@@ -337,19 +337,19 @@ module.exports = function (grunt) {
         less: {
             development: {
                 options: {
-                    paths: ["styles"]
+                    paths: ['styles']
                 },
                 files: {
-                    "app/styles/main.css": "app/less/*.less"
+                    'app/styles/main.css': 'app/less/*.less'
                 }
             },
             production: {
                 options: {
-                    paths: ["styles"],
+                    paths: ['styles'],
                     cleancss: true
                 },
                 files: {
-                    "app/styles/main.css": "app/less/*.less"
+                    'app/styles/main.css': 'app/less/*.less'
                 }
             }
         },
@@ -367,26 +367,8 @@ module.exports = function (grunt) {
                 'imagemin',
                 'svgmin'
             ]
-        },
-
-        // PHP builtin webserver
-        php: {
-            watch: {},
-            test: {
-                options: {
-                    keepalive: true,
-                    open: true,
-                    base: '<%= config.app %>/',
-                    middleware: function (connect) {
-                        return [
-                            connect.static('.tmp'),
-                            connect().use('/bower_components', connect.static('./bower_components')),
-                            connect.static(config.app)
-                        ];
-                    }
-                }
-            }
         }
+
     });
 
 
@@ -404,17 +386,6 @@ module.exports = function (grunt) {
             'concurrent:server',
             'autoprefixer',
             'connect:livereload',
-            'watch'
-        ]);
-    });
-
-    grunt.registerTask('server', 'start the builtin PHP server and preview your app', function (target) {
-        grunt.task.run([
-            'clean:server',
-            'wiredep',
-            'concurrent:server',
-            'autoprefixer',
-            'php:test',
             'watch'
         ]);
     });
