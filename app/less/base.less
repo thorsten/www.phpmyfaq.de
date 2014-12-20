@@ -1,0 +1,493 @@
+@import "mixins.less";
+@import "theme-default.less";
+
+/* ======= Base ======= */
+
+body {
+  font-family: 'Lato', arial, sans-serif;
+  color: @text-color;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: @smoky-white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cabin', arial, sans-serif;
+  font-weight: 700;
+  color: @color;
+}
+
+a {
+  color: @color-2;
+  .transition (all 0.4s ease-in-out);
+  &:hover {
+    text-decoration: underline;
+    color: darken(@color-2, 10%);
+  }
+}
+
+.btn, a.btn {
+  .transition (all 0.4s ease-in-out);
+  font-family: 'Montserrat', arial, sans-serif;
+  padding: 8px 16px;
+  font-weight: bold;
+  .fa {
+    margin-right: 5px;
+  }
+
+  &:focus {
+    color: #fff;
+  }
+}
+
+a.btn-cta-primary, .btn-cta-primary {
+  background: darken(@color, 30%);
+  border: 1px solid darken(@color, 30%);
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  &:hover {
+    background: darken(@color, 35%);
+    border: 1px solid darken(@color, 35%);
+    color: #fff;
+  }
+}
+
+a.btn-cta-secondary, .btn-cta-secondary {
+  background: @color-2;
+  border: 1px solid @color-2;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  &:hover {
+    background: darken(@color-2, 5%);
+    border: 1px solid darken(@color-2, 5%);
+    color: #fff;
+  }
+}
+
+.text-highlight {
+  color: darken(@color, 30%);
+}
+
+.offset-header {
+  padding-top: 90px;
+}
+
+pre code {
+  font-size: 16px;
+}
+
+/**
+ * Header
+ *
+ */
+.header {
+  padding: 10px 0;
+  background: @color;
+  color: @smoky-white;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+
+  &.navbar-fixed-top {
+    background: #fff;
+    z-index: 9999;
+    .box-shadow (0 0 4px rgba(0, 0, 0, 0.4));
+    .logo {
+      a {
+        color: @color;
+      }
+    }
+    .main-nav .nav .nav-item a {
+      color: @text-secondary;
+    }
+  }
+
+  .logo {
+    margin: 0;
+    font-size: 26px;
+    padding-top: 10px;
+    a {
+      color: #fff;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .main-nav {
+    margin-top: 10px;
+    button {
+      background: #000000;
+      color: #fff !important;
+      .border-radius(4px);
+      &:focus {
+        outline: none;
+      }
+      .icon-bar {
+        background-color: #fff;
+      }
+    }
+    .navbar-collapse {
+      padding: 0;
+    }
+    .nav {
+      .nav-item {
+        font-weight: normal;
+        margin-right: 20px;
+        font-family: 'Montserrat', sans-serif;
+        &.active {
+          a {
+            background: @smoky-white;
+            color: @color-2;
+            .border-radius(10px)
+          }
+        }
+        a {
+          font-weight: 200;
+          color: #ed6a36;
+          .transition (none);
+          font-size: 14px;
+          padding: 10px 10px;
+          &:hover {
+            background: @smoky-white;
+            color: @color;
+            .border-radius(10px)
+          }
+          &:focus {
+            outline: none;
+            background: none;
+          }
+          &:active {
+            outline: none;
+            background: none;
+          }
+        }
+        &.active {
+          color: darken(#ed6a36, 33%);
+        }
+        &.last {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Promo Section on start page
+ *
+ */
+.promo {
+  background: url("../images/background.png") repeat;
+  color: #fff;
+  padding-top: 150px;
+  .title {
+    font-size: 98px;
+    color: darken(white, 30%);
+    margin-top: 0;
+    .highlight {
+      color: @color-2;
+    }
+  }
+
+  .intro {
+    font-size: 28px;
+    max-width: 680px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .btns {
+    .btn {
+      margin-right: 15px;
+      font-size: 18px;
+      padding: 8px 30px;
+    }
+  }
+
+  .love-phpmyfaq {
+    margin-top: 120px;
+    margin-bottom: 30px;
+  }
+
+  .meta {
+    margin-bottom: 30px;
+    color: darken(@smoky-white, 20%);
+    li {
+      margin-right: 15px;
+
+    }
+    a {
+      color: darken(@color-2, 20%);
+      &:hover {
+        color: darken(@color-2, 30%);
+      }
+    }
+  }
+
+  .social-media {
+    background: darken(@color, 15%);
+    padding: 10px 0;
+    margin: 0 auto;
+    li {
+      margin-top: 15px;
+      &.facebook-like {
+        margin-top: 0;
+        position: relative;
+        top: -5px;
+      }
+    }
+  }
+}
+
+/**
+ * News Section on start page
+ *
+ */
+.news {
+  padding: 20px 0;
+  background: @smoky-white;
+
+  .title {
+    margin-top: 0;
+    color: darken(@color, 30%);
+  }
+  .news-inner {
+    max-width: 800px;
+    background: #fff;
+    padding: 30px;
+    .border-radius(4px);
+    margin: 0 auto;
+
+  }
+  .news-container {
+    max-width: 540px;
+    margin: 0 auto;
+    padding-top: 20px;
+    .border-radius(4px);
+    .news-bubble {
+      background: #ffffff;
+      color: darken(@color, 30%);
+      padding: 30px;
+      margin-bottom: 30px;
+      position: relative;
+      .border-radius(4px);
+    }
+    .icon-holder {
+      .fa {
+        font-size: 56px;
+      }
+
+    }
+  }
+}
+
+
+/**
+ * Features Section
+ *
+ */
+.features {
+  padding: 80px 0;
+
+  .container {
+    background: #ffffff;
+    .border-radiuses(0, 20px, 20px, 0);
+  }
+
+  .core-features {
+    margin-bottom: 36px;
+  }
+
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  .title {
+    color: darken(@color, 30%);
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .feature-list {
+    font-size: 125%;
+    .fa {
+      color: @color-2;
+    }
+  }
+
+  .item {
+    position: relative;
+    margin-bottom: 30px;
+    .icon-holder {
+      position: absolute;
+      left: 30px;
+      top: 0;
+      .fa {
+        font-size: 36px;
+        color: @color-2;
+      }
+    }
+    .content {
+      padding-left: 60px;
+      .sub-title {
+        margin-top: 0;
+        color: darken(@color, 30%);
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+
+/**
+ * Documentation Section
+ *
+ */
+.documentation {
+  padding: 80px 0;
+  .container {
+    background: #ffffff;
+    .border-radiuses(0, 20px, 20px, 0);
+  }
+}
+
+/**
+ * Support Section
+ *
+ */
+.support {
+  padding: 80px 0;
+  .container {
+    background: #ffffff;
+    .border-radiuses(0, 20px, 20px, 0);
+  }
+}
+
+/**
+ * Download Section
+ *
+ */
+.downloads {
+  padding: 80px 0;
+  .container {
+    background: #ffffff;
+    .border-radiuses(0, 20px, 20px, 0);
+    .btn-download {
+      margin-top: 12px;
+      border: 2px solid @color-2;
+    }
+    .small {
+      font-size: 80% !important;
+    }
+    .label-info {
+      background: @color-2 !important;
+    }
+  }
+}
+
+/* ======= License Section ======= */
+
+
+/**
+ * Top Footer Section
+ *
+ */
+.top-footer {
+  padding: 40px 0;
+  background: @color;
+  color: #fff;
+
+  h4 {
+    color: @smoky-white;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: @color-2;
+    &:hover {
+      color: darken(@color-2, 10%);
+    }
+  }
+
+  .info {
+    margin-top: 35px;
+  }
+  .social-icons {
+    list-style: none;
+    padding: 10px 0;
+    margin-bottom: 0;
+    display: inline-block;
+    margin: 0 auto;
+    li {
+      float: left;
+      &.last {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      display: inline-block;
+      background: darken(@color, 15%);
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      padding-top: 12px;
+      .border-radius(50%);
+      margin-right: 8px;
+      float: left;
+
+      &:hover {
+        background: darken(@color-2, 10%);
+      }
+
+      .fa {
+        color: #fff;
+        &:before {
+          font-size: 26px;
+          text-align: center;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Footer Section
+ *
+ */
+.footer {
+  padding: 15px 0;
+  background: darken(@color, 40%);
+  color: #fff;
+  .copyright {
+    .opacity(0.8);
+  }
+  .fa-heart {
+    color: @heart;
+  }
+  a {
+    color: @color-2;
+    &:hover {
+      color: darken(@color-2, 10%);
+    }
+  }
+}
+
+/**
+ * Retina images
+ *
+ */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .promo {
+    background: url("../images/background_@2X.png") repeat;
+  }
+}
