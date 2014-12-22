@@ -1,5 +1,7 @@
 {
-  "name": "www-phpmyfaq-de",
+  "name": "phpMyFAQ-Homepage",
+  "description": "Homepage of phpMyFAQ project",
+  "repository": "https://github.com/thorsten/www.phpmyfaq.de",
   "devDependencies": {
     "apache-server-configs": "^2.7.1",
     "grunt": "^0.4.5",
@@ -22,6 +24,7 @@
     "grunt-php": "^1.1.1",
     "grunt-rev": "^0.1.0",
     "grunt-svgmin": "^0.4.0",
+    "grunt-template": "^0.2.3",
     "grunt-usemin": "^2.3.0",
     "grunt-wiredep": "^1.7.0",
     "jshint-stylish": "^0.4.0",
