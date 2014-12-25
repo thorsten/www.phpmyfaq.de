@@ -14,22 +14,46 @@ module.exports = function (grunt) {
     require('time-grunt')(grunt);
 
     // Load grunt tasks automatically
-    require('load-grunt-tasks')(grunt);
+    require('load-grunt-tasks')(grunt, {pattern: ['grunt-*', 'assemble']});
 
     // Configurable paths
     var config = {
-        app: 'app',
-        dist: 'dist'
+        app:        './app',
+        dist:       './dist',
+        tpl:        './app/templates',
+        pages:      './app/templates/pages',
+        partials:   './app/templates/partials',
+        devblog:    './app/templates/devblog',
+        vendor:     './bower_components',
+        expand:     true
     };
+
+    // Rewrite snippets
+    var rewriteRulesSnippet = require('grunt-connect-rewrite/lib/utils').rewriteRequest;
 
     // Define the configuration for all the tasks
     grunt.initConfig({
 
         // Project settings
         config: config,
+        pkg:    grunt.file.readJSON('package.json'),
+
 
         // Watches files for changes and runs tasks based on the changed files
         watch: {
+            assemble: {
+                files: [
+                    './app/templates/pages/**/*',
+                    './app/templates/devblog/**/*',
+                    './app/templates/partials/**/*',
+                    './app/templates/**/*'
+                ],
+                tasks: ['assemble'],
+                options: {
+                    spawn: false,
+                    livereload: true,
+                }
+            },
             bower: {
                 files: ['bower.json'],
                 tasks: ['wiredep']
@@ -61,9 +85,76 @@ module.exports = function (grunt) {
                     livereload: '<%= connect.options.livereload %>'
                 },
                 files: [
-                    '<%= config.app %>/{,*/}*.html',
                     '.tmp/styles/{,*/}*.css',
                     '<%= config.app %>/images/{,*/}*'
+                ]
+            }
+        },
+
+        // Assemble
+        assemble: {
+            options: {
+                flatten: true,
+                data: ['./data/*.{json,yml}', 'package.json'],
+                plugins: [
+                    'assemble-contrib-permalinks'
+                ],
+                helpers: [
+                    'handlebars-helper-compose',
+                    'handlebars-helper-moment',
+                    'handlebars-helper-inarray',
+                    './app/templates/helpers/*.js'
+                ],
+                assets: './dest/public',
+                partials: [
+                    './app/templates/partials/*.hbs',
+                    './app/templates/components/*.hbs'
+                ],
+                layoutdir: './app/templates/layouts/',
+                layout: 'default.hbs',
+                /*
+                collections: [
+                    {
+                        name: 'post',
+                        sortby: 'date',
+                        sortorder: 'descending',
+                        pages: [ './app/templates/devblog' ]
+                    }
+                ],
+                marked: {
+                    highlight: function (code, lang) {
+                        if (lang === undefined) {
+                            lang = 'bash';
+                        }
+                        if (lang === 'html') {
+                            lang = 'xml';
+                        }
+                        if (lang === 'js') {
+                            lang = 'javascript';
+                        }
+                        return hljs.highlight(lang, code).value;
+                    }
+                },
+                */
+                sitemap: {
+                    homepage: '<%= pkg.url %>',
+                    changefreq: 'daily',
+                    priority: '0.8',
+                    robot: true
+                },
+                permalinks: {
+                    structure: ':basename/index.html'
+                },
+                compose: {
+                    cwd: '<%= config.devblog %>'
+                }
+            },
+            pages: {
+                files: [
+                    {
+                        src: './app/templates/pages/*.{hbs,md}',
+                        dest: './dist/'
+                    }
                 ]
             }
         },
@@ -77,14 +168,46 @@ module.exports = function (grunt) {
                 // Change this to '0.0.0.0' to access the server from outside
                 hostname: 'localhost'
             },
+            rules: [
+                {
+                    from: '(^((?!css|html|js|images|fonts|\/$).)*$)',
+                    to: "$1.html"
+                }
+            ],
             livereload: {
                 options: {
-                    middleware: function (connect) {
+                    base: './',
+                    middleware: function (connect, options) {
+                        var middlewares = [];
+
+                        // RewriteRules support
+                        middlewares.push(rewriteRulesSnippet);
+
+                        if (!Array.isArray(options.base)) {
+                            options.base = [options.base];
+                        }
+
+                        var directory = options.directory || options.base[options.base.length - 1];
+                        options.base.forEach(function (base) {
+                            // Serve static files.
+                            middlewares.push(connect.static('.tmp'));
+                            middlewares.push(connect().use('/bower_components', connect.static('./bower_components')));
+                            middlewares.push(connect.static(config.app));
+                            middlewares.push(connect.static(config.dist));
+                        });
+
+                        // Make directory browse-able.
+                        middlewares.push(connect.directory(directory));
+
+                        return middlewares;
+                        /*
                         return [
                             connect.static('.tmp'),
                             connect().use('/bower_components', connect.static('./bower_components')),
-                            connect.static(config.app)
+                            connect.static(config.app),
+                            connect.static(config.dist)
                         ];
+                        */
                     }
                 }
             },
@@ -178,8 +301,8 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     src: [
-                        '<%= config.dist %>/scripts/{,*/}*.js',
-                        '<%= config.dist %>/styles/{,*/}*.css',
+                        '<%= config.dist %>/assets/js/{,*/}*.js',
+                        '<%= config.dist %>/assets/css/{,*/}*.css',
                         '<%= config.dist %>/images/{,*/}*.*',
                         '<%= config.dist %>/styles/fonts/{,*/}*.*',
                         '<%= config.dist %>/*.{ico,png}'
@@ -256,32 +379,6 @@ module.exports = function (grunt) {
             }
         },
 
-        // By default, your `index.html`'s <!-- Usemin block --> will take care
-        // of minification. These next options are pre-configured if you do not
-        // wish to use the Usemin blocks.
-        // cssmin: {
-        //   dist: {
-        //     files: {
-        //       '<%= config.dist %>/styles/main.css': [
-        //         '.tmp/styles/{,*/}*.css',
-        //         '<%= config.app %>/styles/{,*/}*.css'
-        //       ]
-        //     }
-        //   }
-        // },
-        // uglify: {
-        //   dist: {
-        //     files: {
-        //       '<%= config.dist %>/scripts/scripts.js': [
-        //         '<%= config.dist %>/scripts/scripts.js'
-        //       ]
-        //     }
-        //   }
-        // },
-        // concat: {
-        //   dist: {}
-        // },
-
         // Copies remaining files to places other tasks can use
         copy: {
             dist: {
@@ -340,7 +437,8 @@ module.exports = function (grunt) {
                     paths: ['styles']
                 },
                 files: {
-                    'app/styles/main.css': 'app/less/*.less'
+                    'app/styles/main.css': 'app/less/*.less',
+                    'dist/assets/css/main.css': 'app/less/*.less'
                 }
             },
             production: {
@@ -357,12 +455,15 @@ module.exports = function (grunt) {
         // Run some tasks in parallel to speed up build process
         concurrent: {
             server: [
+                'less:development',
                 'copy:styles'
             ],
             test: [
+                'less:development',
                 'copy:styles'
             ],
             dist: [
+                'less:production',
                 'copy:styles',
                 'imagemin',
                 'svgmin'
@@ -385,6 +486,8 @@ module.exports = function (grunt) {
             'wiredep',
             'concurrent:server',
             'autoprefixer',
+            'assemble',
+            'configureRewriteRules',
             'connect:livereload',
             'watch'
         ]);
@@ -400,6 +503,8 @@ module.exports = function (grunt) {
         }
 
         grunt.task.run([
+            'assemble',
+            'configureRewriteRules',
             'connect:test',
             'mocha'
         ]);
@@ -407,6 +512,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
+        'assemble',
         'wiredep',
         'useminPrepare',
         'concurrent:dist',

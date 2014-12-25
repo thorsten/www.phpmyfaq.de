@@ -201,7 +201,7 @@ pre code {
  *
  */
 .promo {
-  background: url("../images/background.png") repeat;
+  background: url("../../images/background.png") repeat;
   color: #fff;
   padding-top: 150px;
 }
@@ -567,7 +567,7 @@ pre code {
  */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .promo {
-    background: url("../images/background_@2X.png") repeat;
+    background: url("../../images/background_@2X.png") repeat;
   }
 }
 
@@ -896,7 +896,7 @@ pre code {
  *
  */
 .promo {
-  background: url("../images/background.png") repeat;
+  background: url("../../images/background.png") repeat;
   color: #fff;
   padding-top: 150px;
 }
@@ -1262,7 +1262,7 @@ pre code {
  */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .promo {
-    background: url("../images/background_@2X.png") repeat;
+    background: url("../../images/background_@2X.png") repeat;
   }
 }
 /* Extra small devices (phones, less than 768px) */
