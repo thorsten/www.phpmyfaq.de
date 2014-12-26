@@ -265,6 +265,31 @@ pre code {
   top: -5px;
 }
 /**
+ * Styles for sections
+ *
+ */
+.section {
+  padding: 80px 0;
+}
+.section .container {
+  background: #ffffff;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+/**
  * News Section on start page
  *
  */
@@ -385,80 +410,9 @@ pre code {
   font-size: 18px;
 }
 /**
- * Documentation Section
- *
- */
-.documentation {
-  padding: 80px 0;
-}
-.documentation .container {
-  background: #ffffff;
-  -webkit-border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 20px;
-  -webkit-border-bottom-left-radius: 20px;
-  -webkit-border-top-left-radius: 0;
-  -moz-border-radius-topright: 0;
-  -moz-border-radius-bottomright: 20px;
-  -moz-border-radius-bottomleft: 20px;
-  -moz-border-radius-topleft: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 0;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-}
-/**
- * Support Section
- *
- */
-.support {
-  padding: 80px 0;
-}
-.support .container {
-  background: #ffffff;
-  -webkit-border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 20px;
-  -webkit-border-bottom-left-radius: 20px;
-  -webkit-border-top-left-radius: 0;
-  -moz-border-radius-topright: 0;
-  -moz-border-radius-bottomright: 20px;
-  -moz-border-radius-bottomleft: 20px;
-  -moz-border-radius-topleft: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 0;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-}
-/**
  * Download Section
  *
  */
-.downloads {
-  padding: 80px 0;
-}
-.downloads .container {
-  background: #ffffff;
-  -webkit-border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 20px;
-  -webkit-border-bottom-left-radius: 20px;
-  -webkit-border-top-left-radius: 0;
-  -moz-border-radius-topright: 0;
-  -moz-border-radius-bottomright: 20px;
-  -moz-border-radius-bottomleft: 20px;
-  -moz-border-radius-topleft: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 0;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-}
 .downloads .container .btn-download {
   margin-top: 12px;
   border: 2px solid #ed6a36;
@@ -469,7 +423,6 @@ pre code {
 .downloads .container .label-info {
   background: #ed6a36 !important;
 }
-/* ======= License Section ======= */
 /**
  * Top Footer Section
  *
@@ -960,6 +913,31 @@ pre code {
   top: -5px;
 }
 /**
+ * Styles for sections
+ *
+ */
+.section {
+  padding: 80px 0;
+}
+.section .container {
+  background: #ffffff;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+/**
  * News Section on start page
  *
  */
@@ -1080,80 +1058,9 @@ pre code {
   font-size: 18px;
 }
 /**
- * Documentation Section
- *
- */
-.documentation {
-  padding: 80px 0;
-}
-.documentation .container {
-  background: #ffffff;
-  -webkit-border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 20px;
-  -webkit-border-bottom-left-radius: 20px;
-  -webkit-border-top-left-radius: 0;
-  -moz-border-radius-topright: 0;
-  -moz-border-radius-bottomright: 20px;
-  -moz-border-radius-bottomleft: 20px;
-  -moz-border-radius-topleft: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 0;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-}
-/**
- * Support Section
- *
- */
-.support {
-  padding: 80px 0;
-}
-.support .container {
-  background: #ffffff;
-  -webkit-border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 20px;
-  -webkit-border-bottom-left-radius: 20px;
-  -webkit-border-top-left-radius: 0;
-  -moz-border-radius-topright: 0;
-  -moz-border-radius-bottomright: 20px;
-  -moz-border-radius-bottomleft: 20px;
-  -moz-border-radius-topleft: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 0;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-}
-/**
  * Download Section
  *
  */
-.downloads {
-  padding: 80px 0;
-}
-.downloads .container {
-  background: #ffffff;
-  -webkit-border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 20px;
-  -webkit-border-bottom-left-radius: 20px;
-  -webkit-border-top-left-radius: 0;
-  -moz-border-radius-topright: 0;
-  -moz-border-radius-bottomright: 20px;
-  -moz-border-radius-bottomleft: 20px;
-  -moz-border-radius-topleft: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 0;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-}
 .downloads .container .btn-download {
   margin-top: 12px;
   border: 2px solid #ed6a36;
@@ -1164,7 +1071,6 @@ pre code {
 .downloads .container .label-info {
   background: #ed6a36 !important;
 }
-/* ======= License Section ======= */
 /**
  * Top Footer Section
  *

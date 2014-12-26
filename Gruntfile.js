@@ -23,7 +23,6 @@ module.exports = function (grunt) {
         tpl:        './app/templates',
         pages:      './app/templates/pages',
         partials:   './app/templates/partials',
-        devblog:    './app/templates/devblog',
         vendor:     './bower_components',
         expand:     true
     };
@@ -44,14 +43,12 @@ module.exports = function (grunt) {
             assemble: {
                 files: [
                     './app/templates/pages/**/*',
-                    './app/templates/devblog/**/*',
                     './app/templates/partials/**/*',
                     './app/templates/**/*'
                 ],
                 tasks: ['assemble'],
                 options: {
-                    spawn: false,
-                    livereload: true,
+                    spawn: false
                 }
             },
             bower: {
@@ -112,30 +109,6 @@ module.exports = function (grunt) {
                 ],
                 layoutdir: './app/templates/layouts/',
                 layout: 'default.hbs',
-                /*
-                collections: [
-                    {
-                        name: 'post',
-                        sortby: 'date',
-                        sortorder: 'descending',
-                        pages: [ './app/templates/devblog' ]
-                    }
-                ],
-                marked: {
-                    highlight: function (code, lang) {
-                        if (lang === undefined) {
-                            lang = 'bash';
-                        }
-                        if (lang === 'html') {
-                            lang = 'xml';
-                        }
-                        if (lang === 'js') {
-                            lang = 'javascript';
-                        }
-                        return hljs.highlight(lang, code).value;
-                    }
-                },
-                */
                 sitemap: {
                     homepage: '<%= pkg.url %>',
                     changefreq: 'daily',
@@ -156,6 +129,10 @@ module.exports = function (grunt) {
                         dest: './dist/'
                     }
                 ]
+            },
+            docs: {
+                src: ['./app/templates/pages/docs/*.hbs'],
+                dest: './dist/docs/'
             }
         },
 

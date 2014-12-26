@@ -1,0 +1,176 @@
+---
+title: Contribute
+layout: none
+---
+{{> head ~}}
+
+{{> header ~}}
+
+    <section class="contribute section">
+        <div class="container">
+            <h1>{{page.title}}</h1>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>
+                        Since phpMyFAQ is an Open Source project we encourage developers to contribute patches and code
+                        for us to include in the main package of phpMyFAQ. However there are a few rules and limitations
+                        when doing so and this page list them.
+                    </p>
+                    <ol>
+                        <li>
+                            Contributed code will be licensed under the MPL 2.0 license.
+                        </li>
+                        <li>
+                            Copyright notices will be changed to <em>phpMyFAQ Team</em>. But contributors will get
+                            credit for their work!
+                        </li>
+                        <li>
+                            All third party code will be reviewed, tested and possible modified before being released.
+                        </li>
+                    </ol>
+                    <p>
+                        These basic rules makes it possible for us to earn a living of the phpMyFAQ project but it also
+                        ensures that the code remains Open Source and under the MPL 2.0 license. All contributions will
+                        be added to the <a href="/changelog">changelog</a> and on the phpMyFAQ website.
+                    </p>
+                    <h3>How to contribute?</h3>
+                    <p>
+                        Contributing to phpMyFAQ is quite easy - just fork the project on
+                        <a rel="nofollow" href="https://github.com/thorsten/phpMyFAQ/">GitHub</a>, work on your copy and
+                        send pull requests.
+                    </p>
+                    <h4>Setup a phpMyFAQ development environment</h4>
+                    <p>
+                        Before working on phpMyFAQ, setup an environment with the following software:
+                    </p>
+                    <ul>
+                        <li>Git</li>
+                        <li>PHP development
+                            <ul>
+                                <li><a rel="nofollow" href="http://www.php.de">PHP</a> 5.4.4+</li>
+                                <li><a rel="nofollow" href="http://www.phpunit.de">PHPUnit</a> 4.x</li>
+                                <li><a rel="nofollow" href="http://getcomposer.org">Composer</a></li>
+                            </ul>
+                        </li>
+                        <li>JavaScript / HTML5 / CSS development
+                            <ul>
+                                <li><a rel="nofollow" href="http://nodejs.org">node.js</a> with
+                                    <ul>
+                                        <li><a rel="nofollow" href="http://www.jshint.com/">JSHint</a></li>
+                                        <li><a rel="nofollow" href="https://github.com/mishoo/UglifyJS">UglifyJS</a></li>
+                                        <li><a rel="nofollow" href="http://lesscss.org/">less</a></li>
+                                        <li><a rel="nofollow" href="http://gruntjs.com/">Grunt</a></li>
+                                        <li><a rel="nofollow" href="http://bower.io/">Bower</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>
+                        It's easier to use our Vagrant/Puppet development box, you can download the box at
+                        <a rel="nofollow" href="https://github.com/phpMyFAQ/phpmyfaq-vagrant">Github</a>.
+                    </p>
+                    <h4>Configure your Git installation</h4>
+                    <p>
+                        Set up your user information with your real name and a working e-mail address:
+                    </p>
+<pre>
+$ git config --global user.name "Your Name"
+$ git config --global user.email you@example.com
+$ git config core.autocrlf # if you're on Windows</pre>
+                    <h4>How to get the phpMyFAQ source code?</h4>
+                    <p>
+                        Clone your forked phpMyFAQ repository locally:
+                    </p>
+<pre>
+$ git clone git@github.com:USERNAME/phpMyFAQ.git</pre>
+                    <p>
+                        Add the upstream repository as remote:
+                    </p>
+<pre>
+$ cd phpMyFAQ
+$ git remote add upstream git://github.com/thorsten/phpMyFAQ.git</pre>
+                    <p>
+                        Please check our <a href="/docs/standards">coding standards</a> before sending patches or pull
+                        requests.
+                    </p>
+                    <h4>Fetch 3rd party libraries and install phpMyFAQ</h4>
+                    <p>
+                        After cloning your forked repository, you have to fetch the 3rd party libraries used in phpMyFAQ:
+                    </p>
+<pre>
+$ cd phpMyFAQ
+$ curl -s https://getcomposer.org/installer | php
+$ php composer.phar install
+$ npm install
+$ bower install</pre>
+                    <p>
+                        Then just start a normal, local <a href="/documentation.2.8.en#2c">phpMyFAQ installation</a>.
+                    </p>
+                    <p>
+                        If you changed some JavaScript code, you have to merge the .js files into one with the following
+                        grunt task:
+                    </p>
+<pre>
+$ grunt</pre>
+                    <h4>Rebase your Patch</h4>
+                    <p>
+                        Before submitting your patch, please update your local branch:
+                    </p>
+<pre>
+$ git checkout 2.8
+$ git fetch upstream
+$ git merge upstream/2.8
+$ git checkout YOUR_BRANCH_NAME
+$ git rebase 2.8</pre>
+                    <h4>Make a Pull Request</h4>
+                    <p>You can now make a pull request on the phpMyFAQ Github repository.</p>
+                    <h4>Branches</h4>
+                    <ul>
+                        <li>
+                            <span class="label label-success">Maintainance</span>
+                            <em>2.8</em> is the stable branch for bugfixes
+                        </li>
+                        <li>
+                            <span class="label label-success">Development</span>
+                            <em>2.9</em> is the development branch for new features based on 2.8 code
+                        </li>
+                        <li>
+                            <span class="label label-success">Development</span>
+                            <em>master</em> is the development branch for the Symfony2 based phpMyFAQ 3.0
+                        </li>
+                        <li><span class="label label-danger">Unsupported</span>
+                            <em>2.0</em>, <em>2.5</em>, <em>2.6</em> and <em>2.7</em> are old, unsupported branches
+                        </li>
+                    </ul>
+                    <h3>Hints</h3>
+                    <h4>Proxy issues with Bower</h4>
+                    <p>
+                        If you are behind a non-transparent proxy, add 'proxy' and ''https-proxy' settings to ~/.bowerrc.
+                        See http://bower.io/docs/config/.
+                    </p>
+                    <h4>Proxy issues with Composer</h4>
+                    <p>
+                        If you are behind a non-transparent proxy, add the following at the end of composer.json, just
+                        before the last }:
+                    </p>
+<pre>
+"repositories" : {
+"sourceforge": {
+"type": "vcs",
+"url": "http://git.code.sf.net/p/tcpdf/code"
+}
+}</pre>
+                    <h3>Contributors</h3>
+                    <p>
+                        Here's a <a rel="nofollow" href="https://github.com/thorsten/phpMyFAQ/contributors">list of
+                        contributors</a> to phpMyFAQ since we host our repository on Github.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{{> footer ~}}
+
+{{> scripts ~}}

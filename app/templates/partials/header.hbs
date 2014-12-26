@@ -2,7 +2,7 @@
         <div class="container">
             <h1 class="logo pull-left">
                 <a href="/">
-                    <img src="{{site.domain}}/assets/images/logo.png" width="150" height="50" alt="phpMyFAQ">
+                    <img src="{{site.domain}}/images/logo.png" width="199" height="50" alt="phpMyFAQ">
                 </a>
             </h1>
             <nav id="main-nav" class="main-nav navbar-right" role="navigation">
@@ -16,27 +16,27 @@
                 </div>
                 <div class="navbar-collapse collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="nav-item">
+                        <li class="nav-item{{#is basename "features"}} active{{/is}}">
                             <a href="{{site.domain}}/features">
                                 Features
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item{{#is basename "documentation"}} active{{/is}}">
                             <a href="{{site.domain}}/documentation">
                                 Documentation
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item{{#is basename "support"}} active{{/is}}">
                             <a href="{{site.domain}}/support">
                                 Support
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item{{#is basename "development"}} active{{/is}}">
                             <a href="{{site.domain}}/development">
                                 Development
                             </a>
                         </li>
-                        <li class="nav-item last">
+                        <li class="nav-item last{{#is basename "download"}} active{{/is}}">
                             <a href="{{site.domain}}/download">
                                 Download
                             </a>
