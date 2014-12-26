@@ -28,25 +28,36 @@ safe_mode = off (recommended)
 memory_limit = 64M</pre>
                                 </li>
                             </ul></li>
-                        <li><strong>Database server, e.g.</strong>
+                        <li>
+                            <strong>Database server, e.g.</strong>
                             <ul>
                                 <li>
                                     <a rel="nofollow" href="http://www.mysql.com">MySQL</a> 5.1.x with ext/mysqli extension
                                     (recommended: 5.6.x)
                                 </li>
-                                <li><a rel="nofollow" href="http://www.postgresql.org">PostgreSQL</a> 8.x or 9.x</li>
-                                <li><a rel="nofollow" href="http://www.microsoft.com/sql/">Microsoft SQL Server</a> 2005, 2008, 2012</li>
-                                <li><a rel="nofollow" href="http://www.sqlite.org">SQLite3</a></li>
-                                <li><a rel="nofollow" href="http://mariadb.org/">MariaDB</a></li>
-                            </ul></li>
-                        <li><strong>Webserver, e.g.</strong>
+                                <li>
+                                    <a rel="nofollow" href="http://www.postgresql.org">PostgreSQL</a> 8.x or 9.x
+                                </li>
+                                <li>
+                                    <a rel="nofollow" href="http://www.microsoft.com/sql/">Microsoft SQL Server</a> 2008, 2012
+                                </li>
+                                <li>
+                                    <a rel="nofollow" href="http://www.sqlite.org">SQLite3</a>
+                                </li>
+                                <li>
+                                    <a rel="nofollow" href="http://mariadb.org/">MariaDB</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Webserver, e.g.</strong>
                             <ul>
                                 <li>
-                                    <a rel="nofollow" href="http://httpd.apache.org">Apache</a> 1.3.x / 2.0.x / 2.2.x / 2.4.x with mod_rewrite
-                                    and "AllowOverride All" set
+                                    <a rel="nofollow" href="http://httpd.apache.org">Apache</a> 2.2.x / 2.4.x with
+                                    mod_rewrite and "AllowOverride All" set
                                 </li>
-                                <li><a rel="nofollow" href="http://www.microsoft.com/">IIS</a> 5.0+</li>
-                                <li><a rel="nofollow" href="http://www.nginx.net">nginx</a> 0.8+</li>
+                                <li><a rel="nofollow" href="http://www.microsoft.com/">IIS</a> 7.0+</li>
+                                <li><a rel="nofollow" href="http://www.nginx.net">nginx</a> 1.0+</li>
                                 <li><a rel="nofollow" href="http://www.lighttpd.net">lighttpd</a> 1.4+</li>
                             </ul>
                             <p>
@@ -54,14 +65,19 @@ memory_limit = 64M</pre>
                                 JavaScript.
                             </p>
                             <p>
-                                If you're running Apache von Windows, you may have to increase of the Apache's stack size:
+                                If you're running Apache von Windows, you may have to increase of the Apache's stack
+                                size:
+                            </p>
 <pre>&lt;IfModule mpm_winnt_module&gt;
 ThreadStackSize 8388608
 &lt;/IfModule&gt;</pre>
+                            <p>
                             You should add the code to the <strong>httpd-mpm.conf</strong> file and enable that file in
+                            </p>
                             <pre>Include conf/extra/httpd-mpm.conf</pre>
-                            </p></li>
-                        <li><strong>Operating system support</strong>
+                        </li>
+                        <li>
+                            <strong>Operating system support</strong>
                             <ul>
                                 <li>GNU/Linux</li>
                                 <li>Microsoft Windows</li>
@@ -72,7 +88,8 @@ ThreadStackSize 8388608
                                 <li>AIX</li>
                                 <li>Netware</li>
                             </ul></li>
-                        <li><strong>Browser support</strong>
+                        <li>
+                            <strong>Browser support</strong>
                             <ul>
                                 <li>Mozilla Firefox</li>
                                 <li>Google Chrome</li>
@@ -92,9 +109,9 @@ ThreadStackSize 8388608
                         installation. The files and directories have to be owned by the Apache user.
                     </p>
                     <p>
-                        We recommend using the free and open source <a rel="nofollow" href="http://www.suhosin.org">Suhosin extension</a>
-                        for PHP from <a rel="nofollow" href="http://www.sektioneins.de/">SektionEins GmbH</a> for additional protection and
-                        security.
+                        We recommend using the free and open source <a rel="nofollow" href="http://www.suhosin.org">
+                        Suhosin extension</a> for PHP from <a rel="nofollow" href="http://www.sektioneins.de/">
+                        SektionEins GmbH</a> for additional protection and security.
                     </p>
                 </div>
             </div>
