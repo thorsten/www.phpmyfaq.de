@@ -1,0 +1,41 @@
+---
+title: Security Advisory 2009-06-02
+canonical: security/advisory-2009-06-02
+layout: security.hbs
+---
+                    <h3>phpMyFAQ 2.x XSS vulnerability</h3>
+
+                    <dl class="dl-horizontal">
+                        <dt>Issued on:</dt>
+                        <dd>2009-06-02</dd>
+                        <dt>Software:</dt>
+                        <dd>phpMyFAQ <= 2.0.14</dd>
+                        <dt>Risk:</dt>
+                        <dd>High</dd>
+                        <dt>Platforms:</dt>
+                        <dd>all</dd>
+                    </dl>
+
+                    <p>The phpMyFAQ Team has learned of a security issue that has been discovered in phpMyFAQ 2.0.x</p>
+
+                    <h3>Description</h3>
+                    <p>
+                        phpMyFAQ doesn't sanitize the error message in the admin login page. In case of a "bad login" attempt
+                        with a properly crafted URL it is f.e. possible to inject HTML code into the output of the error
+                        message, which could result in the leakage of domain cookies (f.e. session identifiers).
+                    </p>
+
+                    <h3>Solution</h3>
+                    <p>
+                        The phpMyFAQ Team has released a new phpMyFAQ version 2.0.15 which fixes the vulnerability. All users of
+                        affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+                    </p>
+
+                    <h3>Workaround</h3>
+                    <p>There's no workaround except installing phpMyFAQ 2.0.15.</p>
+
+                    <h3>Credits</h3>
+                    <p>
+                        The phpMyFAQ Team would like to thank Jan Hertsens and Rick G. Elliot (LiveOps Inc) for reporting the
+                        vulnerability.
+                    </p>

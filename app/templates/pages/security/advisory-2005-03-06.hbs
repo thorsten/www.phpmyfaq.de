@@ -1,0 +1,50 @@
+---
+title: Security Advisory 2005-03-06
+canonical: security/advisory-2005-03-06
+layout: security.hbs
+---
+                    <h3>SQL injection vulnerability in phpMyFAQ version 1.4 and 1.5</h3>
+                    <dl class="dl-horizontal">
+                        <dt>Issued on:</dt>
+                        <dd>2005-03-06</dd>
+                        <dt>Software:</dt>
+                        <dd>phpMyFAQ version 1.4 and 1.5</dd>
+                        <dt>Risk:</dt>
+                        <dd>medium</dd>
+                        <dt>Platforms:</dt>
+                        <dd>all</dd>
+                    </dl>
+
+                    <p>
+                        The phpMyFAQ Team has learned of a possible SQL injection vulnerability in phpMyFAQ version 1.4 and
+                        1.5.
+                    </p>
+
+                    <h3>Description</h3>
+                    <p>
+                        phpMyFAQ lets public users add FAQ records to the database. The records will be saved into the database
+                        but aren't visible by default.
+                    </p>
+
+                    <h3>Impact</h3>
+                    <p>
+                        Input passed to the username field in forum messages isn't properly sanitised before being stored.
+                    </p>
+
+                    <h3>Solution</h3>
+                    <p>
+                        The phpMyFAQ Team has released a new phpMyFAQ version 1.4.7 and 1.5.0 RC2, which incorporate a fix for
+                        the SQL injection vulnerability. All users of affected phpMyFAQ versions are encouraged to upgrade to
+                        this latest version.
+                    </p>
+
+                    <h3>Workaround</h3>
+                    <p>
+                        There is no workaround except installing the new version.
+                    </p>
+
+                    <h3>Credits</h3>
+                    <p>
+                        The phpMyFAQ Team would like to thank Sven Michels of sectoor GmbH for discovering this SQL injection
+                        vulnerability.
+                    </p>

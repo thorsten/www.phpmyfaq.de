@@ -1,0 +1,44 @@
+---
+title: Security Advisory 2006-12-15
+canonical: security/advisory-2006-12-15
+layout: security.hbs
+---
+                    <h3>SQL injection and remote code execution vulnerabilities in phpMyFAQ 1.6.x</h3>
+                    <dl class="dl-horizontal">
+                        <dt>Issued on:</dt>
+                        <dd>2006-12-15</dd>
+                        <dt>Software:</dt>
+                        <dd>phpMyFAQ <= 1.6.7</dd>
+                        <dt>Risk:</dt>
+                        <dd>High</dd>
+                        <dt>Platforms:</dt>
+                        <dd>all</dd>
+                    </dl>
+
+                    <p>
+                        The phpMyFAQ Team has learned about some vulnerabilities in the code that could be exploited in
+                        phpMyFAQ 1.6.x.</p>
+
+                    <h3>Description</h3>
+                    <p>
+                        Through one of the vulnerabilities it is possible to gain the privilege for uploading files on the
+                        server: currently no public exploit is available but two users already reported us to be hacked and
+                        the <strong>r57shell</strong> script has been installed on their systems.</p>
+
+                    <h3>Solution</h3>
+                    <p>
+                        The phpMyFAQ Team has released the new phpMyFAQ version 1.6.8 which fixes these vulnerabilities. All
+                        users of the affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest
+                        version.
+                    </p>
+
+                    <h3>Workaround</h3>
+                    <p>
+                        At the time of this advisory there's no workaround except installing phpMyFAQ 1.6.8.
+                    </p>
+
+                    <h3>Credits</h3>
+                    <p>
+                        The phpMyFAQ Team would like to thank Markus Kohlmeyer, for reporting us how his system has been
+                        hacked, and Stefan Esser, for discovering all the other vulnerabilities.
+                    </p>

@@ -1,0 +1,48 @@
+---
+title: Security Advisory 2005-09-23
+canonical: security/advisory-2005-09-23
+layout: security.hbs
+---
+                    <h3>SQL injection, takeover, path disclosure, remote code execution in phpMyFAQ 1.5.x</h3>
+                    <dl class="dl-horizontal">
+                        <dt>Issued on:</dt>
+                        <dd>2005-09-23</dd>
+                        <dt>Software:</dt>
+                        <dd>phpMyFAQ <= 1.5.2</dd>
+                        <dt>Risk:</dt>
+                        <dd>critical</dd>
+                        <dt>Platforms:</dt>
+                        <dd>all</dd>
+                    </dl>
+
+                    <p>The phpMyFAQ Team has learned of a serious security issue that has been discovered in phpMyFAQ 1.5.</p>
+
+                    <h3>Description</h3>
+                    <p>
+                        If magic quotes are off there's a SQL injection when sending a forgotten password. It's possible to
+                        overwrite the admin password and to take over the whole system. In some files in the admin section
+                        there are some cross site scripting vulnerabilities. In the public frontend it's possible to include
+                        arbitrary php files.
+                    </p>
+
+                    <h3>Solution</h3>
+                    <p>
+                        The phpMyFAQ Team has released a new phpMyFAQ version 1.5.2 which fixes these vulnerabilities. All
+                        users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest
+                        version.
+                    </p>
+
+                    <h3>Workaround</h3>
+                    <p>
+                        There's no workaround except installing phpMyFAQ 1.5.2.
+                    </p>
+
+                    <h3>Credits</h3>
+                    <p>
+                        Thanks to <strong>Christian Ney</strong> for the hint about the public exploit.
+                    </p>
+                    <p>
+                        We would like to put emphasis on the disappointment we feel when a bugreporter does not contact the
+                        authors of a software first, before posting any exploits. The common way to report this, is to give
+                        the developers a reasonable amount of time to respond to an exploit before it is made public.
+                    </p>

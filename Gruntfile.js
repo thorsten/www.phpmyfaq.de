@@ -133,6 +133,10 @@ module.exports = function (grunt) {
             docs: {
                 src: ['./app/templates/pages/docs/*.{hbs,md}'],
                 dest: './dist/docs/'
+            },
+            security: {
+                src: ['./app/templates/pages/security/*.{hbs,md}'],
+                dest: './dist/security/'
             }
         },
 

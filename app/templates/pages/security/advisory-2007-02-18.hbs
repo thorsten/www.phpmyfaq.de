@@ -1,0 +1,38 @@
+---
+title: Security Advisory 2007-02-18
+canonical: security/advisory-2007-02-18
+layout: security.hbs
+---
+                    <h3>Remote code execution vulnerability in phpMyFAQ 1.6.x</h3>
+
+                    <dl class="dl-horizontal">
+                        <dt>Issued on:</dt>
+                        <dd>2007-02-18</dd>
+                        <dt>Software:</dt>
+                        <dd>phpMyFAQ <= 1.6.9</dd>
+                        <dt>Risk:</dt>
+                        <dd>High</dd>
+                        <dt>Platforms:</dt>
+                        <dd>all</dd>
+                    </dl>
+
+                    <p>The phpMyFAQ Team has learned about a vulnerability in the code that could be exploited in phpMyFAQ
+                        1.6.x.</p>
+
+                    <h3>Description</h3>
+                    <p>Through the vulnerability it is possible to gain the privilege for uploading files on the server when
+                        register_globals is activated: currently no public exploit is available but some users already reported
+                        us to be hacked and the <strong>r57shell</strong> script has been installed on their systems.</p>
+
+                    <h3>Solution</h3>
+                    <p>The phpMyFAQ Team has released the new phpMyFAQ version 1.6.10 which fixes the vulnerability. All users
+                        of the affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest
+                        version.</p>
+
+                    <h3>Workaround</h3>
+                    <p>If it's possible for you set register_globals to off in your php.ini configuration settings.</p>
+
+                    <h3>Credits</h3>
+                    <p>The phpMyFAQ Team would like to thank François Maillet and Enrico Fischer (Powerserver-Germany
+                        webHosting & DomainServices) for reporting the vulnerability, and Johannes Schlüter for discovering and
+                        fixing the issue.</p>

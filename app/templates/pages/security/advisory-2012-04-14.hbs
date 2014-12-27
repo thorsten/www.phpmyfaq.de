@@ -1,0 +1,45 @@
+---
+title: Security Advisory 2012-04-14
+canonical: security/advisory-2012-04-14
+layout: security.hbs
+---
+                    <h3>Remote PHP Code Execution Vulnerability in phpMyFAQ 2.7.4 and earlier</h3>
+
+                    <dl class="dl-horizontal">
+                        <dt>Issued on:</dt>
+                        <dd>2012-04-14</dd>
+                        <dt>Software:</dt>
+                        <dd>phpMyFAQ <= 2.7.4</dd>
+                        <dt>Risk:</dt>
+                        <dd>Critical</dd>
+                        <dt>Platforms:</dt>
+                        <dd>all</dd>
+                    </dl>
+
+                    <p>
+                        The phpMyFAQ Team has learned of a serious security issue that has been discovered in our bundled
+                        ImageManager library we use in phpMyFAQ 2.7.
+                    </p>
+
+                    <h3>Description</h3>
+                    <p>
+                        The bundled ImageManager library allows injection of arbitrary PHP code to execute arbitrary PHP
+                        code and upload malware and trojan horses.
+                    </p>
+
+                    <h3>Solution</h3>
+                    <p>
+                        The phpMyFAQ Team has released a new phpMyFAQ version 2.7.5, which incorporates a fixed bundled
+                        ImageManager library. All users of affected phpMyFAQ versions are encouraged to upgrade as soon
+                        as possible to this latest version.
+                    </p>
+
+                    <h3>Workaround</h3>
+                    <p>
+                        There's no workaround except installing phpMyFAQ 2.7.5.
+                    </p>
+
+                    <h3>Credits</h3>
+                    <p>
+                        The phpMyFAQ Team would like to thank <strong>EgiX</strong> for discovering this vulnerability.
+                    </p>

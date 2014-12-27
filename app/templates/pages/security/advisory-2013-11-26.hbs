@@ -1,0 +1,53 @@
+---
+title: Security Advisory 2013-11-18
+canonical: security/advisory-2013-11-18
+layout: security.hbs
+---
+                        <h3>Possible arbitrary PHP code execution vulnerability</h3>
+
+                        <dl class="dl-horizontal">
+                            <dt>Issued on:</dt>
+                            <dd>2013-11-26</dd>
+                            <dt>Software:</dt>
+                            <dd>phpMyFAQ <= 2.8.3</dd>
+                            <dt>Risk:</dt>
+                            <dd>Medium</dd>
+                            <dt>Platforms:</dt>
+                            <dd>all</dd>
+                        </dl>
+
+                        <p>
+                            The phpMyFAQ Team has learned of a security issue that has been discovered in phpMyFAQ 2.8.x.
+                        </p>
+
+                        <h3>Description</h3>
+                        <p>
+                            Secunia noticed while analysing the advisory that authenticated users with "Right to add
+                            attachments" are able to exploit an already publicly known issue in the bundled Ajax File
+                            Manager of phpMyFAQ version 2.8.3, which leads to arbitrary PHP code execution for authenticated
+                            users with the permission "Right to add attachments".
+                        </p>
+
+                        <h3>Solution</h3>
+                        <p>
+                            The phpMyFAQ Team has released a new phpMyFAQ version 2.8.4 which fixes thie vulnerability. All
+                            users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest
+                            version.
+                        </p>
+
+                        <h3>Workaround</h3>
+                        <p>
+                            There's no workaround except installing phpMyFAQ 2.8.3.
+                        </p>
+
+                        <h3>Credits</h3>
+                        <p>
+                            Please check <a href="http://en.securitylab.ru/lab/PT-2013-41">this advisory</a> for further
+                            information about the publicly known issue in the bundled Ajax File Manager.
+                        </p>
+
+                        <h3>Thanks</h3>
+                        <p>
+                            The phpMyFAQ teams would like to thank <a href="http://secunia.com/">Secunia</a> for the
+                            responsible disclosure of this vulnerability.
+                        </p>
