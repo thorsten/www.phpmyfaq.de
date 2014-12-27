@@ -1,0 +1,22 @@
+{{> head ~}}
+
+{{> header ~}}
+
+<section class="documentation section">
+    <div class="container">
+        <h1>{{page.title}}</h1>
+        <div class="row">
+            <div class="col-lg-12">
+
+                {{#markdown}}
+                    {{> body }}
+                {{/markdown ~}}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{{> footer ~}}
+
+{{> scripts ~}}
