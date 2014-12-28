@@ -79,6 +79,11 @@ pre code {
   font-size: 16px;
 }
 
+hr {
+  margin: 10px 0 10px 0 !important;
+  border-color: #222222;
+}
+
 /**
  * Header
  *
@@ -263,37 +268,11 @@ pre code {
 .news {
   padding: 20px 0;
   background: @smoky-white;
-
-  .title {
-    margin-top: 0;
-    color: darken(@color, 30%);
-  }
-  .news-inner {
-    max-width: 800px;
-    background: #fff;
-    padding: 30px;
-    .border-radius(4px);
-    margin: 0 auto;
-
-  }
-  .news-container {
-    max-width: 540px;
-    margin: 0 auto;
-    padding-top: 20px;
-    .border-radius(4px);
-    .news-bubble {
-      background: #ffffff;
-      color: darken(@color, 30%);
-      padding: 30px;
-      margin-bottom: 30px;
-      position: relative;
-      .border-radius(4px);
-    }
+  .row {
     .icon-holder {
       .fa {
         font-size: 56px;
       }
-
     }
   }
 }
