@@ -39,6 +39,7 @@ module.exports = function (grunt) {
         // Project settings
         config: config,
         pkg:    grunt.file.readJSON('package.json'),
+        banner: '/*! phpMyFAQ - http://www.phpmyfaq.de/ - Copyright (c) 2001-2015 Thorsten Rinne - compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
 
 
         // Watches files for changes and runs tasks based on the changed files
@@ -358,6 +359,21 @@ module.exports = function (grunt) {
             }
         },
 
+        // Concats vendor files
+        concat: {
+            options: {
+                banner: '<%= banner %>',
+                stripBanners: true
+            },
+            dist: {
+                src: [
+                    'bower_components/jquery/dist/jquery.min.js',
+                    'bower_components/retinajs/dist/retina.min.js',
+                    'bower_components/bootstrap/dist/js/bootstrap.min.js'
+                ],
+                dest: '<%= config.app %>/assets/js/vendor.js'
+            }
+        },
         // Copies remaining files to places other tasks can use
         copy: {
             dist: {
@@ -393,6 +409,13 @@ module.exports = function (grunt) {
                 cwd: '<%= config.app %>/assets/css',
                 dest: '<%= config.dist %>/assets/css',
                 src: '{,*/}*.css'
+            },
+            javascripts: {
+                expand: true,
+                dot: true,
+                cwd: '<%= config.app %>/assets/js',
+                dest: '<%= config.dist %>/assets/js',
+                src: '{,*/}*.js'
             }
         },
 
@@ -447,7 +470,9 @@ module.exports = function (grunt) {
             ],
             dist: [
                 'less:production',
+                'concat',
                 'copy:styles',
+                'copy:javascripts',
                 'imagemin',
                 'svgmin'
             ]
