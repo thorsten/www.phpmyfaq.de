@@ -375,7 +375,7 @@ module.exports = function (grunt) {
                         ]
                     },
                     {
-                        src: 'node_modules/apache-server-configs/dist/.htaccess',
+                        src: '<%= config.app %>/.htaccess',
                         dest: '<%= config.dist %>/.htaccess'
                     },
                     {
