@@ -2,23 +2,36 @@
 <html class="no-js">
 <head>
     <meta charset="utf-8">
+
     <title>{{site.title}} - {{page.title}}</title>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="language" content="de">
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="{{#if page.description}}{{page.description}}{{else}}{{site.description}}{{/if}}">
     <meta name="author" content="Thorsten Rinne">
     <meta name="robots" content="index, follow, NOODP">
+
     <link rel="canonical" href="{{site.domain}}/{{page.canonical}}">
     <link rel="alternate" hreflang="en" href="{{site.domain}}">
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="{{site.domain}}/favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
-    <!-- build:css(.tmp) assets/css/main.css -->
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <!-- endbuild -->
-    <!-- build:js assets/js/modernizr.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
+    <link rel="stylesheet" href="{{site.domain}}/assets/css/main.css">
+
+    <script src="{{site.domain}}/assets/js/modernizr.js"></script>
+
+    <meta property="og:url" content="{{site.domain}}">
+    <meta property="og:title" content="phpMyFAQ">
+    <meta property="og:image" content="{{site.domain}}/images/logo.png">
+    <meta property="og:site_name" content="phpMyFAQ">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="{{#if page.description}}{{page.description}}{{else}}{{site.description}}{{/if}}">
+
+    <meta name="twitter:url" content="{{site.domain}}">
+    <meta name="twitter:title" content="phpMyFAQ">
+    <meta name="twitter:image" content="{{site.domain}}/images/logo.png">
+    <meta name="twitter:description" content="{{#if page.description}}{{page.description}}{{else}}{{site.description}}{{/if}}">
+
 </head>
 <body>
