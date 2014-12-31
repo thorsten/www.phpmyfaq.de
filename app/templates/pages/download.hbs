@@ -21,27 +21,42 @@ layout: none
 
             <div class="row">
                 <div class="col-lg-offset-1 col-lg-4 text-center">
-                    <a href="http://download.phpmyfaq.de/phpMyFAQ-2.8.18.zip" class="btn btn-block btn-lg btn-default btn-download">
+
+                    <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.stable }}.zip" class="btn btn-block btn-lg btn-default btn-download">
                         <h4>
                             <i class="fa fa-download"></i>
-                            phpMyFAQ 2.8.18 (.zip)
+                            phpMyFAQ {{ versions.stable }} (.zip)
                         </h4>
-                        <p class="small">Size: 6.1 MB<br>Release date: 2014-11-30</p>
+                        <p class="small">
+                            Size: {{ stable.zip.filesize }} MB<br>Release date: {{ versions.stable_released }}
+                        </p>
                     </a>
                     <p class="small">
-                        MD5 hash: <em><a href="http://download.phpmyfaq.de/phpMyFAQ-2.8.18.zip.md5">f3b3ee1925ec778d7fcad3e3846a48cd</a></em>
+                        MD5 hash:
+                        <em>
+                            <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.stable }}.zip.md5">
+                                {{ stable.zip.md5 }}
+                            </a>
+                        </em>
                     </p>
                 </div>
                 <div class="col-lg-4 col-lg-offset-1 text-center">
-                    <a href="http://download.phpmyfaq.de/phpMyFAQ-2.8.18.tar.gz" class="btn btn-block btn-lg btn-default btn-download">
+                    <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.stable }}.tar.gz" class="btn btn-block btn-lg btn-default btn-download">
                         <h4>
                             <i class="fa fa-download"></i>
-                            phpMyFAQ 2.8.18 (.tar.gz)
+                            phpMyFAQ {{ versions.stable }} (.tar.gz)
                         </h4>
-                        <p class="small">Size: 5.42 MB, <br>Release date: 2014-11-30</p>
+                        <p class="small">
+                            Size: {{ stable.targz.filesize }} MB, <br>Release date: {{ versions.stable_released }}
+                        </p>
                     </a>
                     <p class="small">
-                        MD5 hash: <em><a href="http://download.phpmyfaq.de/phpMyFAQ-2.8.18.tar.gz.md5">84c82f328c973de0c850abd72e9586d3</a></em>
+                        MD5 hash:
+                        <em>
+                            <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.stable }}.tar.gz.md5">
+                                {{ stable.targz.md5 }}
+                            </a>
+                        </em>
                     </p>
                 </div>
             </div>
@@ -49,7 +64,8 @@ layout: none
                 <div class="col-lg-12">
                     <p>
                         <span class="label label-info">What's new?</span>
-                        A list of user visible changes are available on our <a href="/changelog#2.8.18">detailed changelog</a>.
+                        A list of user visible changes are available on our <a href="/changelog#{{ versions.stable }}">
+                        detailed changelog</a>.
                     </p>
                     <p>
                         phpMyFAQ is available for free with no additional costs as it's open source software released
@@ -67,27 +83,37 @@ layout: none
 
             <div class="row">
                 <div class="col-lg-offset-1 col-lg-4 text-center">
-                    <a href="http://download.phpmyfaq.de/phpMyFAQ-2.9.0-alpha.zip" class="btn btn-block btn-lg btn-default btn-download">
+                    <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.development }}.zip" class="btn btn-block btn-lg btn-default btn-download">
                         <h4>
                             <i class="fa fa-download"></i>
-                            phpMyFAQ 2.9.0-alpha (.zip)
+                            phpMyFAQ {{ versions.development }} (.zip)
                         </h4>
-                        <p class="small">Size: 4.35 MB<br>Release date: 2014-08-12</p>
+                        <p class="small">Size: {{ development.zip.filesize }} MB<br>Release date: {{ versions.development_released }}</p>
                     </a>
                     <p class="small">
-                        MD5 hash: <em><a href="http://download.phpmyfaq.de/phpMyFAQ-2.8.18.zip.md5">f8981261910137e33dea15994f658ddb</a></em>
+                        MD5 hash:
+                        <em>
+                            <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.stable }}.zip.md5">
+                                {{ development.zip.md5 }}
+                            </a>
+                        </em>
                     </p>
                 </div>
                 <div class="col-lg-4 col-lg-offset-1 text-center">
-                    <a href="http://download.phpmyfaq.de/phpMyFAQ-2.9.0-alpha.tar.gz" class="btn btn-block btn-lg btn-default btn-download">
+                    <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.development }}.tar.gz" class="btn btn-block btn-lg btn-default btn-download">
                         <h4>
                             <i class="fa fa-download"></i>
-                            phpMyFAQ 2.9.0-alpha  (.tar.gz)
+                            phpMyFAQ {{ versions.development }}  (.tar.gz)
                         </h4>
-                        <p class="small">Size: 3.88 MB<br>Release date: 2014-08-12</p>
+                        <p class="small">Size: {{ development.targz.filesize }} MB<br>Release date: {{ versions.development_released }}</p>
                     </a>
                     <p class="small">
-                        MD5 hash: <em><a href="http://download.phpmyfaq.de/phpMyFAQ-2.9.0-alpha.tar.gz.md5">100e17030e503c332988c7ee3b0659d4</a></em>
+                        MD5 hash:
+                        <em>
+                            <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.development }}.tar.gz.md5">
+                                {{ development.targz.md5 }}
+                            </a>
+                        </em>
                     </p>
                 </div>
             </div>
@@ -95,7 +121,7 @@ layout: none
                 <div class="col-lg-12">
                     <p>
                         <span class="label label-info">What's new?</span>
-                        A list of user visible changes are available on our <a href="/changelog#2.8.18">detailed changelog</a>.
+                        A list of user visible changes are available on our <a href="/changelog#{{ versions.stable }}">detailed changelog</a>.
                     </p>
                     <p>
                         phpMyFAQ is available for free with no additional costs as it's open source software released under the
@@ -141,7 +167,7 @@ layout: none
                     <p>You can also check out a specific version of phpMyFAQ from GitHub at:</p>
 
                         <pre>$ git clone git://github.com/thorsten/phpMyFAQ.git
-$ git checkout 2.8.18
+$ git checkout {{ versions.stable }}
 $ composer install
 $ npm install
 $ bower install
@@ -161,3 +187,5 @@ $ grunt</pre>
 {{> footer ~}}
 
 {{> scripts ~}}
+
+<script src="assets/js/download.js"></script>

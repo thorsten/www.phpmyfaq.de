@@ -24,7 +24,7 @@ module.exports = function (grunt) {
         pages:      './app/templates/pages',
         partials:   './app/templates/partials',
         vendor:     './bower_components',
-        expand:     true
+        expand:     true,
     };
 
     // Rewrite snippets
@@ -37,10 +37,26 @@ module.exports = function (grunt) {
     grunt.initConfig({
 
         // Project settings
-        config: config,
-        pkg:    grunt.file.readJSON('package.json'),
-        banner: '/*! phpMyFAQ - http://www.phpmyfaq.de/ - Copyright (c) 2001-2015 Thorsten Rinne - compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+        config:   config,
+        pkg:      grunt.file.readJSON('package.json'),
+        versions: grunt.file.readJSON('./data/versions.json'),
+        banner:   '/*! phpMyFAQ - http://www.phpmyfaq.de/ - Copyright (c) 2001-2015 Thorsten Rinne - compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
 
+        // Fetch external data for downloads
+        curl: {
+            getVersions: {
+                src: 'http://api.phpmyfaq.de/versions',
+                dest: './data/versions.json'
+            },
+            getStableInfo: {
+                src: 'http://download.phpmyfaq.de/info/<%= versions.stable %>',
+                dest: './data/stable.json'
+            },
+            getDevelopmentInfo: {
+                src: 'http://download.phpmyfaq.de/info/<%= versions.development %>',
+                dest: './data/development.json'
+            }
+        },
 
         // Watches files for changes and runs tasks based on the changed files
         watch: {
@@ -96,7 +112,7 @@ module.exports = function (grunt) {
         assemble: {
             options: {
                 flatten: true,
-                data: ['./data/' + grunt.config('env') + '/*.{json,yml}', 'package.json'],
+                data: ['./data/' + grunt.config('env') + '/*.{json,yml}', './data/*.{json,yml}', 'package.json'],
                 plugins: [
                     'assemble-contrib-permalinks'
                 ],
@@ -369,7 +385,8 @@ module.exports = function (grunt) {
                 src: [
                     'bower_components/jquery/dist/jquery.min.js',
                     'bower_components/retinajs/dist/retina.min.js',
-                    'bower_components/bootstrap/dist/js/bootstrap.min.js'
+                    'bower_components/bootstrap/dist/js/bootstrap.min.js',
+                    'bower_components/handlebars/handlebars.min.js'
                 ],
                 dest: '<%= config.app %>/assets/js/vendor.js'
             }
@@ -462,6 +479,7 @@ module.exports = function (grunt) {
         concurrent: {
             server: [
                 'less:development',
+                'concat',
                 'copy:styles'
             ],
             test: [
@@ -491,6 +509,8 @@ module.exports = function (grunt) {
 
         grunt.task.run([
             'clean:server',
+            'fetchVersions',
+            'fetchDownloadInfos',
             'wiredep',
             'concurrent:server',
             'autoprefixer',
@@ -520,6 +540,8 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
+        'fetchVersions',
+        'fetchDownloadInfos',
         'assemble',
         'wiredep',
         'useminPrepare',
@@ -527,7 +549,6 @@ module.exports = function (grunt) {
         'autoprefixer',
         'copy:dist',
         'modernizr',
-        //'rev',
         'usemin',
         'htmlmin'
     ]);
@@ -536,4 +557,14 @@ module.exports = function (grunt) {
         'newer:jshint',
         'build'
     ]);
+
+    grunt.registerTask('fetchVersions', [
+        'curl:getVersions'
+    ]);
+
+    grunt.registerTask('fetchDownloadInfos', [
+        'curl:getStableInfo',
+        'curl:getDevelopmentInfo'
+    ]);
+
 };
