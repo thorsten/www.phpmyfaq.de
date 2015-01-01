@@ -88,7 +88,10 @@ layout: none
                             <i class="fa fa-download"></i>
                             phpMyFAQ {{ versions.development }} (.zip)
                         </h4>
-                        <p class="small">Size: {{ development.zip.filesize }} MB<br>Release date: {{ versions.development_released }}</p>
+                        <p class="small">
+                            Size: {{ development.zip.filesize }} MB<br>
+                            Release date: {{ versions.development_released }}
+                        </p>
                     </a>
                     <p class="small">
                         MD5 hash:
@@ -105,7 +108,10 @@ layout: none
                             <i class="fa fa-download"></i>
                             phpMyFAQ {{ versions.development }}  (.tar.gz)
                         </h4>
-                        <p class="small">Size: {{ development.targz.filesize }} MB<br>Release date: {{ versions.development_released }}</p>
+                        <p class="small">
+                            Size: {{ development.targz.filesize }} MB<br>
+                            Release date: {{ versions.development_released }}
+                        </p>
                     </a>
                     <p class="small">
                         MD5 hash:
@@ -121,11 +127,13 @@ layout: none
                 <div class="col-lg-12">
                     <p>
                         <span class="label label-info">What's new?</span>
-                        A list of user visible changes are available on our <a href="/changelog#{{ versions.stable }}">detailed changelog</a>.
+                        A list of user visible changes are available on our <a href="/changelog#{{ versions.stable }}">
+                        detailed changelog</a>.
                     </p>
                     <p>
-                        phpMyFAQ is available for free with no additional costs as it's open source software released under the
-                        <a target="_blank" href="https://raw.github.com/thorsten/phpMyFAQ/master/LICENSE">Mozilla Public License 2.0</a>
+                        phpMyFAQ is available for free with no additional costs as it's open source software released
+                        under the <a target="_blank" href="https://raw.github.com/thorsten/phpMyFAQ/master/LICENSE">
+                        Mozilla Public License 2.0</a>
                     </p>
                 </div>
             </div>
@@ -136,11 +144,11 @@ layout: none
                     <ul>
                         <li>
                             <a rel="nofollow" target="_blank" href="http://www.ampps.com/">
-                                <img src="assets/images/ampps_logo.png" width="200" height="53" alt="AMMPS" style="float: right">
+                                <img src="/images/ampps_logo.png" width="200" height="53" alt="AMMPS" style="float: right">
                             </a>
                             <a rel="nofollow" target="_blank" href="http://www.ampps.com/" target="_blank">AMPPS</a> is
-                            a free WAMP, MAMP and LAMP and it includes Softaculous Auto-Installer. Developers can install
-                            AMPPS on their Desktops and one click install phpMyFAQ.
+                            a free WAMP, MAMP and LAMP and it includes Softaculous Auto-Installer. Developers can
+                            install AMPPS on their Desktops and one click install phpMyFAQ.
                         </li>
                         <li>
                             <a rel="nofollow" target="_blank" href="http://www.softaculous.com/" target="_blank">
@@ -187,5 +195,3 @@ $ grunt</pre>
 {{> footer ~}}
 
 {{> scripts ~}}
-
-<script src="assets/js/download.js"></script>
