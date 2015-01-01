@@ -24,7 +24,7 @@ module.exports = function (grunt) {
         pages:      './app/templates/pages',
         partials:   './app/templates/partials',
         vendor:     './bower_components',
-        expand:     true,
+        expand:     true
     };
 
     // Rewrite snippets
