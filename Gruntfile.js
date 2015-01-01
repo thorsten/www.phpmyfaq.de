@@ -494,6 +494,19 @@ module.exports = function (grunt) {
                 'imagemin',
                 'svgmin'
             ]
+        },
+
+        // Deployment via FTP
+        'ftp-deploy': {
+            build: {
+                auth: {
+                    host: 'www.phpmyfaq.de',
+                    port: 21,
+                    authKey: 'production'
+                },
+                src: '<%= config.dist %>',
+                dest: '/staging.phpmyfaq.de'
+            }
         }
 
     });
@@ -565,6 +578,12 @@ module.exports = function (grunt) {
     grunt.registerTask('fetchDownloadInfos', [
         'curl:getStableInfo',
         'curl:getDevelopmentInfo'
+    ]);
+
+    grunt.registerTask('deploy', [
+        'newer:jshint',
+        'build',
+        'ftp-deploy'
     ]);
 
 };
