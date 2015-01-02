@@ -191,6 +191,7 @@ hr {
   background: url("../../images/background.png") repeat;
   color: #fff;
   padding-top: 150px;
+  width: 100%;
   .title {
     font-size: 98px;
     color: darken(white, 30%);
@@ -454,5 +455,13 @@ hr {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .promo {
     background: url("../../images/background@2X.png") repeat;
+    width: auto;
+    overflow: auto;
+    h2.title {
+      font-size: 48px;
+    }
+    p.intro {
+      font-size: 18px;
+    }
   }
 }
