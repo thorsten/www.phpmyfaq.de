@@ -170,16 +170,16 @@ layout: none
                     </p>
                     <p>If you have access to Git, you can connect to the repository here:</p>
 
-                    <pre>$ git clone git://github.com/thorsten/phpMyFAQ.git </pre>
+                    <pre><code class="bash">$ git clone git://github.com/thorsten/phpMyFAQ.git</code></pre>
 
                     <p>You can also check out a specific version of phpMyFAQ from GitHub at:</p>
 
-                        <pre>$ git clone git://github.com/thorsten/phpMyFAQ.git
+                        <pre><code class="bash">$ git clone git://github.com/thorsten/phpMyFAQ.git
 $ git checkout {{ versions.stable }}
 $ composer install
 $ npm install
 $ bower install
-$ grunt</pre>
+$ grunt</code></pre>
                 </div>
             </div>
 
@@ -191,6 +191,9 @@ $ grunt</pre>
             </div>
         </div>
     </section>
+
+    <script src="assets/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
 {{> footer ~}}
 

@@ -24,9 +24,9 @@ layout: none
                                 <li>Allocate at least 64MB of memory to each PHP process</li>
                                 <li>Required extensions: GD, JSON, Session, MBString, Filter, XMLWriter, SPL</li>
                                 <li>Recommended configuration:
-<pre>register_globals = off
+<pre><code class="php">register_globals = off
 safe_mode = off (recommended)
-memory_limit = 64M</pre>
+memory_limit = 64M</code></pre>
                                 </li>
                             </ul></li>
                         <li>
@@ -69,9 +69,9 @@ memory_limit = 64M</pre>
                                 If you're running Apache von Windows, you may have to increase of the Apache's stack
                                 size:
                             </p>
-<pre>&lt;IfModule mpm_winnt_module&gt;
+<pre><code class="apache">&lt;IfModule mpm_winnt_module&gt;
 ThreadStackSize 8388608
-&lt;/IfModule&gt;</pre>
+&lt;/IfModule&gt;</code></pre>
                             <p>
                             You should add the code to the <strong>httpd-mpm.conf</strong> file and enable that file in
                             </p>
@@ -118,6 +118,9 @@ ThreadStackSize 8388608
             </div>
         </div>
     </section>
+
+    <script src="assets/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
 {{> footer ~}}
 

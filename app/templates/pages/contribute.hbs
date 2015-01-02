@@ -75,22 +75,19 @@ layout: none
                     <p>
                         Set up your user information with your real name and a working e-mail address:
                     </p>
-<pre>
-$ git config --global user.name "Your Name"
+<pre><code class="bash">$ git config --global user.name "Your Name"
 $ git config --global user.email you@example.com
-$ git config core.autocrlf # if you're on Windows</pre>
+$ git config core.autocrlf # if you're on Windows</code></pre>
                     <h4>How to get the phpMyFAQ source code?</h4>
                     <p>
                         Clone your forked phpMyFAQ repository locally:
                     </p>
-<pre>
-$ git clone git@github.com:USERNAME/phpMyFAQ.git</pre>
+<pre><code class="bash">$ git clone git@github.com:USERNAME/phpMyFAQ.git</code></pre>
                     <p>
                         Add the upstream repository as remote:
                     </p>
-<pre>
-$ cd phpMyFAQ
-$ git remote add upstream git://github.com/thorsten/phpMyFAQ.git</pre>
+<pre><code class="bash">$ cd phpMyFAQ
+$ git remote add upstream git://github.com/thorsten/phpMyFAQ.git</code></pre>
                     <p>
                         Please check our <a href="/docs/standards">coding standards</a> before sending patches or pull
                         requests.
@@ -99,12 +96,11 @@ $ git remote add upstream git://github.com/thorsten/phpMyFAQ.git</pre>
                     <p>
                         After cloning your forked repository, you have to fetch the 3rd party libraries used in phpMyFAQ:
                     </p>
-<pre>
-$ cd phpMyFAQ
+<pre><code class="bash">$ cd phpMyFAQ
 $ curl -s https://getcomposer.org/installer | php
 $ php composer.phar install
 $ npm install
-$ bower install</pre>
+$ bower install</code></pre>
                     <p>
                         Then just start a normal, local <a href="/documentation.2.8.en#2c">phpMyFAQ installation</a>.
                     </p>
@@ -112,20 +108,21 @@ $ bower install</pre>
                         If you changed some JavaScript code, you have to merge the .js files into one with the following
                         grunt task:
                     </p>
-<pre>
-$ grunt</pre>
+<pre><code class="bash">$ grunt</code></pre>
                     <h4>Rebase your Patch</h4>
                     <p>
                         Before submitting your patch, please update your local branch:
                     </p>
-<pre>
-$ git checkout 2.8
+
+<pre><code class="bash">$ git checkout 2.8
 $ git fetch upstream
 $ git merge upstream/2.8
 $ git checkout YOUR_BRANCH_NAME
-$ git rebase 2.8</pre>
+$ git rebase 2.8</code></pre>
+
                     <h4>Make a Pull Request</h4>
                     <p>You can now make a pull request on the phpMyFAQ Github repository.</p>
+
                     <h4>Branches</h4>
                     <ul>
                         <li>
@@ -144,24 +141,27 @@ $ git rebase 2.8</pre>
                             <em>2.0</em>, <em>2.5</em>, <em>2.6</em> and <em>2.7</em> are old, unsupported branches
                         </li>
                     </ul>
+
                     <h3>Hints</h3>
+
                     <h4>Proxy issues with Bower</h4>
                     <p>
                         If you are behind a non-transparent proxy, add 'proxy' and ''https-proxy' settings to ~/.bowerrc.
                         See http://bower.io/docs/config/.
                     </p>
+
                     <h4>Proxy issues with Composer</h4>
                     <p>
                         If you are behind a non-transparent proxy, add the following at the end of composer.json, just
                         before the last }:
                     </p>
-<pre>
-"repositories" : {
-"sourceforge": {
-"type": "vcs",
-"url": "http://git.code.sf.net/p/tcpdf/code"
-}
-}</pre>
+<pre><code class="json">"repositories" : {
+    "sourceforge": {
+        "type": "vcs",
+        "url": "http://git.code.sf.net/p/tcpdf/code"
+    }
+}</code></pre>
+
                     <h3>Contributors</h3>
                     <p>
                         Here's a <a rel="nofollow" href="https://github.com/thorsten/phpMyFAQ/contributors">list of
@@ -171,6 +171,9 @@ $ git rebase 2.8</pre>
             </div>
         </div>
     </section>
+
+    <script src="assets/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
 {{> footer ~}}
 
