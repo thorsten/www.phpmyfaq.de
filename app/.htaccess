@@ -584,7 +584,7 @@ FileETag None
     RedirectPermanent /references.php                   /references
     RedirectPermanent /requirements.php                 /requirements
     RedirectPermanent /roadmap.php                      /
-    RedirectPermanent /security.php                     /security
+    RedirectPermanent /security.php                     /advisories
     RedirectPermanent /team.php                         /imprint
     RedirectPermanent /terms.php                        /terms
     RedirectPermanent /themes.php                       /themes
