@@ -12,10 +12,12 @@
                     {{> body }}
                 {{/markdown ~}}
 
-                <p>
-                    <i class="fa fa-home"></i>
-                    <a href="/news/">Back to the news overview</a>
-                </p>
+                {{#isnt basename "index"}}
+                    <p>
+                        <i class="fa fa-home"></i>
+                        <a href="/news/">Back to the news overview</a>
+                    </p>
+                {{/isnt}}
             </div>
         </div>
     </div>
