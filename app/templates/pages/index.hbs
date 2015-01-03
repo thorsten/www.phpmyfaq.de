@@ -5,17 +5,6 @@ layout: none
 ---
 {{> head ~}}
 
-<!---//Facebook button code-->
-<div id="fb-root"></div>
-<script>(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
 {{> header ~}}
 
     <section class="promo offset-header">
@@ -50,59 +39,6 @@ layout: none
                     </a>
                 </li>
             </ul>
-        </div>
-        <div class="social-media">
-            <div class="social-media-inner container text-center">
-                <ul class="list-inline">
-                    <li class="twitter-follow"><a rel="nofollow" href="https://twitter.com/phpMyFAQ" class="twitter-follow-button"
-                                                  data-show-count="false">Follow @phpMyFAQ</a>
-                        <script>!function (d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                            if (!d.getElementById(id)) {
-                                js = d.createElement(s);
-                                js.id = id;
-                                js.src = p + '://platform.twitter.com/widgets.js';
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }
-                        }(document, 'script', 'twitter-wjs');</script>
-                    </li>
-                    <!--//twitter-follow-->
-                    <li class="twitter-tweet">
-                        <a rel="nofollow" href="https://twitter.com/share" class="twitter-share-button" data-via="phpMyFAQ"
-                           data-hashtags="bootstrap">Tweet</a>
-                        <script>!function (d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                            if (!d.getElementById(id)) {
-                                js = d.createElement(s);
-                                js.id = id;
-                                js.src = p + '://platform.twitter.com/widgets.js';
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }
-                        }(document, 'script', 'twitter-wjs');</script>
-                    </li>
-                    <!--//twitter-tweet-->
-                    <li class="facebook-like">
-                        <div class="fb-like" data-href="http://www.phpmyfaq.de/" data-layout="button_count"
-                             data-action="like" data-show-faces="false" data-share="true">
-
-                        </div>
-                    </li>
-                    <!--//facebook-like-->
-                    <li class="github-star">
-                        <iframe src="http://ghbtns.com/github-btn.html?user=thorsten&repo=phpMyFAQ&type=watch&count=true"
-                                allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20">
-
-                        </iframe>
-                    </li>
-                    <li class="github-fork">
-                        <iframe src="http://ghbtns.com/github-btn.html?user=thorsten&repo=phpMyFAQ&type=fork"
-                                allowtransparency="true" frameborder="0" scrolling="0" width="53" height="20">
-
-                        </iframe>
-                    </li>
-
-                </ul>
-            </div>
         </div>
     </section>
 
