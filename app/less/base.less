@@ -152,9 +152,9 @@ hr {
         font-family: 'Montserrat', sans-serif;
         &.active {
           a {
-            background: @smoky-white;
-            color: @color-2;
-            .border-radius(10px)
+            background: @color-2;
+            color: @color;
+            .border-radius(10px);
           }
         }
         a {
@@ -163,18 +163,10 @@ hr {
           .transition (none);
           font-size: 14px;
           padding: 10px 10px;
-          &:hover {
+          &:hover, &:focus, &:active {
             background: @smoky-white;
             color: @color;
             .border-radius(10px)
-          }
-          &:focus {
-            outline: none;
-            background: none;
-          }
-          &:active {
-            outline: none;
-            background: none;
           }
         }
         &.active {
