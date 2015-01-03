@@ -11,6 +11,10 @@
  *
  */
 
+*, *:before, *:after {
+  .box-sizing();
+}
+
 body {
   font-family: 'Lato', arial, sans-serif;
   color: @text-color;
@@ -44,7 +48,7 @@ a {
     margin-right: 5px;
   }
 
-  &:focus {
+  &:hover, &:focus {
     color: #fff;
   }
 }
@@ -55,7 +59,7 @@ a.btn-cta-primary, .btn-cta-primary {
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
-  &:hover {
+  &:hover, &:focus {
     background: darken(@color, 35%);
     border: 1px solid darken(@color, 35%);
     color: #fff;
@@ -68,7 +72,7 @@ a.btn-cta-secondary, .btn-cta-secondary {
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
-  &:hover {
+  &:hover, &:focus {
     background: darken(@color-2, 5%);
     border: 1px solid darken(@color-2, 5%);
     color: #fff;
@@ -229,7 +233,7 @@ hr {
     }
     a {
       color: darken(@color-2, 20%);
-      &:hover {
+      &:hover, &:focus {
         color: darken(@color-2, 30%);
       }
     }
@@ -451,7 +455,7 @@ hr {
  */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .promo {
-    background: url("../../images/background@2X.png") repeat;
+    background: #333 url("../../images/background@2X.png") repeat;
     width: auto;
     overflow: auto;
     h2.title {
