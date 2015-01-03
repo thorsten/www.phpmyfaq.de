@@ -6,6 +6,7 @@
     $ cd www.phpmyfaq.de
     $ npm install
     $ bower install
+    $ grunt build
     $ grunt serve
     
 ## Build
