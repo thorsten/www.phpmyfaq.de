@@ -3,7 +3,7 @@ title: Security Advisory 2010-12-15
 canonical: security/advisory-2010-12-15
 layout: security.hbs
 ---
-                    <h3>phpmyfaq.de compromised</h3>
+                    <h2>phpmyfaq.de compromised</h2>
 
                     <dl class="dl-horizontal">
                         <dt>Issued on:</dt>
@@ -23,20 +23,20 @@ layout: security.hbs
                         files.
                     </p>
 
-                    <h3>Description</h3>
+                    <h2>Description</h2>
                     <p>
                         The attacker added a backdoor into the file inc/Faq.php in the method getTopTen(). The code was base64
                         encoded and first sent an e-mail to a GMail address and added an entry in the faqconfig table. With this
                         entry, a backdoor was opened to include to include arbitrary PHP code.
                     </p>
 
-                    <h3>Solution</h3>
+                    <h2>Solution</h2>
                     <p>
                         The phpMyFAQ Team will release a new clean phpMyFAQ version 2.6.13. All users of affected phpMyFAQ
                         versions are encouraged to upgrade as soon as possible to this latest version.
                     </p>
 
-                    <h3>Workaround</h3>
+                    <h2>Workaround</h2>
                     <p>
                         If you use phpMyFAQ 2.6.11 or phpMyFAQ 2.6.12 downloaded after december 4th or before december 15th you
                         should change the file inc/Faq.php as soon as possible.

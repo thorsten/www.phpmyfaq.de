@@ -3,7 +3,7 @@ title: Security Advisory 2008-09-11
 canonical: security/advisory-2008-09-11
 layout: security.hbs
 ---
-                    <h3>phpMyFAQ 2.x input sanitization errors (XSS)</h3>
+                    <h2>phpMyFAQ 2.x input sanitization errors (XSS)</h2>
 
                     <dl class="dl-horizontal">
                         <dt>Issued on:</dt>
@@ -18,7 +18,7 @@ layout: security.hbs
 
                     <p>The phpMyFAQ Team has learned of a security issue that has been discovered in phpMyFAQ 2.</p>
 
-                    <h3>Description</h3>
+                    <h2>Description</h2>
                     <p>
                         phpMyFAQ relies on code similar to Popoon's externalinput.php to filter out potential XSS attacks on
                         user-supplied input. This filter, and the original, fail to fully sanitize user data. In particular,
@@ -26,16 +26,16 @@ layout: security.hbs
                         Mozilla Firefox.
                     </p>
 
-                    <h3>Solution</h3>
+                    <h2>Solution</h2>
                     <p>
                         The phpMyFAQ Team has released a new phpMyFAQ version 2.0.8 which fixes these vulnerabilities. All users
                         of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
                     </p>
 
-                    <h3>Workaround</h3>
+                    <h2>Workaround</h2>
                     <p>There's no workaround except installing phpMyFAQ 2.0.8.</p>
 
-                    <h3>Credits</h3>
+                    <h2>Credits</h2>
                     <p>
                         Vulnerability report and proof of concepts by Alexios Fakos. Thanks to Will Drewry for contacting the
                         phpMyFAQ Team. The full advisory can be found

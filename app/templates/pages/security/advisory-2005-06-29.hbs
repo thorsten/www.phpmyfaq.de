@@ -3,7 +3,7 @@ title: Security Advisory 2005-03-06
 canonical: security/advisory-2005-03-06
 layout: security.hbs
 ---
-                        <h3>Execution of arbitrary PHP code in phpMyFAQ version 1.4 and 1.5</h3>
+                        <h2>Execution of arbitrary PHP code in phpMyFAQ version 1.4 and 1.5</h2>
                         <dl class="dl-horizontal">
                             <dt>Issued on:</dt>
                             <dd>2005-06-29</dd>
@@ -19,31 +19,31 @@ layout: security.hbs
                             The phpMyFAQ Team has learned of a serious security issue that has been discovered in our bundled library
                             XML-RPC we use in phpMyFAQ 1.4 and 1.5.</p>
 
-                        <h3>Description</h3>
+                        <h2>Description</h2>
                         <p>
                             The vulnerability is caused due to an unspecified error, which can be exploited to execute arbitrary PHP
                             code via an application using the vulnerable library.
                         </p>
 
-                        <h3>Impact</h3>
+                        <h2>Impact</h2>
                         <p>
                             This issue allows for possible remote code execution.
                         </p>
 
-                        <h3>Solution</h3>
+                        <h2>Solution</h2>
                         <p>
                             The phpMyFAQ Team has released a new phpMyFAQ version 1.4.9 and 1.5.0 RC5, which incorporate a fixed
                             bundled library XML-RPC. All users of affected phpMyFAQ versions are encouraged to upgrade as soon as
                             possible to this latest version.
                         </p>
 
-                        <h3>Workaround</h3>
+                        <h2>Workaround</h2>
                         <p>
                             As a temporary hotfix you can delete your xmlrpcs.php and xmlrpcs.php file in the directory inc/so that
                             your FAQ will not easily allow execution of maliclius XML-RPC method calls.
                         </p>
 
-                        <h3>Credits</h3>
+                        <h2>Credits</h2>
                         <p>
                             Please read this <a href="http://secunia.com/advisories/15852/">advisory</a>, too.
                         </p>

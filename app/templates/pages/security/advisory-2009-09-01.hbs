@@ -3,7 +3,7 @@ title: Security Advisory 2009-09-01
 canonical: security/advisory-2009-09-01
 layout: security.hbs
 ---
-                    <h3>phpMyFAQ 2.x XSS vulnerability</h3>
+                    <h2>phpMyFAQ 2.x XSS vulnerability</h2>
 
                     <dl class="dl-horizontal">
                         <dt>Issued on:</dt>
@@ -18,24 +18,24 @@ layout: security.hbs
 
                     <p>The phpMyFAQ Team has learned of a security issue that has been discovered in phpMyFAQ 2.x</p>
 
-                    <h3>Description</h3>
+                    <h2>Description</h2>
                     <p>
                         When using Microsoft Internet Explorer 6 or 7 phpMyFAQ doesn't sanitize a GET variable in the search page
                         correctly. With a properly crafted URL it is f.e. possible to inject HTML code into the output of the
                         error message, which could result in the leakage of domain cookies (f.e. session identifiers).
                     </p>
 
-                    <h3>Solution</h3>
+                    <h2>Solution</h2>
                     <p>
                         The phpMyFAQ Team has released new phpMyFAQ versions 2.0.17 and 2.5.2 which fix the vulnerability. All
                         users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest
                         version.
                     </p>
 
-                    <h3>Workaround</h3>
+                    <h2>Workaround</h2>
                     <p>There's no workaround except installing phpMyFAQ 2.0.17 or 2.5.2.</p>
 
-                    <h3>Credits</h3>
+                    <h2>Credits</h2>
                     <p>
                         The phpMyFAQ Team would like to thank Or Katz from <a href="http://www.breach.com/">Breach Security</a>
                         and Yair Lapin from the <a href="http://www.huji.ac.il/">Hebrew University of Jerusalem</a> for
