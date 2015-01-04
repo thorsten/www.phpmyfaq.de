@@ -274,6 +274,20 @@ hr {
   }
 }
 
+.h2-numbering {
+  counter-reset: h2;
+
+  h2 {
+    font-size: 16px;
+    &:before {
+      counter-increment: h2;
+      content: counter(h2) ".";
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}
+
 /**
  * News Section on start page
  *
