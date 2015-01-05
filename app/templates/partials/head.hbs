@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="{{#if page.description}}{{page.description}}{{else}}{{site.description}}{{/if}}">
     <meta name="author" content="Thorsten Rinne">
-    <meta name="robots" content="index, follow, NOODP">
+    <meta name="robots" content="{{#if page.robots}}{{page.robots}}{{else}}index, follow, NOODP{{/if}}">
 
     <link rel="canonical" href="{{site.domain}}/{{page.canonical}}">
     <link rel="alternate" hreflang="en" href="{{site.domain}}">

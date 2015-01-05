@@ -150,6 +150,10 @@ module.exports = function (grunt) {
                 src: ['./app/templates/pages/docs/*.{hbs,md}'],
                 dest: './dist/docs/'
             },
+            errors: {
+                src: ['./app/templates/pages/errors/*.{hbs,md}'],
+                dest: './dist/errors/'
+            },
             news: {
                 src: ['./app/templates/pages/news/*.{hbs,md}'],
                 dest: './dist/news/'
