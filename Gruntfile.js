@@ -37,10 +37,11 @@ module.exports = function (grunt) {
     grunt.initConfig({
 
         // Project settings
-        config:   config,
-        pkg:      grunt.file.readJSON('package.json'),
-        versions: grunt.file.readJSON('./data/versions.json'),
-        banner:   '/*! phpMyFAQ - http://www.phpmyfaq.de/ - Copyright (c) 2001-2015 Thorsten Rinne - compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+        config:     config,
+        pkg:        grunt.file.readJSON('package.json'),
+        versions:   grunt.file.readJSON('./data/versions.json'),
+        deployment: grunt.file.readJSON('./data/' + grunt.config('env') + '/deployment.json'),
+        banner:     '/*! phpMyFAQ - http://www.phpmyfaq.de/ - Copyright (c) 2001-2015 Thorsten Rinne - compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
 
         // Fetch external data for downloads
         curl: {
@@ -505,7 +506,7 @@ module.exports = function (grunt) {
                     authKey: 'production'
                 },
                 src: '<%= config.dist %>',
-                dest: '/staging.phpmyfaq.de'
+                dest: '/<%= deployment.remote_path %>'
             }
         }
 
