@@ -1,3 +1,5 @@
 # phpmyfaq.de/
 
 User-agent: *
+
+Sitemap: http://www.phpmyfaq.de/sitemap.xml
