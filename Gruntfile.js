@@ -109,9 +109,10 @@ module.exports = function (grunt) {
         assemble: {
             options: {
                 flatten: true,
-                data: ['./data/' + grunt.config('env') + '/*.{json,yml}', './data/*.{json,yml}', 'package.json'],
-                plugins: [
-                    'assemble-contrib-permalinks'
+                data: [
+                    './data/' + grunt.config('env') + '/*.{json,yml}',
+                    './data/*.{json,yml}',
+                    'package.json'
                 ],
                 helpers: [
                     'handlebars-helper-compose',
@@ -119,22 +120,13 @@ module.exports = function (grunt) {
                     'handlebars-helper-inarray',
                     './app/templates/helpers/*.js'
                 ],
-                assets: './dest/public',
+                assets: './dest/assets',
                 partials: [
                     './app/templates/partials/*.hbs',
                     './app/templates/components/*.hbs'
                 ],
                 layoutdir: './app/templates/layouts/',
                 layout: 'default.hbs',
-                sitemap: {
-                    homepage: '<%= pkg.url %>',
-                    changefreq: 'daily',
-                    priority: '0.8',
-                    robot: true
-                },
-                permalinks: {
-                    structure: ':basename/index.html'
-                },
                 compose: {
                     cwd: '<%= config.devblog %>'
                 }
@@ -497,6 +489,14 @@ module.exports = function (grunt) {
             ]
         },
 
+        // Generate Sitemap
+        sitemap: {
+            dist: {
+                siteRoot: 'dist/',
+                extension: false
+            }
+        },
+
         // Deployment via FTP
         'ftp-deploy': {
             build: {
@@ -564,7 +564,8 @@ module.exports = function (grunt) {
         'copy:dist',
         'modernizr',
         'usemin',
-        'htmlmin'
+        'htmlmin',
+        'sitemap'
     ]);
 
     grunt.registerTask('default', [
