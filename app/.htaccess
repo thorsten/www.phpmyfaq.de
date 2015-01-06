@@ -542,7 +542,7 @@ FileETag None
     RedirectPermanent /dokumentation.1.6.en.php         /docs
     RedirectPermanent /docs/dokumentation.1.6.en.php    /docs
     RedirectPermanent /dokumentation.1.6.de.php         /docs
-    RedirectPermanent /docs/dokumentation.1.6.en.php    /docs
+    RedirectPermanent /docs/dokumentation.1.6.de.php    /docs
     RedirectPermanent /dokumentation.2.0.en.php         /docs/2.0
     RedirectPermanent /docs/dokumentation.2.0.en.php    /docs/2.0
     RedirectPermanent /documentation.2.5.en.php         /docs/2.5
