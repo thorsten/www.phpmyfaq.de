@@ -520,6 +520,7 @@ FileETag None
     RedirectPermanent /contributing.php                 /contribute
     RedirectPermanent /contribute.php                   /contribute
     RedirectPermanent /danke.php                        /thankyou
+    RedirectPermanent /demo                             http://demo.phpmyfaq.de
     RedirectPermanent /development.php                  /development
     RedirectPermanent /dokumentation.php                /documentation
     RedirectPermanent /documentation.php                /documentation

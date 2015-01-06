@@ -139,6 +139,10 @@ module.exports = function (grunt) {
                     }
                 ]
             },
+            demo: {
+                src: ['./app/templates/pages/demo/*.{hbs,md}'],
+                dest: './dist/demo/'
+            },
             docs: {
                 src: ['./app/templates/pages/docs/*.{hbs,md}'],
                 dest: './dist/docs/'
