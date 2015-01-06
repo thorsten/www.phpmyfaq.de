@@ -36,6 +36,30 @@ The site will be generated inside the folder ./dist with http://staging.phpmyfaq
     
 The site will be generated inside the folder ./dist with http://www.phpmyfaq.de as domain.
 
+## Deployment
+
+First, generate a JSON file with the name **.ftppass** in the root folder of this project. The file contains your FTP 
+username and password:
+
+    {
+      "production": {
+        "username": "your-ftp-username",
+        "password": "your-ftp-password"
+      }
+    }
+
+### Staging
+
+The deployment endpoint is defined in ./data/staging/deployment.json, then just simply deploy with this command:
+
+    $ grunt deploy -env=staging
+
+### Production
+
+The deployment endpoint is defined in ./data/production/deployment.json, then just simply deploy with this command:
+
+    $ grunt deploy -env=production
+
 ## Testing
 
 n/a
@@ -46,6 +70,6 @@ n/a
 
 ## License
 
-n/a
+Mozilla Public License 2.0, see LICENSE.md for more information.
 
-(c) 2014-2015 Thorsten Rinne
+© 2014-2015 Thorsten Rinne
