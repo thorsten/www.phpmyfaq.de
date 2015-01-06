@@ -585,7 +585,7 @@ FileETag None
     RedirectPermanent /terms.php                        /terms
     RedirectPermanent /themes.php                       /themes
     RedirectPermanent /imprint.php                      /imprint
-    RedirectPermanent /translation.php                  /
+    RedirectPermanent /translation.php                  /translations
     RedirectPermanent /xml/faqschema.xsd                /
     RedirectPermanent /xml/version.php                  http://api.phpmyfaq.de/versions
     

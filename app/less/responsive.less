@@ -61,18 +61,37 @@
             font-size: 18px;
         }
     }
-    
+
+    .translations {
+        .list-translations {
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+        }
+    }
     
 }
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-      
+@media (min-width: 768px) {
+    .translations {
+        .list-translations {
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+        }
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-
+    .translations {
+        .list-translations {
+            -webkit-column-count: 4;
+            -moz-column-count: 4;
+            column-count: 4;
+        }
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
