@@ -44,7 +44,7 @@
 # | Custom error messages/pages                                        |
 # ----------------------------------------------------------------------
 
-#ErrorDocument 404 /errors/404.html
+ErrorDocument 404 /errors/404.html
 
 # ----------------------------------------------------------------------
 # | Error prevention                                                   |
@@ -599,6 +599,6 @@ FileETag None
 
 <IfModule mod_rewrite.c>
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule (.*) $1.html [L]
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.*)$ $1.html [L]
 </IfModule>
