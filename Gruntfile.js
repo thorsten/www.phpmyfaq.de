@@ -497,7 +497,10 @@ module.exports = function (grunt) {
         sitemap: {
             dist: {
                 siteRoot: 'dist/',
-                extension: false
+                extension: {
+                    required: false,
+                    trailingSlash: false
+                }
             }
         },
 
