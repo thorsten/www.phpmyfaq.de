@@ -493,6 +493,7 @@ FileETag None
     RewriteRule download/phpMyFAQ-development.tar.gz    http://download.phpmyfaq.de/phpMyFAQ-development.tar.gz [R=301,L]
     RewriteRule download/phpMyFAQ-(.+).zip$             http://download.phpmyfaq.de/phpMyFAQ-$1.zip [R=301,L]
     RewriteRule download/phpMyFAQ-(.+).tar.gz$          http://download.phpmyfaq.de/phpMyFAQ-$1.tar.gz [R=301,L]
+    RewriteRule download/phpmyfaq-(.+).tar.gz.md5$      http://download.phpmyfaq.de/phpMyFAQ-$1.tar.gz.md5 [R=301,L]
     RewriteRule download/phpmyfaq-(.+)&version=(.+)     http://download.phpmyfaq.de/phpmyfaq-$1&version=$2 [R=301,L]
 
     # Documentation
