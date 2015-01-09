@@ -533,6 +533,7 @@ FileETag None
     RedirectPermanent /dokumentation.1.2.php            /docs
     RedirectPermanent /dokumentation.1.2.de.php         /docs
     RedirectPermanent /docs/dokumentation.1.2.de.php    /docs
+    RedirectPermanent /dokumentation.1.3.cz.php         /docs
     RedirectPermanent /dokumentation.1.3.de.php         /docs
     RedirectPermanent /docs/dokumentation.1.3.de.php    /docs
     RedirectPermanent /dokumentation.1.3.en.php         /docs
@@ -561,6 +562,7 @@ FileETag None
     RedirectPermanent /docs/documentation.de.php        /documentation
     RedirectPermanent /docs/lizenz.html                 https://raw.github.com/thorsten/phpMyFAQ/master/LICENSE
     RedirectPermanent /docs/lizenz.php                  https://raw.github.com/thorsten/phpMyFAQ/master/LICENSE
+    RedirectPermanent /docs/phpmyfaq.txt                /docs
     RedirectPermanent /donations.php                    /donations
     RedirectPermanent /download.php                     /download
     RedirectPermanent /download_old.php                 /old-downloads
@@ -578,7 +580,10 @@ FileETag None
     RedirectPermanent /mailingliste.php                 http://forum.phpmyfaq.de
     RedirectPermanent /news/bugtraq.php                 https://github.com/thorsten/phpMyFAQ/issues
     RedirectPermanent /news/changelog.php               /changelog
+    RedirectPermanent /news/documentation.php           /documentation
     RedirectPermanent /news/dokumentation.php           /documentation
+    RedirectPermanent /news/dokumentation.1.3.php       /documentation
+    RedirectPermanent /news/dokumentation.1.3.pl.php    /documentation
     RedirectPermanent /documentation.php                /documentation
     RedirectPermanent /referenzen.php                   /references
     RedirectPermanent /references.php                   /references
