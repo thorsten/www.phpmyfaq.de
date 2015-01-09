@@ -522,6 +522,7 @@ FileETag None
     RedirectPermanent /contribute.php                   /contribute
     RedirectPermanent /danke.php                        /thankyou
     RedirectPermanent /demo                             http://demo.phpmyfaq.de
+    RedirectPermanent /download/                        /download
     RedirectPermanent /development.php                  /development
     RedirectPermanent /dokumentation.php                /documentation
     RedirectPermanent /documentation.php                /documentation
