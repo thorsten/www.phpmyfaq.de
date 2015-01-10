@@ -34,12 +34,14 @@ layout: none
                         ensures that the code remains Open Source and under the MPL 2.0 license. All contributions will
                         be added to the <a href="/changelog">changelog</a> and on the phpMyFAQ website.
                     </p>
+
                     <h2>How to contribute?</h2>
                     <p>
                         Contributing to phpMyFAQ is quite easy - just fork the project on
-                        <a rel="nofollow" href="https://github.com/thorsten/phpMyFAQ/">GitHub</a>, work on your copy and
-                        send pull requests.
+                        <a rel="nofollow" target="_blank" href="https://github.com/thorsten/phpMyFAQ/">GitHub</a>, work
+                        on your copy and send pull requests.
                     </p>
+
                     <h3>Setup a phpMyFAQ development environment</h3>
                     <p>
                         Before working on phpMyFAQ, setup an environment with the following software:
@@ -71,6 +73,7 @@ layout: none
                         It's easier to use our Vagrant/Puppet development box, you can download the box at
                         <a rel="nofollow" href="https://github.com/phpMyFAQ/phpmyfaq-vagrant">Github</a>.
                     </p>
+
                     <h3>Configure your Git installation</h3>
                     <p>
                         Set up your user information with your real name and a working e-mail address:
@@ -78,6 +81,7 @@ layout: none
 <pre><code class="bash">$ git config --global user.name "Your Name"
 $ git config --global user.email you@example.com
 $ git config core.autocrlf # if you're on Windows</code></pre>
+
                     <h3>How to get the phpMyFAQ source code?</h3>
                     <p>
                         Clone your forked phpMyFAQ repository locally:
@@ -92,6 +96,7 @@ $ git remote add upstream git://github.com/thorsten/phpMyFAQ.git</code></pre>
                         Please check our <a href="/docs/standards">coding standards</a> before sending patches or pull
                         requests.
                     </p>
+
                     <h3>Fetch 3rd party libraries and install phpMyFAQ</h3>
                     <p>
                         After cloning your forked repository, you have to fetch the 3rd party libraries used in phpMyFAQ:
@@ -108,7 +113,8 @@ $ bower install</code></pre>
                         If you changed some JavaScript code, you have to merge the .js files into one with the following
                         grunt task:
                     </p>
-<pre><code class="bash">$ grunt</code></pre>
+                    <pre><code class="bash">$ grunt</code></pre>
+
                     <h3>Rebase your Patch</h3>
                     <p>
                         Before submitting your patch, please update your local branch:
@@ -146,8 +152,9 @@ $ git rebase 2.8</code></pre>
 
                     <h3>Proxy issues with Bower</h3>
                     <p>
-                        If you are behind a non-transparent proxy, add 'proxy' and ''https-proxy' settings to ~/.bowerrc.
-                        See http://bower.io/docs/config/.
+                        If you are behind a non-transparent proxy, add 'proxy' and ''https-proxy' settings to
+                        ~/.bowerrc. See <a rel="nofollow" target="_blank" href="http://bower.io/docs/config/">this page</a>
+                        for more information.
                     </p>
 
                     <h3>Proxy issues with Composer</h3>
