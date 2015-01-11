@@ -590,6 +590,7 @@ FileETag None
     RedirectPermanent /requirements.php                 /requirements
     RedirectPermanent /roadmap.php                      /
     RedirectPermanent /security.php                     /advisories
+    RedirectPermanent /standards.php                    /docs/standards
     RedirectPermanent /support.php                      /support
     RedirectPermanent /team.php                         /imprint
     RedirectPermanent /terms.php                        /terms
