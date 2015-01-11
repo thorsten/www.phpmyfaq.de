@@ -535,6 +535,7 @@ FileETag None
     RedirectPermanent /docs/dokumentation.1.2.de.php    /docs
     RedirectPermanent /dokumentation.1.3.cz.php         /docs
     RedirectPermanent /dokumentation.1.3.de.php         /docs
+    RedirectPermanent /docs/dokumentation.1.3.cz.php    /docs
     RedirectPermanent /docs/dokumentation.1.3.de.php    /docs
     RedirectPermanent /dokumentation.1.3.en.php         /docs
     RedirectPermanent /docs/dokumentation.1.3.en.php    /docs
@@ -565,6 +566,7 @@ FileETag None
     RedirectPermanent /docs/phpmyfaq.txt                /docs
     RedirectPermanent /donations.php                    /donations
     RedirectPermanent /download.php                     /download
+    RedirectPermanent /download.PHP                     /download
     RedirectPermanent /download_old.php                 /old-downloads
     RedirectPermanent /faq                              http://faq.phpmyfaq.de
     RedirectPermanent /features.php                     /features
@@ -582,6 +584,7 @@ FileETag None
     RedirectPermanent /news/changelog.php               /changelog
     RedirectPermanent /news/documentation.php           /documentation
     RedirectPermanent /news/dokumentation.php           /documentation
+    RedirectPermanent /news/documentation.1.3.php       /documentation
     RedirectPermanent /news/dokumentation.1.3.php       /documentation
     RedirectPermanent /news/dokumentation.1.3.pl.php    /documentation
     RedirectPermanent /documentation.php                /documentation
