@@ -18,35 +18,53 @@ layout: none
                         to the files on the server to update templates and perform upgrades or maintenance.
                     </p>
                     <ul type="square">
-                        <li><strong><a rel="nofollow" href="http://www.php.net">PHP 5.4.4+</a>:</strong>
+                        <li>
+                            <strong><a rel="nofollow" target="_blank" href="http://www.php.net">PHP 5.4.4+</a></strong>
+                            or
+                            <strong><a rel="nofollow" target="_blank" href="http://hhvm.com/">HHVM 3.4.2+</a></strong>
                             <ul type="circle">
-                                <li>We recommend using a PHP accelerator or opcode cache like APC</li>
-                                <li>Allocate at least 64MB of memory to each PHP process</li>
-                                <li>Required extensions: GD, JSON, Session, MBString, Filter, XMLWriter, SPL</li>
-                                <li>Recommended configuration:
-<pre><code class="php">register_globals = off
+                                <li>
+                                    We recommend using a PHP accelerator or opcode cache like Zend OpCache or APC
+                                </li>
+                                <li>
+                                    Allocate at least 64MB of memory to each PHP process
+                                </li>
+                                <li>
+                                    Required extensions: GD, JSON, Session, MBString, Filter, XMLWriter, SPL
+                                </li>
+                                <li>
+                                    Recommended configuration:
+<pre><code class="ini">register_globals = off
 safe_mode = off (recommended)
 memory_limit = 64M</code></pre>
                                 </li>
-                            </ul></li>
+                                <li>
+                                    phpMyFAQ 2.8.x also supports PHP 5.3.3+, but we do not recommend using PHP 5.3 as it
+                                    reached its end of support.
+                                </li>
+                            </ul>
+                        </li>
                         <li>
                             <strong>Database server, e.g.</strong>
                             <ul>
                                 <li>
-                                    <a rel="nofollow" href="http://www.mysql.com">MySQL</a> 5.1.x with ext/mysqli extension
-                                    (recommended: 5.6.x)
+                                    <a rel="nofollow" target="_blank" href="http://www.mysql.com">MySQL</a> 5.1.x with
+                                    ext/mysqli extension (recommended: 5.6.x)
                                 </li>
                                 <li>
-                                    <a rel="nofollow" href="http://www.postgresql.org">PostgreSQL</a> 8.x or 9.x
+                                    <a rel="nofollow" target="_blank" href="http://www.postgresql.org">PostgreSQL</a>
+                                    8.x or 9.x
                                 </li>
                                 <li>
-                                    <a rel="nofollow" href="http://www.microsoft.com/sql/">Microsoft SQL Server</a> 2008, 2012
+                                    <a rel="nofollow" target="_blank" href="http://www.microsoft.com/sql/">Microsoft SQL Server</a>
+                                    2008, 2012
                                 </li>
                                 <li>
-                                    <a rel="nofollow" href="http://www.sqlite.org">SQLite3</a>
+                                    <a rel="nofollow" target="_blank" href="http://www.sqlite.org">SQLite3</a>
                                 </li>
                                 <li>
-                                    <a rel="nofollow" href="http://mariadb.org/">MariaDB</a>
+                                    <a rel="nofollow" target="_blank" href="http://mariadb.org/">MariaDB</a> 5.1.x with
+                                    ext/mysqli extension (recommended: 5.5.x)
                                 </li>
                             </ul>
                         </li>
@@ -54,12 +72,18 @@ memory_limit = 64M</code></pre>
                             <strong>Webserver, e.g.</strong>
                             <ul>
                                 <li>
-                                    <a rel="nofollow" href="http://httpd.apache.org">Apache</a> 2.2.x / 2.4.x with
-                                    mod_rewrite and "AllowOverride All" set
+                                    <a rel="nofollow" target="_blank" href="http://httpd.apache.org">Apache</a>
+                                    2.2.x / 2.4.x with mod_rewrite and "AllowOverride All" set
                                 </li>
-                                <li><a rel="nofollow" href="http://www.microsoft.com/">IIS</a> 7.0+</li>
-                                <li><a rel="nofollow" href="http://www.nginx.net">nginx</a> 1.0+</li>
-                                <li><a rel="nofollow" href="http://www.lighttpd.net">lighttpd</a> 1.4+</li>
+                                <li>
+                                    <a rel="nofollow" target="_blank" href="http://www.microsoft.com/">IIS</a> 7.0+
+                                </li>
+                                <li>
+                                    <a rel="nofollow" target="_blank" href="http://www.nginx.net">nginx</a> 1.0+
+                                </li>
+                                <li>
+                                    <a rel="nofollow" target="_blank" href="http://www.lighttpd.net">lighttpd</a> 1.4+
+                                </li>
                             </ul>
                             <p>
                                 We recommend enabling content compression to speed up the delivery of HTML, CSS and
@@ -70,12 +94,12 @@ memory_limit = 64M</code></pre>
                                 size:
                             </p>
 <pre><code class="apache">&lt;IfModule mpm_winnt_module&gt;
-ThreadStackSize 8388608
+    ThreadStackSize 8388608
 &lt;/IfModule&gt;</code></pre>
                             <p>
                             You should add the code to the <strong>httpd-mpm.conf</strong> file and enable that file in
                             </p>
-                            <pre>Include conf/extra/httpd-mpm.conf</pre>
+                            <pre><code class="apache">Include conf/extra/httpd-mpm.conf</code></pre>
                         </li>
                         <li>
                             <strong>Operating system support</strong>
