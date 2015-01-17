@@ -1,5 +1,6 @@
 ---
 title: Security Advisory 2005-09-23
+description: SQL injection, takeover, path disclosure, remote code execution in phpMyFAQ 1.5.x
 canonical: security/advisory-2005-09-23
 layout: security.hbs
 ---
@@ -15,21 +16,23 @@ layout: security.hbs
                         <dd>all</dd>
                     </dl>
 
-                    <p>The phpMyFAQ Team has learned of a serious security issue that has been discovered in phpMyFAQ 1.5.</p>
+                    <p>
+                        The phpMyFAQ Team has learned of a serious security issue that has been discovered in phpMyFAQ 1.5.
+                    </p>
 
                     <h2>Description</h2>
                     <p>
-                        If magic quotes are off there's a SQL injection when sending a forgotten password. It's possible to
-                        overwrite the admin password and to take over the whole system. In some files in the admin section
-                        there are some cross site scripting vulnerabilities. In the public frontend it's possible to include
-                        arbitrary php files.
+                        If magic quotes are off there's a SQL injection when sending a forgotten password. It's possible
+                        to overwrite the admin password and to take over the whole system. In some files in the admin
+                        section there are some cross site scripting vulnerabilities. In the public frontend it's
+                        possible to include arbitrary PHP files.
                     </p>
 
                     <h2>Solution</h2>
                     <p>
-                        The phpMyFAQ Team has released a new phpMyFAQ version 1.5.2 which fixes these vulnerabilities. All
-                        users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest
-                        version.
+                        The phpMyFAQ Team has released a new phpMyFAQ version 1.5.2 which fixes these vulnerabilities.
+                        All users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this
+                        latest version.
                     </p>
 
                     <h2>Workaround</h2>
@@ -42,7 +45,8 @@ layout: security.hbs
                         Thanks to <strong>Christian Ney</strong> for the hint about the public exploit.
                     </p>
                     <p>
-                        We would like to put emphasis on the disappointment we feel when a bugreporter does not contact the
-                        authors of a software first, before posting any exploits. The common way to report this, is to give
-                        the developers a reasonable amount of time to respond to an exploit before it is made public.
+                        We would like to put emphasis on the disappointment we feel when a bugreporter does not contact
+                        the authors of a software first, before posting any exploits. The common way to report this, is
+                        to give the developers a reasonable amount of time to respond to an exploit before it is made
+                        public.
                     </p>

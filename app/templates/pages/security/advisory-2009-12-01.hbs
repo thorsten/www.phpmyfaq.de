@@ -1,5 +1,6 @@
 ---
 title: Security Advisory 2009-12-01
+description: phpMyFAQ 2.5.x XSS vulnerabilities
 canonical: security/advisory-2009-12-01
 layout: security.hbs
 ---
@@ -16,23 +17,30 @@ layout: security.hbs
                         <dd>all</dd>
                     </dl>
 
-                    <p>The phpMyFAQ Team has learned of multiple security issues that have been discovered in phpMyFAQ 2.5.x</p>
+                    <p>
+                        The phpMyFAQ Team has learned of multiple security issues that have been discovered in phpMyFAQ
+                        2.5.x
+                    </p>
 
                     <h2>Description</h2>
                     <p>
-                        When using Microsoft Internet Explorer 6 or 7 phpMyFAQ doesn't sanitize various variables in different
-                        pages correctly. With a properly crafted URL it is e.g. possible to inject JavaScript code into the
-                        output of a page, which could result in the leakage of domain cookies (f.e. session identifiers).
+                        When using Microsoft Internet Explorer 6 or 7 phpMyFAQ doesn't sanitize various variables in
+                        different pages correctly. With a properly crafted URL it is e.g. possible to inject JavaScript
+                        code into the output of a page, which could result in the leakage of domain cookies (f.e.
+                        session identifiers).
                     </p>
 
                     <h2>Solution</h2>
                     <p>
-                        The phpMyFAQ Team has released new phpMyFAQ version 2.5.5 which fix the vulnerability. All users of
-                        affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+                        The phpMyFAQ Team has released new phpMyFAQ version 2.5.5 which fix the vulnerability. All users
+                        of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest
+                        version.
                     </p>
 
                     <h2>Workaround</h2>
-                    <p>There's no workaround except installing phpMyFAQ 2.5.5.</p>
+                    <p>
+                        There's no workaround except installing phpMyFAQ 2.5.5.
+                    </p>
 
                     <h2>Credits</h2>
                     <p>

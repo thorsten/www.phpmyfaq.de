@@ -1,5 +1,6 @@
 ---
 title: Security Advisory 2005-08-15
+description: Remote PHP Code Injection Vulnerability in phpMyFAQ 1.4.x and 1.5.x
 canonical: security/advisory-2005-08-15
 layout: security.hbs
 ---
@@ -17,33 +18,35 @@ layout: security.hbs
                     </dl>
 
                     <p>
-                        The phpMyFAQ Team has learned of a serious security issue that has been discovered in our bundled
-                        library XML-RPC we use in phpMyFAQ 1.4 and 1.5.
+                        The phpMyFAQ Team has learned of a serious security issue that has been discovered in our
+                        bundled library XML-RPC we use in phpMyFAQ 1.4 and 1.5.
                     </p>
 
                     <h2>Description</h2>
                     <p>
-                        The bundled XML-RPC library allow injection of arbitrary PHP code into eval() statements. This is caused
-                        by an improper handling of XMLRPC requests and responses that are malformed in a certain way.
+                        The bundled XML-RPC library allow injection of arbitrary PHP code into eval() statements. This
+                        is caused by an improper handling of XMLRPC requests and responses that are malformed in a
+                        certain way.
                     </p>
 
                     <h2>Solution</h2>
                     <p>
-                        The phpMyFAQ Team has released a new phpMyFAQ version 1.4.11 and 1.5.0 RC7, which incorporate a fixed
-                        bundled library XML-RPC. All users of affected phpMyFAQ versions are encouraged to upgrade as soon as
-                        possible to this latest version.
+                        The phpMyFAQ Team has released a new phpMyFAQ version 1.4.11 and 1.5.0 RC7, which incorporate a
+                        fixed bundled library XML-RPC. All users of affected phpMyFAQ versions are encouraged to upgrade
+                        as soon as possible to this latest version.
                     </p>
 
                     <h2>Workaround</h2>
                     <p>
-                        As a temporary hotfix you can delete your xmlrpc.php and xmlrpcs.php file in the directory inc/ so that
-                        your FAQ will not easily allow execution of maliclius XML-RPC method calls.
+                        As a temporary hotfix you can delete your xmlrpc.php and xmlrpcs.php file in the directory inc/
+                        so that your FAQ will not easily allow execution of maliclius XML-RPC method calls.
                     </p>
 
                     <h2>Credits</h2>
                     <p>
                         The phpMyFAQ Team would like to thank Stefan Esser and the
-                        <a href="http://www.hardened-php.net">Hardened-PHP Project</a> for discovering this vulnerability. The
-                        Hardened-PHP Project has also released a <a href="http://www.hardened-php.net/advisory_152005.67.html">
+                        <a rel="nofollow" target="_blank" href="http://www.hardened-php.net">Hardened-PHP Project</a>
+                        for discovering this vulnerability. The Hardened-PHP Project has also released a
+                        <a rel="nofollow" target="_blank" href="http://www.hardened-php.net/advisory_152005.67.html">
                         more detailed advisory</a>.
                     </p>
