@@ -1,5 +1,6 @@
 ---
 title: Security Advisory 2013-11-18
+description: Possible arbitrary PHP code execution vulnerability
 canonical: security/advisory-2013-11-18
 layout: security.hbs
 ---
@@ -17,22 +18,23 @@ layout: security.hbs
                         </dl>
 
                         <p>
-                            The phpMyFAQ Team has learned of a security issue that has been discovered in phpMyFAQ 2.8.x.
+                            The phpMyFAQ Team has learned of a security issue that has been discovered in phpMyFAQ
+                            2.8.x.
                         </p>
 
                         <h2>Description</h2>
                         <p>
                             Secunia noticed while analysing the advisory that authenticated users with "Right to add
                             attachments" are able to exploit an already publicly known issue in the bundled Ajax File
-                            Manager of phpMyFAQ version 2.8.3, which leads to arbitrary PHP code execution for authenticated
-                            users with the permission "Right to add attachments".
+                            Manager of phpMyFAQ version 2.8.3, which leads to arbitrary PHP code execution for
+                            authenticated users with the permission "Right to add attachments".
                         </p>
 
                         <h2>Solution</h2>
                         <p>
-                            The phpMyFAQ Team has released a new phpMyFAQ version 2.8.4 which fixes thie vulnerability. All
-                            users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest
-                            version.
+                            The phpMyFAQ Team has released a new phpMyFAQ version 2.8.4 which fixes thie vulnerability.
+                            All users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to
+                            this latest version.
                         </p>
 
                         <h2>Workaround</h2>

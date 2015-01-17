@@ -1,5 +1,6 @@
 ---
 title: Security Advisory 2014-02-04
+description: phpMyFAQ vulnerable to XSS and CSRF
 canonical: security/advisory-2014-02-04
 layout: security.hbs
 ---
@@ -17,22 +18,23 @@ layout: security.hbs
                         </dl>
 
                         <p>
-                            The phpMyFAQ Team has learned of security issues that have been discovered in phpMyFAQ 2.8.5 and
-                            earlier. phpMyFAQ contains cross-site request forgery and cross-site scripting vulnerabilities.
+                            The phpMyFAQ Team has learned of security issues that have been discovered in phpMyFAQ 2.8.5
+                            and earlier. phpMyFAQ contains cross-site request forgery and cross-site scripting
+                            vulnerabilities.
                         </p>
 
                         <h2>Description</h2>
                         <p>
-                            An arbitrary script may be executed on the user's Internet Explorer when using an older version
-                            of the browser. If a user views a malicious page while logged in, settings may be changed
-                            unintentionally.
+                            An arbitrary script may be executed on the user's Internet Explorer when using an older
+                            version of the browser. If a user views a malicious page while logged in, settings may be
+                            changed unintentionally.
                         </p>
 
                         <h2>Solution</h2>
                         <p>
-                            The phpMyFAQ Team has released a new phpMyFAQ version 2.8.6 which fixes thie vulnerability. All
-                            users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest
-                            version. Internet Explorer user are save with version 10 or later.
+                            The phpMyFAQ Team has released a new phpMyFAQ version 2.8.6 which fixes thie vulnerability.
+                            All users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to
+                            this latest version. Internet Explorer user are save with version 10 or later.
                         </p>
 
                         <h2>Workaround</h2>
@@ -42,12 +44,16 @@ layout: security.hbs
 
                         <h2>Credits</h2>
                         <ul>
-                            <li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0813">CVE-2014-0813</a></li>
-                            <li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0814">CVE-2014-0814</a></li>
+                            <li>
+                                <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0813">CVE-2014-0813</a>
+                            </li>
+                            <li>
+                                <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0814">CVE-2014-0814</a>
+                            </li>
                         </ul>
 
                         <h2>Thanks</h2>
                         <p>
-                            The phpMyFAQ teams would like to thank <a href="https://www.jpcert.or.jp/english/">JPCERT Coordination Center</a>
-                            for the responsible disclosure of this vulnerability.
+                            The phpMyFAQ teams would like to thank <a rel="nofollow" target="_blank" href="https://www.jpcert.or.jp/english/">
+                            JPCERT Coordination Center</a> for the responsible disclosure of this vulnerability.
                         </p>

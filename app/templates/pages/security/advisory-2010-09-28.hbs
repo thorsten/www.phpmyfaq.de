@@ -1,5 +1,6 @@
 ---
 title: Security Advisory 2010-09-28
+description: phpMyFAQ 2.6.x XSS vulnerabilities
 canonical: security/advisory-2010-09-28
 layout: security.hbs
 ---
@@ -16,19 +17,30 @@ layout: security.hbs
                         <dd>all</dd>
                     </dl>
 
-                    <p>The phpMyFAQ Team has learned of a security issue that have been discovered in phpMyFAQ 2.6.x</p>
+                    <p>
+                        The phpMyFAQ Team has learned of a security issue that have been discovered in phpMyFAQ 2.6.x
+                    </p>
 
                     <h2>Description</h2>
-                    <p>phpMyFAQ doesn't sanitize some variables in different pages correctly. With a properly crafted URL it is
-                        e.g. possible to inject JavaScript code into the output of a page, which could result in the leakage of
-                        domain cookies (f.e. session identifiers).</p>
+                    <p>
+                        phpMyFAQ doesn't sanitize some variables in different pages correctly. With a properly crafted
+                        URL it is e.g. possible to inject JavaScript code into the output of a page, which could result
+                        in the leakage of domain cookies (f.e. session identifiers).
+                    </p>
 
                     <h2>Solution</h2>
-                    <p>The phpMyFAQ Team has released new phpMyFAQ version 2.6.9 which fix the vulnerability. All users of
-                        affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.</p>
+                    <p>
+                        The phpMyFAQ Team has released new phpMyFAQ version 2.6.9 which fix the vulnerability. All users
+                        of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest
+                        version.
+                    </p>
 
                     <h2>Workaround</h2>
-                    <p>There's no workaround except installing phpMyFAQ 2.6.9.</p>
+                    <p>
+                        There's no workaround except installing phpMyFAQ 2.6.9.
+                    </p>
 
                     <h2>Credits</h2>
-                    <p>The phpMyFAQ Team would like to thank Yam Mesicka for reporting the vulnerability.</p>
+                    <p>
+                        The phpMyFAQ Team would like to thank Yam Mesicka for reporting the vulnerability.
+                    </p>

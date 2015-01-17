@@ -1,5 +1,6 @@
 ---
 title: Security Advisory 2014-09-16
+description: Multiple security vulnerabilities in phpMyFAQ 2.8
 canonical: security/advisory-2014-09-16
 layout: security.hbs
 ---
@@ -17,8 +18,8 @@ layout: security.hbs
                         </dl>
 
                         <p>
-                            The phpMyFAQ Team has learned of security issues that have been discovered in phpMyFAQ 2.8.12 and
-                            earlier:
+                            The phpMyFAQ Team has learned of security issues that have been discovered in phpMyFAQ
+                            2.8.12 and earlier:
                         </p>
                         <ul>
                             <li>SQL Injection</li>
@@ -34,12 +35,12 @@ layout: security.hbs
                         <h2>Description</h2>
                         <ul>
                             <li>
-                                phpMyFAQ 2.8.12 is containing a SQL Injection vulnerability through the restore function.
-                                This functionality is only executable by admin users with special permissions.
+                                phpMyFAQ 2.8.12 is containing a SQL Injection vulnerability through the restore
+                                function. This functionality is only executable by admin users with special permissions.
                             </li>
                             <li>
-                                The application containing cross site scripting and content spoofing vulnerabilities through
-                                flash files bundled with TinyMCE and Ajax FileManager plugins.
+                                The application containing cross site scripting and content spoofing vulnerabilities
+                                through Flash files bundled with TinyMCE and Ajax FileManager plugins.
                             </li>
                             <li>
                                 The bundled TinyMCE Editor (v3.5.11) containing a DOM based stored cross site scripting
@@ -49,31 +50,31 @@ layout: security.hbs
                                 The "delete user" functionality of phpMyFAQ 2.8.12 is containing a CSRF vulnerability.
                             </li>
                             <li>
-                                An attacker can delete any open question through another CSRF vulnerability because of the
-                                lack of a CSRF token.
+                                An attacker can delete any open question through another CSRF vulnerability because of
+                                the lack of a CSRF token.
                             </li>
                             <li>
-                                The check on "download an attachment" permissions is not working correct, so that anyone can
-                                download attachments.
+                                The check on "download an attachment" permissions is not working correct, so that anyone
+                                can download attachments.
                             </li>
                             <li>
                                 An admin having privilege to delete any FAQ multi-site master instance.
                             </li>
                             <li>
-                                The application containing an improper Captcha implementation, as a result an attacker can
-                                replay the request to bypass the Captcha protections on forms.
+                                The application containing an improper Captcha implementation, as a result an attacker
+                                can replay the request to bypass the Captcha protections on forms.
                             </li>
                             <li>
-                                Administrator is able to view information about specific user session with unfiltered IPs
-                                and user agents.
+                                Administrator is able to view information about specific user session with unfiltered
+                                IPs and user agents.
                             </li>
                         </ul>
 
                         <h2>Solution</h2>
                         <p>
                             The phpMyFAQ Team has released phpMyFAQ version 2.8.13 which fixes the vulnerabilities. All
-                            users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest
-                            version.
+                            users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this
+                            latest version.
                         </p>
 
                         <h2>Workaround</h2>
@@ -93,6 +94,7 @@ layout: security.hbs
 
                         <h2>Thanks</h2>
                         <p>
-                            The phpMyFAQ teams would like to thank Nikhil Srivastava, CTO at <a href="http://www.techdefencelabs.com/">Techdefence Labs</a>
+                            The phpMyFAQ teams would like to thank Nikhil Srivastava, CTO at
+                            <a rel="nofollow" target="_blank" href="http://www.techdefencelabs.com/">Techdefence Labs</a>
                             and Jinen Patel for the responsible disclosure of these vulnerabilities.
                         </p>
