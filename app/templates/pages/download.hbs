@@ -173,7 +173,7 @@ layout: none
                 </div>
             </div>
 
-            <h2>Git</h2>
+            <h2>Installation via Git</h2>
             <div class="row">
                 <div class="col-lg-12">
                     <p>
@@ -186,11 +186,22 @@ layout: none
 
                     <pre><code class="bash">$ git clone git://github.com/thorsten/phpMyFAQ.git</code></pre>
 
-                    <p>You can also check out a specific version of phpMyFAQ from GitHub at:</p>
+                    <p>You can also check out the stable version of phpMyFAQ from GitHub at:</p>
 
                         <pre><code class="bash">$ git clone git://github.com/thorsten/phpMyFAQ.git
 $ git checkout {{ versions.stable }}
-$ composer install
+$ curl -s https://getcomposer.org/installer | php
+$ php composer.phar install
+$ npm install
+$ bower install
+$ grunt</code></pre>
+
+                    <p>You can also check out the development version of phpMyFAQ from GitHub at:</p>
+
+                        <pre><code class="bash">$ git clone git://github.com/thorsten/phpMyFAQ.git
+$ git checkout {{ versions.development }}
+$ curl -s https://getcomposer.org/installer | php
+$ php composer.phar install
 $ npm install
 $ bower install
 $ grunt</code></pre>
