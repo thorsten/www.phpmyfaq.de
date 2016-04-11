@@ -1,0 +1,55 @@
+---
+title: Security Advisory 2016-04-11
+description: RCE via CSRF in phpMyFAQ
+canonical: security/advisory-2016-04-11
+layout: security.hbs
+---
+<h2>RCE via CSRF in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+    <dt>Issued on:</dt>
+    <dd>2016-04-11</dd>
+    <dt>Software:</dt>
+    <dd>phpMyFAQ &lt;= 2.8.26 and phpMyFAQ &lt;= 2.9.0-RC2</dd>
+    <dt>Risk:</dt>
+    <dd>High</dd>
+    <dt>Platforms:</dt>
+    <dd>all</dd>
+</dl>
+
+<p>
+    The phpMyFAQ Team has learned of a security issue that have been discovered in phpMyFAQ 2.8.26 and 2.9.0-RC2 and
+    earlier. phpMyFAQ contains a cross-site request forgery vulnerability.
+</p>
+
+<h2>Description</h2>
+<p>
+    The vulnerability exists due to application does not properly verify origin of HTTP requests in "Interface
+    Translation" functionality. A remote unauthenticated attacker can create a specially crafted malicious web page with
+    CSRF exploit, trick a logged-in administrator to visit the page, spoof the HTTP request, as if it was coming from the
+    legitimate user, inject and execute arbitrary PHP code on the target system with privileges of the webserver.
+</p>
+
+<h2>Solution</h2>
+<p>
+    The phpMyFAQ Team has released the new phpMyFAQ versions 2.8.27 and 2.9.0-RC3 which fix the vulnerability. All users
+    of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+    There's no workaround except installing phpMyFAQ 2.8.27 and 2.9.0-RC3.
+</p>
+
+<h2>Credits</h2>
+<ul>
+    <li>
+        <a href="https://www.htbridge.com/advisory/HTB23300">HTB23300 Security Advisory</a>
+    </li>
+</ul>
+
+<h2>Thanks</h2>
+<p>
+    The phpMyFAQ teams would like to thank <a rel="nofollow" target="_blank" href="https://www.htbridge.com/">High-Tech
+    Bridge Security Research Lab</a> for the responsible disclosure of this vulnerability.
+</p>
