@@ -106,9 +106,9 @@ $ curl -s https://getcomposer.org/installer | php
 $ php composer.phar install
 $ npm install
 $ bower install
-$ grunt</code></pre>
+$ grunt build</code></pre>
                     <p>
-                        Then just start a normal, local <a href="/docs/2.8#2c">phpMyFAQ installation</a>.
+                        Then just start a normal, local <a href="/docs/2.9#2c">phpMyFAQ installation</a>.
                     </p>
                     <p>
                         If you changed some JavaScript code, you have to merge the .js files into one with the following
@@ -121,11 +121,11 @@ $ grunt</code></pre>
                         Before submitting your patch, please update your local branch:
                     </p>
 
-<pre><code class="bash">$ git checkout 2.8
+<pre><code class="bash">$ git checkout 2.9
 $ git fetch upstream
-$ git merge upstream/2.8
+$ git merge upstream/2.9
 $ git checkout YOUR_BRANCH_NAME
-$ git rebase 2.8</code></pre>
+$ git rebase 2.9</code></pre>
 
                     <h3>Make a Pull Request</h3>
                     <p>You can now make a pull request on the phpMyFAQ Github repository.</p>
@@ -134,18 +134,20 @@ $ git rebase 2.8</code></pre>
                     <ul>
                         <li>
                             <span class="label label-success">Maintainance</span>
-                            <em>2.8</em> is the stable branch for bugfixes
+                            <em>2.9</em> is the stable branch for bugfixes
                         </li>
                         <li>
                             <span class="label label-success">Development</span>
-                            <em>2.9</em> is the development branch for new features based on 2.8 code
+                            <em>2.10</em> is the development branch for new features based on 2.9 code
                         </li>
                         <li>
                             <span class="label label-success">Development</span>
-                            <em>master</em> is the development branch for the Symfony2 based phpMyFAQ 3.0
+                            <em>master</em> is the development branch for the Symfony 3 and Twig based phpMyFAQ 3.0 for
+                            PHP 7 and HHVM only
                         </li>
                         <li><span class="label label-danger">Unsupported</span>
-                            <em>2.0</em>, <em>2.5</em>, <em>2.6</em> and <em>2.7</em> are old, unsupported branches
+                            <em>2.0</em>, <em>2.5</em>, <em>2.6</em>, <em>2.7</em> and <em>2.8</em> are old, unsupported
+                            branches
                         </li>
                     </ul>
 
