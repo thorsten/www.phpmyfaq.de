@@ -1,0 +1,53 @@
+---
+title: Security Advisory 2016-05-31
+description: Stored XSS in phpMyFAQ
+canonical: security/advisory-2016-05-31
+layout: security.hbs
+---
+<h2>Stored XSS in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+    <dt>Issued on:</dt>
+    <dd>2016-05-31</dd>
+    <dt>Software:</dt>
+    <dd>phpMyFAQ &lt;= 2.8.28 and phpMyFAQ &lt;= 2.9.0</dd>
+    <dt>Risk:</dt>
+    <dd>High</dd>
+    <dt>Platforms:</dt>
+    <dd>all</dd>
+</dl>
+
+<p>
+    The phpMyFAQ Team has learned of a security issue that have been discovered in phpMyFAQ 2.8.28 and 2.9.0 and
+    earlier. phpMyFAQ contains a stored vulnerability.
+</p>
+
+<h2>Description</h2>
+<p>
+    phpMyFAQ relies on PHPs filter_input() function with FILTER_VALIDATE_URL flag is used to validate URLs inside the
+    functionality to save FAQs. But this function doesn’t protect against XSS.
+</p>
+
+<h2>Solution</h2>
+<p>
+    The phpMyFAQ Team has released the new phpMyFAQ versions 2.8.29 and 2.9.1 which fix the vulnerability. All users
+    of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+    There's no workaround except installing phpMyFAQ 2.8.29 and 2.9.1.
+</p>
+
+<h2>Credits</h2>
+<ul>
+    <li>
+        <a href="http://security.szurek.pl/private/phpmyfaq-290-stored-xss.html">Security Advisory by Kacper Szurek</a>
+    </li>
+</ul>
+
+<h2>Thanks</h2>
+<p>
+    The phpMyFAQ teams would like to thank <a rel="nofollow" target="_blank" href="http://security.szurek.pl/">Kacper Szurek</a>
+    for the responsible disclosure of this vulnerability.
+</p>
