@@ -576,7 +576,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('default', [
-        'newer:jshint',
+        //'newer:jshint',
         'build'
     ]);
 
@@ -590,7 +590,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('deploy', [
-        'newer:jshint',
+        //'newer:jshint',
         'build',
         'ftp-deploy'
     ]);
