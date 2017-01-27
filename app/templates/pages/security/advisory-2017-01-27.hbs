@@ -1,0 +1,51 @@
+---
+title: Security Advisory 2017-01-27
+description: Execution of arbitrary PHP code in phpMyFAQ version 2.9
+canonical: security/advisory-2017-01-27
+layout: security.hbs
+---
+<h2>Execution of arbitrary PHP code in phpMyFAQ version 2.9</h2>
+<dl class="dl-horizontal">
+    <dt>Issued on:</dt>
+    <dd>2017-01-27</dd>
+    <dt>Software:</dt>
+    <dd>phpMyFAQ version <= 2.9.5</dd>
+    <dt>Risk:</dt>
+    <dd>critical</dd>
+    <dt>Platforms:</dt>
+    <dd>all</dd>
+</dl>
+
+<p>
+    The phpMyFAQ Team has learned of a serious security issue that has been discovered in our
+    file upload functionality in phpMyFAQ 2.9.
+</p>
+
+<h2>Description</h2>
+<p>
+    The vulnerability is caused due to missing CSRF and file type check, which can be exploited to execute
+    arbitrary PHP code.
+</p>
+
+<h2>Impact</h2>
+<p>
+    This issue allows for possible remote code execution.
+</p>
+
+<h2>Solution</h2>
+<p>
+    The phpMyFAQ Team has released the new phpMyFAQ versions 2.89.6 which fix the vulnerability. All users
+    of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+    There's no workaround except installing phpMyFAQ 2.9.6.
+</p>
+
+<h2>Credits</h2>
+<p>
+    The phpMyFAQ teams would like to thank Clifford Trigo from
+    <a rel="nofollow" target="_blank" href="http://invalidwebsecurity.info/">Invalid Web Security</a> for the
+    responsible disclosure of this vulnerability.
+</p>
