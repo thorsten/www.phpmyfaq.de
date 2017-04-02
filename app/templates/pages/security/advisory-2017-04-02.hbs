@@ -1,0 +1,45 @@
+---
+title: Security Advisory 2017-04-02
+description: Stored XSS in phpMyFAQ
+canonical: security/advisory-2017-04-02
+layout: security.hbs
+---
+<h2>Stored XSS in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2017-04-02</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 2.9.6</dd>
+  <dt>Risk:</dt>
+  <dd>High</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of a security issue that have been discovered in phpMyFAQ 2.9.6 and
+  earlier. phpMyFAQ contains a stored vulnerability.
+</p>
+
+<h2>Description</h2>
+<p>
+  phpMyFAQ relies on PHPs filter_input() function with FILTER_SANITIZE_STRING flag is used to sanitize strings inside
+  the functionality to save new FAQs. But this function doesn’t protect against XSS.
+</p>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ versions 2.9.7 which fix the vulnerability. All users
+  of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 2.9.7.
+</p>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ teams would like to thank Noman Shaikh for the responsible disclosure of this vulnerability.
+</p>
