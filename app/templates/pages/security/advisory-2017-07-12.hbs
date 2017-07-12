@@ -1,0 +1,54 @@
+---
+title: Security Advisory 2017-07-12
+description: Improper Restriction in phpMyFAQ
+canonical: security/advisory-2017-07-12
+layout: security.hbs
+---
+<h2>Improper Restriction in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2017-07-12</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 2.9.7</dd>
+  <dt>Risk:</dt>
+  <dd>Medium</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of a security issue that have been discovered in phpMyFAQ 2.9.6 and
+  earlier. phpMyFAQ has an improper account-lockout setting, which makes it easier for remote attackers to obtain access
+  via a brute-force attack.
+</p>
+
+<h2>Description</h2>
+<p>
+  phpMyFAQ does not implement sufficient measures to prevent multiple failed authentication attempts within in a short
+  time frame, making it more susceptible to brute force attacks. An attacker could perform an arbitrary number of
+  authentication attempts using different passwords, and eventually gain access to the targeted account.
+</p>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ versions 2.9.8 which fix the vulnerability. All users
+  of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 2.9.8.
+</p>
+
+<h2>References</h2>
+<ul>
+  <li>
+    n/a (coming soon)
+  </li>
+</ul>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ teams would like to thank Mishra Dhiraj for the responsible disclosure of this vulnerability.
+</p>
