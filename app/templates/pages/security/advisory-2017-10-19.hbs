@@ -1,0 +1,59 @@
+---
+title: Security Advisory 2017-10-19
+description: XSS and CSRF in phpMyFAQ
+canonical: security/advisory-2017-10-19
+layout: security.hbs
+---
+<h2>XSS and CSRF in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2017-10-19</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 2.9.8</dd>
+  <dt>Risk:</dt>
+  <dd>Medium</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of some security issues that have been discovered in phpMyFAQ 2.9.8 and
+  earlier. phpMyFAQ contains cross-site request forgery and cross-site scripting vulnerabilities.
+</p>
+
+<h2>Description</h2>
+<p>
+  phpMyFAQ does not implement sufficient checks to avoid XSS and CSRF. All these vulnerabilities need administrator
+  privileges to be executed.
+</p>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ versions 2.9.9 which fix the vulnerabilities. All users
+  of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 2.9.9.
+</p>
+
+<h2>References</h2>
+<ul>
+  <li>
+    <a rel="nofollow" target="_blank" href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-14618">CVE-2017-14618</a>
+  </li>
+  <li>
+    <a rel="nofollow" target="_blank" href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-14619">CVE-2017-14619</a>
+  </li>
+</ul>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ teams would like to thank
+  <a target="_blank" rel="nofollow" href="https://about.me/security-prince">Ishaq Mohammed</a>,
+  <a target="_blank" rel="nofollow" href="https://twitter.com/c0d3G33k">Nikhil Mittal</a> and
+  <strong>Chirag Solanki</strong>
+  for the responsible disclosure of these vulnerabilities.
+</p>
