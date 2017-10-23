@@ -1,6 +1,6 @@
 ---
 title: Security Advisory 2017-10-19
-description: XSS and CSRF in phpMyFAQ
+description: XSS, CSRF and SQL injection in phpMyFAQ
 canonical: security/advisory-2017-10-19
 layout: security.hbs
 ---
@@ -19,13 +19,13 @@ layout: security.hbs
 
 <p>
   The phpMyFAQ Team has learned of some security issues that have been discovered in phpMyFAQ 2.9.8 and
-  earlier. phpMyFAQ contains cross-site request forgery and cross-site scripting vulnerabilities.
+  earlier. phpMyFAQ contains cross-site request forgery, cross-site scripting and SQL injection vulnerabilities.
 </p>
 
 <h2>Description</h2>
 <p>
-  phpMyFAQ does not implement sufficient checks to avoid XSS and CSRF. All these vulnerabilities need administrator
-  privileges to be executed.
+  phpMyFAQ does not implement sufficient checks to avoid XSS, CSRF and SQL injection. All these vulnerabilities need
+  administrator privileges to be executed.
 </p>
 
 <h2>Solution</h2>
@@ -51,6 +51,51 @@ layout: security.hbs
       CVE-2017-14619
     </a> (reported by Ishaq Mohammed)
   </li>
+  <li>
+    <a rel="nofollow" target="_blank" href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15727">
+      CVE-2017-15727
+    </a> (reported by Nikhil Mittal)
+  </li>
+  <li>
+    <a rel="nofollow" target="_blank" href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15728">
+      CVE-2017-15728
+    </a> (reported by Nikhil Mittal)
+  </li>
+  <li>
+    <a rel="nofollow" target="_blank" href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15729">
+      CVE-2017-15729
+    </a> (reported by Nikhil Mittal)
+  </li>
+  <li>
+    <a rel="nofollow" target="_blank" href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15730">
+      CVE-2017-15730
+    </a> (reported by Nikhil Mittal)
+  </li>
+  <li>
+    <a rel="nofollow" target="_blank" href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15731">
+      CVE-2017-15731
+    </a> (reported by Nikhil Mittal)
+  </li>
+  <li>
+    <a rel="nofollow" target="_blank" href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15732">
+      CVE-2017-15732
+    </a> (reported by Nikhil Mittal)
+  </li>
+  <li>
+    <a rel="nofollow" target="_blank" href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15733">
+      CVE-2017-15733
+    </a> (reported by Nikhil Mittal)
+  </li>
+  <li>
+    <a rel="nofollow" target="_blank" href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15734">
+      CVE-2017-15734
+    </a> (reported by Nikhil Mittal)
+  </li>
+  <li>
+    <a rel="nofollow" target="_blank" href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15735">
+      CVE-2017-15735
+    </a> (reported by Nikhil Mittal)
+  </li>
 </ul>
 
 <h2>Thanks</h2>
@@ -58,6 +103,8 @@ layout: security.hbs
   The phpMyFAQ teams would like to thank
   <a target="_blank" rel="nofollow" href="https://about.me/security-prince">Ishaq Mohammed</a>,
   <a target="_blank" rel="nofollow" href="https://twitter.com/c0d3G33k">Nikhil Mittal</a> and
-  <strong>Chirag Solanki</strong>
+  <strong>Chirag Solanki</strong>. We also like to thank
+  <strong>Li Ke</strong> and <strong>Zhou Junyu</strong> from <strong>Tencent's Xuanwu Lab</strong>.
+
   for the responsible disclosure of these vulnerabilities.
 </p>
