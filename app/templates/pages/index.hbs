@@ -12,8 +12,7 @@ layout: none
             <h2 class="title">phpMy<span class="highlight">FAQ</span> 2.9</h2>
 
             <p class="intro">
-                phpMyFAQ is a mobile-friendly, feature-rich, scalable open source FAQ software using PHP 5.5+, PHP 7.x
-                or HHVM
+                phpMyFAQ is a mobile-friendly, feature-rich, scalable open source FAQ software using PHP 5.6+ and PHP 7+
             </p>
 
             <div class="btns">
@@ -65,6 +64,21 @@ layout: none
             <div class="row">
               <div class="col-lg-4 col-md-6 col-xs-12">
 {{#markdown}}
+###2018-02-12
+* * *
+The phpMyFAQ Team is pleased to announce [phpMyFAQ 3.0.0-alpha](/download), the "17 years and still living" release. This
+new major pre-release marks a big step ahead with the changed PHP requirement to PHP 5.6+ and PHP 7+. We finally added
+PHP namespaces, Docker support, a LDAP configuration frontend, a configuration for enable/disable XML sitemaps, support
+for category images and categories on homepage, an image slider template, an improved attachment overview, HTML5 export
+and we're ready for the EU General Data Protection Regulation. We improved our REST API including login and the sticky
+records feature. We switched CSS development from LESS to SCSS and our template variable syntax is now compatible with
+Twig/Handlebars. Our new mobile first template is based on Bootstrap v4. We removed the translation admin frontend, the
+XHTML export, support for ext/mssql, the bundled Symfony ClassLoader and Bower, we're now using NPM/Yarn only. Please
+don't use this version in production systems, but test this version and please report bugs!
+{{/markdown}}
+              </div>
+              <div class="col-lg-4 col-md-6 col-xs-12">
+{{#markdown}}
 ###2017-10-19
 * * *
 The phpMyFAQ Team would like to announce the availability of [phpMyFAQ 2.9.9](/download), the "Hugh Hefner" release.
@@ -86,16 +100,6 @@ slider template and an improved attachment overview. The REST/JSON API includes 
 Bower support, please just use NPM or Yarn. Please don't use this version in production systems, but test this version
 and please report bugs!
 {{/markdown ~}}
-              </div>
-              <div class="col-lg-4 col-md-6 col-xs-12">
-{{#markdown}}
-###2017-07-12
-* * *
-The phpMyFAQ Team is pleased to announce [phpMyFAQ 2.9.8](/download), the "Roger Moore" release. We fixed a missing
-improper restriction to avoid brute force password attacks. A detailed [security advisory](/security/advisory-2017-07-12)
-is available. We added the possibility to search in LDAP sub groups and we fixed some issues. The French translation was
-updated as well.
-{{/markdown}}
               </div>
             </div>
             <div class="row">
