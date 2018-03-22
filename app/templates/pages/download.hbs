@@ -189,6 +189,7 @@ layout: none
                     <p>You can also check out the stable version of phpMyFAQ from GitHub at:</p>
 
                         <pre><code class="bash">$ git clone git://github.com/thorsten/phpMyFAQ.git
+$ cd phpMyFAQ
 $ git checkout {{ versions.stable }}
 $ curl -s https://getcomposer.org/installer | php
 $ php composer.phar install
@@ -199,12 +200,13 @@ $ grunt</code></pre>
                     <p>You can also check out the development version of phpMyFAQ from GitHub at:</p>
 
                         <pre><code class="bash">$ git clone git://github.com/thorsten/phpMyFAQ.git
+$ cd phpMyFAQ
 $ git checkout {{ versions.development }}
 $ curl -s https://getcomposer.org/installer | php
 $ php composer.phar install
-$ npm install
-$ bower install
-$ grunt</code></pre>
+$ curl -o- -L https://yarnpkg.com/install.sh | bash
+$ yarn install
+$ yarn build</code></pre>
                 </div>
             </div>
 
