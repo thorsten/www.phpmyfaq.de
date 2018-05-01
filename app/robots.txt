@@ -2,4 +2,4 @@
 
 User-agent: *
 
-Sitemap: http://www.phpmyfaq.de/sitemap.xml
+Sitemap: https://www.phpmyfaq.de/sitemap.xml

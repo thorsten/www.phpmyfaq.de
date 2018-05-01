@@ -483,19 +483,19 @@ FileETag None
 <IfModule mod_rewrite.c>
 
     # API
-    RewriteRule json/version.php                        http://api.phpmyfaq.de/versions [R=301,L]
-    RewriteRule api/version                             http://api.phpmyfaq.de/versions [R=301,L]
-    RewriteRule api/verify/(.+)$                        http://api.phpmyfaq.de/verify/$1 [L,QSA]
+    RewriteRule json/version.php                        https://api.phpmyfaq.de/versions [R=301,L]
+    RewriteRule api/version                             https://api.phpmyfaq.de/versions [R=301,L]
+    RewriteRule api/verify/(.+)$                        https://api.phpmyfaq.de/verify/$1 [L,QSA]
 
     # Downloads
-    RewriteRule download/phpMyFAQ-latest.zip            http://download.phpmyfaq.de/phpMyFAQ-latest.zip [R=301,L]
-    RewriteRule download/phpMyFAQ-latest.tar.gz         http://download.phpmyfaq.de/phpMyFAQ-latest.tar.gz [R=301,L]
-    RewriteRule download/phpMyFAQ-development.zip       http://download.phpmyfaq.de/phpMyFAQ-development.zip [R=301,L]
-    RewriteRule download/phpMyFAQ-development.tar.gz    http://download.phpmyfaq.de/phpMyFAQ-development.tar.gz [R=301,L]
-    RewriteRule download/phpMyFAQ-(.+).zip$             http://download.phpmyfaq.de/phpMyFAQ-$1.zip [R=301,L]
-    RewriteRule download/phpMyFAQ-(.+).tar.gz$          http://download.phpmyfaq.de/phpMyFAQ-$1.tar.gz [R=301,L]
-    RewriteRule download/phpmyfaq-(.+).tar.gz.md5$      http://download.phpmyfaq.de/phpMyFAQ-$1.tar.gz.md5 [R=301,L]
-    RewriteRule download/phpmyfaq-(.+)&version=(.+)     http://download.phpmyfaq.de/phpmyfaq-$1&version=$2 [R=301,L]
+    RewriteRule download/phpMyFAQ-latest.zip            https://download.phpmyfaq.de/phpMyFAQ-latest.zip [R=301,L]
+    RewriteRule download/phpMyFAQ-latest.tar.gz         https://download.phpmyfaq.de/phpMyFAQ-latest.tar.gz [R=301,L]
+    RewriteRule download/phpMyFAQ-development.zip       https://download.phpmyfaq.de/phpMyFAQ-development.zip [R=301,L]
+    RewriteRule download/phpMyFAQ-development.tar.gz    https://download.phpmyfaq.de/phpMyFAQ-development.tar.gz [R=301,L]
+    RewriteRule download/phpMyFAQ-(.+).zip$             https://download.phpmyfaq.de/phpMyFAQ-$1.zip [R=301,L]
+    RewriteRule download/phpMyFAQ-(.+).tar.gz$          https://download.phpmyfaq.de/phpMyFAQ-$1.tar.gz [R=301,L]
+    RewriteRule download/phpmyfaq-(.+).tar.gz.md5$      https://download.phpmyfaq.de/phpMyFAQ-$1.tar.gz.md5 [R=301,L]
+    RewriteRule download/phpmyfaq-(.+)&version=(.+)     https://download.phpmyfaq.de/phpmyfaq-$1&version=$2 [R=301,L]
 
     # Documentation
     RewriteRule documentation.([0-9]+).([0-9]+).en.php$ /docs/$1.$2 [R=301,L]
@@ -524,7 +524,7 @@ FileETag None
     RedirectPermanent /contributing.php                 /contribute
     RedirectPermanent /contribute.php                   /contribute
     RedirectPermanent /danke.php                        /thankyou
-    RedirectPermanent /demo                             http://demo.phpmyfaq.de
+    RedirectPermanent /demo                             https://demo.phpmyfaq.de
     RedirectPermanent /download/                        /download
     RedirectPermanent /development.php                  /development
     RedirectPermanent /dokumentation.php                /documentation
@@ -571,9 +571,9 @@ FileETag None
     RedirectPermanent /download.php                     /download
     RedirectPermanent /download.PHP                     /download
     RedirectPermanent /download_old.php                 /old-downloads
-    RedirectPermanent /faq                              http://faq.phpmyfaq.de
+    RedirectPermanent /faq                              https://faq.phpmyfaq.de
     RedirectPermanent /features.php                     /features
-    RedirectPermanent /forum                            http://forum.phpmyfaq.de
+    RedirectPermanent /forum                            https://forum.phpmyfaq.de
     RedirectPermanent /hosting.php                      /hosting
     RedirectPermanent /impressum.php                    /imprint
     RedirectPermanent /imprint.php                      /imprint
@@ -582,7 +582,7 @@ FileETag None
     RedirectPermanent /license.php                      https://raw.github.com/thorsten/phpMyFAQ/master/LICENSE
     RedirectPermanent /lizenz.php                       https://raw.github.com/thorsten/phpMyFAQ/master/LICENSE
     RedirectPermanent /logo.php                         /
-    RedirectPermanent /mailingliste.php                 http://forum.phpmyfaq.de
+    RedirectPermanent /mailingliste.php                 https://forum.phpmyfaq.de
     RedirectPermanent /news/bugtraq.php                 https://github.com/thorsten/phpMyFAQ/issues
     RedirectPermanent /news/changelog.php               /changelog
     RedirectPermanent /news/documentation.php           /documentation
@@ -604,7 +604,7 @@ FileETag None
     RedirectPermanent /imprint.php                      /imprint
     RedirectPermanent /translation.php                  /translations
     RedirectPermanent /xml/faqschema.xsd                /
-    RedirectPermanent /xml/version.php                  http://api.phpmyfaq.de/versions
+    RedirectPermanent /xml/version.php                  https://api.phpmyfaq.de/versions
     
 </IfModule>
 

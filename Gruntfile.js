@@ -41,20 +41,20 @@ module.exports = function (grunt) {
         pkg:        grunt.file.readJSON('package.json'),
         versions:   grunt.file.readJSON('./data/versions.json'),
         deployment: grunt.file.readJSON('./data/' + grunt.config('env') + '/deployment.json'),
-        banner:     '/*! phpMyFAQ - http://www.phpmyfaq.de/ - Copyright (c) 2001-2015 Thorsten Rinne - compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+        banner:     '/*! phpMyFAQ - https://www.phpmyfaq.de/ - Copyright (c) 2001-2018 Thorsten Rinne - compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
 
         // Fetch external data for downloads
         curl: {
             getVersions: {
-                src: 'http://api.phpmyfaq.de/versions',
+                src: 'https://api.phpmyfaq.de/versions',
                 dest: './data/versions.json'
             },
             getStableInfo: {
-                src: 'http://download.phpmyfaq.de/info/<%= versions.stable %>',
+                src: 'https://download.phpmyfaq.de/info/<%= versions.stable %>',
                 dest: './data/stable.json'
             },
             getDevelopmentInfo: {
-                src: 'http://download.phpmyfaq.de/info/<%= versions.development %>',
+                src: 'https://download.phpmyfaq.de/info/<%= versions.development %>',
                 dest: './data/development.json'
             }
         },
