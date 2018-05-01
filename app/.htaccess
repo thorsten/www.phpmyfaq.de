@@ -269,8 +269,9 @@ AddDefaultCharset utf-8
 # ----------------------------------------------------------------------
 
 <IfModule mod_rewrite.c>
-    RewriteCond %{HTTP_HOST} ^phpmyfaq.de$
-    RewriteRule (.*) https://www.phpmyfaq.de/$1 [R=301,L]
+    RewriteCond %{HTTPS} off                      [OR]
+    RewriteCond %{HTTP_HOST} ^phpmyfaq.de$        [NC]
+    RewriteRule ^(.*)$ https://www.phpmyfaq.de/$1 [L,R=301]
 </IfModule>
 
 # ######################################################################
