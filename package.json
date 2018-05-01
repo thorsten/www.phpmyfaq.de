@@ -2,7 +2,7 @@
   "name": "phpMyFAQ-Homepage",
   "version": "3.0.0",
   "description": "Homepage of phpMyFAQ project",
-  "homepage": "http://www.phpmyfaq.de/",
+  "homepage": "https://www.phpmyfaq.de/",
   "author": "Thorsten Rinne <thorsten@phpmyfaq.de>",
   "repository": {
     "type": "git",
