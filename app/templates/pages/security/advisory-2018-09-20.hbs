@@ -1,0 +1,49 @@
+---
+title: Security Advisory 2018-09-02
+description: Multiple vulnerabilities in phpMyFAQ
+canonical: security/advisory-2018-09-02
+layout: security.hbs
+---
+<h2>Multiple vulnerabilities in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2018-09-02</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 2.9.10</dd>
+  <dt>Risk:</dt>
+  <dd>Medium</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of some security issues that have been discovered in phpMyFAQ 2.9.10 and
+  earlier. phpMyFAQ contains cross-site request forgery, a CSV Injection and an insecure usage of microtime for
+  password-reset tokens.
+</p>
+
+<h2>Description</h2>
+<p>
+  phpMyFAQ does not implement sufficient checks to avoid CSRF and CSV injection for the reports generated in the admin
+  backend. For the CSRF and CSV injection you need administrator privileges to be executed. We also use microtime to
+  generate the tokens of new passwords.
+</p>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ versions 2.9.11 which fix the vulnerabilities. All users
+  of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 2.9.11.
+</p>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ teams would like to thank Zeel Chavda for the CSRF and CSV injection and to Daniel Gruss and Erik Kraft
+  for hint about microtime usage in phpMyFAQ. We want to thank all  for the responsible disclosure of these
+  vulnerabilities.
+</p>
