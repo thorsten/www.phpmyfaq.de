@@ -62,6 +62,18 @@ layout: none
                 Latest phpMyFAQ news
             </h2>
             <div class="row">
+                <div class="col-lg-4 col-md-6 col-xs-12">
+                    {{#markdown}}
+###2018-12-21
+* * *
+The phpMyFAQ Team is pleased to announce [phpMyFAQ 3.0.0-alpha.3](/download), the "111th release on Github" release. This
+third pre-release marks a big step ahead with the changed PHP requirement to PHP 7.1 or later. We added the experimental
+large permissions support with sections you can define in your FAQ installation. We also added support for Elasticsearch
+v5 and later. We fixed a lot of issue found by our test users of the second alpha release and we updated almost all of
+our bundled dependencies. Please don't use this version in production systems, but test this version and please report
+bugs!
+                    {{/markdown}}
+                </div>
               <div class="col-lg-4 col-md-6 col-xs-12">
                 {{#markdown}}
 ###2018-09-02
@@ -83,21 +95,6 @@ Docker support which is now really awesome. We fixed a lot of issues reported fr
 updated a lot of our external dependencies. Please don't use this version in production systems, but test this version
 and please report bugs!
                 {{/markdown}}
-              </div>
-              <div class="col-lg-4 col-md-6 col-xs-12">
-{{#markdown}}
-###2018-02-12
-* * *
-The phpMyFAQ Team is pleased to announce [phpMyFAQ 3.0.0-alpha](/download), the "17 years and still living" release. This
-new major pre-release marks a big step ahead with the changed PHP requirement to PHP 5.6+ and PHP 7+. We finally added
-PHP namespaces, Docker support, a LDAP configuration frontend, a configuration for enable/disable XML sitemaps, support
-for category images and categories on homepage, an image slider template, an improved attachment overview, HTML5 export
-and we're ready for the EU General Data Protection Regulation. We improved our REST API including login and the sticky
-records feature. We switched CSS development from LESS to SCSS and our template variable syntax is now compatible with
-Twig/Handlebars. Our new mobile first template is based on Bootstrap v4. We removed the translation admin frontend, the
-XHTML export, support for ext/mssql, the bundled Symfony ClassLoader and Bower, we're now using NPM/Yarn only. Please
-don't use this version in production systems, but test this version and please report bugs!
-{{/markdown}}
               </div>
             </div>
             <div class="row">
