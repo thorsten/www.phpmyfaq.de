@@ -571,7 +571,7 @@ FileETag None
     RedirectPermanent /download.php                     /download
     RedirectPermanent /download.PHP                     /download
     RedirectPermanent /download_old.php                 /old-downloads
-    RedirectPermanent /faq                              https://faq.phpmyfaq.de
+    RedirectPermanent /faq                              /
     RedirectPermanent /features.php                     /features
     RedirectPermanent /forum                            https://forum.phpmyfaq.de
     RedirectPermanent /hosting.php                      /hosting
