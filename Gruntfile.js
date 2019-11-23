@@ -508,7 +508,7 @@ module.exports = function (grunt) {
         'ftp-deploy': {
             build: {
                 auth: {
-                    host: 'www.phpmyfaq.de',
+                    host: 'w018670c.kasserver.com',
                     port: 21,
                     authKey: 'production'
                 },
