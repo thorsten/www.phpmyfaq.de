@@ -8,219 +8,233 @@ layout: none
 
 {{> header ~}}
 
-    <section class="downloads section">
-        <div class="container">
-            <h1>Downloads</h1>
-            <p class="intro">
-                Please check the <a href="/requirements">requirements</a> before you download the package. We
-                provide phpMyFAQ as .zip and .tar.gz packages. You can verify the integrity of our packages by checking the
-                MD5 hash of our downloads.
-            </p>
+<section class="downloads section">
+  <div class="container">
+    <h1>Downloads</h1>
+    <p class="intro">
+      Please check the <a href="/requirements">requirements</a> before you download the package. We
+      provide phpMyFAQ as .zip and .tar.gz packages. You can verify the integrity of our packages by checking the
+      MD5 hash of our downloads.
+    </p>
 
-            <h2>Free stable version</h2>
+    <h2>Free stable version</h2>
 
-            <div class="row">
-                <div class="col-lg-offset-1 col-lg-4 text-center">
+    <div class="row">
+      <div class="col-lg-offset-1 col-lg-4 text-center">
 
-                    <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.stable }}.zip" class="btn btn-block btn-lg btn-default btn-download">
-                        <h3 class="h4">
-                            <i class="fa fa-download"></i>
-                            phpMyFAQ {{ versions.stable }} (.zip)
-                        </h3>
-                        <p class="small">
-                            Size: {{ stable.zip.filesize }} MB<br>Release date: {{ versions.stable_released }}
-                        </p>
-                    </a>
-                    <p class="small">
-                        MD5 hash:
-                        <em>
-                            <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.stable }}.zip.md5">
-                                {{ stable.zip.md5 }}
-                            </a>
-                        </em>
-                    </p>
-                </div>
-                <div class="col-lg-4 col-lg-offset-1 text-center">
-                    <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.stable }}.tar.gz" class="btn btn-block btn-lg btn-default btn-download">
-                        <h3 class="h4">
-                            <i class="fa fa-download"></i>
-                            phpMyFAQ {{ versions.stable }} (.tar.gz)
-                        </h3>
-                        <p class="small">
-                            Size: {{ stable.targz.filesize }} MB, <br>Release date: {{ versions.stable_released }}
-                        </p>
-                    </a>
-                    <p class="small">
-                        MD5 hash:
-                        <em>
-                            <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.stable }}.tar.gz.md5">
-                                {{ stable.targz.md5 }}
-                            </a>
-                        </em>
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <p>
-                        <span class="label label-info">What's new?</span>
-                        A list of user visible changes are available on our <a href="/changelog#{{ versions.stable }}">
-                        detailed changelog</a>.
-                    </p>
-                    <p>
-                        phpMyFAQ is available for free with no additional costs as it's open source software released
-                        under the <a rel="nofollow" target="_blank" href="https://raw.github.com/thorsten/phpMyFAQ/master/LICENSE">
-                        Mozilla Public License 2.0</a>. This does not mean, that <a href="/donations">Thorsten and the
-                        rest of the team</a> don't like getting appreciation for their work. If you find phpMyFAQ useful
-                        and want to express your appreciation, have a look at
-                        <a rel="nofollow" target="_blank" href="http://www.amazon.de/exec/obidos/registry/UQQJEX7BCHPZ/">
-                        Thorsten's wishlist</a> or <a rel="nofollow" target="_blank" href="http://www.amazon.de/registry/wishlist/FGS7DWAJIRLD">Florian's wishlist</a>.
-                    </p>
-                </div>
-            </div>
+        <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.stable }}.zip"
+           class="btn btn-block btn-lg btn-default btn-download">
+          <h3 class="h4">
+            <i class="fa fa-download"></i>
+            phpMyFAQ {{ versions.stable }} (.zip)
+          </h3>
+          <p class="small">
+            Size: {{ stable.zip.filesize }} MB<br>Release date: {{ versions.stable_released }}
+          </p>
+        </a>
+        <p class="small">
+          MD5 hash:
+          <em>
+            <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.stable }}.zip.md5">
+                {{ stable.zip.md5 }}
+            </a>
+          </em>
+        </p>
+      </div>
+      <div class="col-lg-4 col-lg-offset-1 text-center">
+        <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.stable }}.tar.gz"
+           class="btn btn-block btn-lg btn-default btn-download">
+          <h3 class="h4">
+            <i class="fa fa-download"></i>
+            phpMyFAQ {{ versions.stable }} (.tar.gz)
+          </h3>
+          <p class="small">
+            Size: {{ stable.targz.filesize }} MB, <br>Release date: {{ versions.stable_released }}
+          </p>
+        </a>
+        <p class="small">
+          MD5 hash:
+          <em>
+            <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.stable }}.tar.gz.md5">
+                {{ stable.targz.md5 }}
+            </a>
+          </em>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p>
+          <span class="label label-info">What's new?</span>
+          A list of user visible changes are available on our <a href="/changelog#{{ versions.stable }}">
+          detailed changelog</a>.
+        </p>
+        <p>
+          phpMyFAQ is available for free with no additional costs as it's open source software released
+          under the <a rel="nofollow" target="_blank" href="https://raw.github.com/thorsten/phpMyFAQ/master/LICENSE">
+          Mozilla Public License 2.0</a>. This does not mean, that <a href="/donations">Thorsten and the
+          rest of the team</a> don't like getting appreciation for their work. If you find phpMyFAQ useful
+          and want to express your appreciation, have a look at
+          <a rel="nofollow" target="_blank" href="http://www.amazon.de/exec/obidos/registry/UQQJEX7BCHPZ/">
+            Thorsten's wishlist</a> or <a rel="nofollow" target="_blank"
+                                          href="http://www.amazon.de/registry/wishlist/FGS7DWAJIRLD">Florian's
+          wishlist</a>.
+        </p>
+      </div>
+    </div>
 
-            <div class="row">
-                <div class="col-xs-12 text-center">
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- Download -->
-                    <ins class="adsbygoogle"
-                         style="display:inline-block;width:320px;height:100px"
-                         data-ad-client="ca-pub-5315994283556480"
-                         data-ad-slot="1677835852"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-            </div>
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Download -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:320px;height:100px"
+             data-ad-client="ca-pub-5315994283556480"
+             data-ad-slot="1677835852"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
 
-            <h2>Free development version</h2>
+    <h2>Free development version</h2>
 
-            <div class="row">
-                <div class="col-lg-offset-1 col-lg-4 text-center">
-                    <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.development }}.zip" class="btn btn-block btn-lg btn-default btn-download">
-                        <h3 class="h4">
-                            <i class="fa fa-download"></i>
-                            phpMyFAQ {{ versions.development }} (.zip)
-                        </h3>
-                        <p class="small">
-                            Size: {{ development.zip.filesize }} MB<br>
-                            Release date: {{ versions.development_released }}
-                        </p>
-                    </a>
-                    <p class="small">
-                        MD5 hash:
-                        <em>
-                            <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.stable }}.zip.md5">
-                                {{ development.zip.md5 }}
-                            </a>
-                        </em>
-                    </p>
-                </div>
-                <div class="col-lg-4 col-lg-offset-1 text-center">
-                    <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.development }}.tar.gz" class="btn btn-block btn-lg btn-default btn-download">
-                        <h3 class="h4">
-                            <i class="fa fa-download"></i>
-                            phpMyFAQ {{ versions.development }}  (.tar.gz)
-                        </h3>
-                        <p class="small">
-                            Size: {{ development.targz.filesize }} MB<br>
-                            Release date: {{ versions.development_released }}
-                        </p>
-                    </a>
-                    <p class="small">
-                        MD5 hash:
-                        <em>
-                            <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.development }}.tar.gz.md5">
-                                {{ development.targz.md5 }}
-                            </a>
-                        </em>
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>
-                        <span class="label label-info">What's new?</span>
-                        A list of user visible changes are available on our <a href="/changelog#{{ versions.development }}">
-                        detailed changelog</a>.
-                    </p>
-                    <p>
-                        phpMyFAQ is available for free with no additional costs as it's open source software released
-                        under the <a target="_blank" href="https://raw.github.com/thorsten/phpMyFAQ/master/LICENSE">
-                        Mozilla Public License 2.0</a>
-                    </p>
-                </div>
-            </div>
+    <div class="row">
+      <div class="col-lg-offset-1 col-lg-4 text-center">
+        <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.development }}.zip"
+           class="btn btn-block btn-lg btn-default btn-download">
+          <h3 class="h4">
+            <i class="fa fa-download"></i>
+            phpMyFAQ {{ versions.development }} (.zip)
+          </h3>
+          <p class="small">
+            Size: {{ development.zip.filesize }} MB<br>
+            Release date: {{ versions.development_released }}
+          </p>
+        </a>
+        <p class="small">
+          MD5 hash:
+          <em>
+            <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.stable }}.zip.md5">
+                {{ development.zip.md5 }}
+            </a>
+          </em>
+        </p>
+      </div>
+      <div class="col-lg-4 col-lg-offset-1 text-center">
+        <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.development }}.tar.gz"
+           class="btn btn-block btn-lg btn-default btn-download">
+          <h3 class="h4">
+            <i class="fa fa-download"></i>
+            phpMyFAQ {{ versions.development }}  (.tar.gz)
+          </h3>
+          <p class="small">
+            Size: {{ development.targz.filesize }} MB<br>
+            Release date: {{ versions.development_released }}
+          </p>
+        </a>
+        <p class="small">
+          MD5 hash:
+          <em>
+            <a href="http://download.phpmyfaq.de/phpMyFAQ-{{ versions.development }}.tar.gz.md5">
+                {{ development.targz.md5 }}
+            </a>
+          </em>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <p>
+          <span class="label label-info">What's new?</span>
+          A list of user visible changes are available on our <a href="/changelog#{{ versions.development }}">
+          detailed changelog</a>.
+        </p>
+        <p>
+          phpMyFAQ is available for free with no additional costs as it's open source software released
+          under the <a target="_blank" href="https://raw.github.com/thorsten/phpMyFAQ/master/LICENSE">
+          Mozilla Public License 2.0</a>
+        </p>
+      </div>
+    </div>
 
-            <h2>Other installation services</h2>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul>
-                        <li>
-                            <a rel="nofollow" target="_blank" href="http://www.ampps.com/">
-                                <img src="/images/ampps_logo.png" width="200" height="53" alt="AMMPS" style="float: right">
-                            </a>
-                            <a rel="nofollow" target="_blank" href="http://www.ampps.com/" target="_blank">AMPPS</a> is
-                            a free WAMP, MAMP and LAMP and it includes Softaculous Auto-Installer. Developers can
-                            install AMPPS on their Desktops and one click install phpMyFAQ.
-                        </li>
-                        <li>
-                            <a rel="nofollow" target="_blank" href="http://www.softaculous.com/" target="_blank">
-                            Softaculous</a> is an auto installer which users can find in their control panel on
-                            productions servers and can install phpMyFAQ on their productions servers via Softaculous.
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <h2>Installation via Docker</h2>
+    <div class="row">
+      <div class="col-lg-12">
+        <p>Coming soon with phpMyFAQ 3.0</p>
+      </div>
+    </div>
 
-            <h2>Installation via Git</h2>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>
-                        All source code is kept under Git revision control, which you can
-                        <a rel="nofollow" target="_blank" href="http://github.com/thorsten/phpMyFAQ">browse online</a>.
-                        There's a download link available for any file or directory, if you only want to download a
-                        portion of the phpMyFAQ code.
-                    </p>
-                    <p>If you have access to Git, you can connect to the repository here:</p>
 
-                    <pre><code class="bash">$ git clone git://github.com/thorsten/phpMyFAQ.git</code></pre>
+    <h2>Other installation services</h2>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul>
+          <li>
+            <a rel="nofollow" target="_blank" href="http://www.ampps.com/">
+              <img src="/images/ampps_logo.png" width="200" height="53" alt="AMMPS" style="float: right">
+            </a>
+            <a rel="nofollow" target="_blank" href="http://www.ampps.com/" target="_blank">AMPPS</a> is
+            a free WAMP, MAMP and LAMP and it includes Softaculous Auto-Installer. Developers can
+            install AMPPS on their Desktops and one click install phpMyFAQ.
+          </li>
+          <li>
+            <a rel="nofollow" target="_blank" href="http://www.softaculous.com/" target="_blank">
+              Softaculous</a> is an auto installer which users can find in their control panel on
+            productions servers and can install phpMyFAQ on their productions servers via Softaculous.
+          </li>
+        </ul>
+      </div>
+    </div>
 
-                    <p>You can also check out the stable version of phpMyFAQ from GitHub at:</p>
+    <h2>Installation via Git</h2>
+    <div class="row">
+      <div class="col-lg-12">
+        <p>
+          All source code is kept under Git revision control, which you can
+          <a rel="nofollow" target="_blank" href="http://github.com/thorsten/phpMyFAQ">browse online</a>.
+          There's a download link available for any file or directory, if you only want to download a
+          portion of the phpMyFAQ code.
+        </p>
+        <p>If you have access to Git, you can connect to the repository here:</p>
 
-                        <pre><code class="bash">$ git clone git://github.com/thorsten/phpMyFAQ.git
+        <pre><code class="bash">$ git clone git://github.com/thorsten/phpMyFAQ.git</code></pre>
+
+        <p>You can also check out the stable version of phpMyFAQ from GitHub at:</p>
+
+        <pre><code class="bash">$ git clone git://github.com/thorsten/phpMyFAQ.git
 $ cd phpMyFAQ
 $ git checkout {{ versions.stable }}
-$ curl -s https://getcomposer.org/installer | php
+          $ curl -s https://getcomposer.org/installer | php
 $ php composer.phar install
 $ npm install
 $ bower install
 $ grunt</code></pre>
 
-                    <p>You can also check out the development version of phpMyFAQ from GitHub at:</p>
+        <p>You can also check out the development version of phpMyFAQ from GitHub at:</p>
 
-                        <pre><code class="bash">$ git clone git://github.com/thorsten/phpMyFAQ.git
+        <pre><code class="bash">$ git clone git://github.com/thorsten/phpMyFAQ.git
 $ cd phpMyFAQ
 $ git checkout {{ versions.development }}
-$ curl -s https://getcomposer.org/installer | php
+          $ curl -s https://getcomposer.org/installer | php
 $ php composer.phar install
 $ curl -o- -L https://yarnpkg.com/install.sh | bash
 $ yarn install
 $ yarn build</code></pre>
-                </div>
-            </div>
+      </div>
+    </div>
 
-            <h2>Old versions of phpMyFAQ</h2>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>You can find older versions of phpMyFAQ <a href="/old-downloads">here</a>.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <h2>Old versions of phpMyFAQ</h2>
+    <div class="row">
+      <div class="col-lg-12">
+        <p>You can find older versions of phpMyFAQ <a href="/old-downloads">here</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script src="assets/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+<script src="assets/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 
 {{> footer ~}}
 
