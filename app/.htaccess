@@ -564,8 +564,8 @@ FileETag None
     RedirectPermanent /docs/documentation.de.html       /documentation
     RedirectPermanent /documentation.php                /documentation
     RedirectPermanent /docs/documentation.de.php        /documentation
-    RedirectPermanent /docs/lizenz.html                 https://raw.github.com/thorsten/phpMyFAQ/master/LICENSE
-    RedirectPermanent /docs/lizenz.php                  https://raw.github.com/thorsten/phpMyFAQ/master/LICENSE
+    RedirectPermanent /docs/lizenz.html                 https://raw.github.com/thorsten/phpMyFAQ/main/LICENSE
+    RedirectPermanent /docs/lizenz.php                  https://raw.github.com/thorsten/phpMyFAQ/main/LICENSE
     RedirectPermanent /docs/phpmyfaq.txt                /docs
     RedirectPermanent /donations.php                    /donations
     RedirectPermanent /download.php                     /download
@@ -579,8 +579,8 @@ FileETag None
     RedirectPermanent /imprint.php                      /imprint
     RedirectPermanent /index.php                        /
     RedirectPermanent /lifecycle.php                    /
-    RedirectPermanent /license.php                      https://raw.github.com/thorsten/phpMyFAQ/master/LICENSE
-    RedirectPermanent /lizenz.php                       https://raw.github.com/thorsten/phpMyFAQ/master/LICENSE
+    RedirectPermanent /license.php                      https://raw.github.com/thorsten/phpMyFAQ/main/LICENSE
+    RedirectPermanent /lizenz.php                       https://raw.github.com/thorsten/phpMyFAQ/main/LICENSE
     RedirectPermanent /logo.php                         /
     RedirectPermanent /mailingliste.php                 https://forum.phpmyfaq.de
     RedirectPermanent /news/bugtraq.php                 https://github.com/thorsten/phpMyFAQ/issues
