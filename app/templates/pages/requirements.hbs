@@ -1,6 +1,6 @@
 ---
 title: Requirements
-description: phpMyFAQ needs to be installed on a web server with PHP or HHVM, a database like MySQL or PostgreSQL
+description: phpMyFAQ needs to be installed on a web server with PHP, a database like MySQL or PostgreSQL
 canonical: requirements
 layout: none
 ---
@@ -18,10 +18,10 @@ layout: none
                         browser to access a web-based GUI to read and add FAQs. phpMyFAQ administrators require access
                         to the files on the server to update templates and perform upgrades or maintenance.
                     </p>
-                    <ul type="square">
+                    <ul>
                         <li>
-                            <strong><a rel="nofollow" target="_blank" href="http://www.php.net">PHP 7.2+</a></strong>
-                            <ul type="circle">
+                            <strong><a rel="nofollow" target="_blank" href="http://www.php.net">PHP 7.2+ or PHP 8.0+</a></strong>
+                            <ul>
                                 <li>
                                     We recommend using a PHP accelerator or Opcode cache like Zend OpCache
                                 </li>
@@ -35,11 +35,7 @@ layout: none
                                     Recommended configuration:
 <pre><code class="ini">register_globals = off
 safe_mode = off (recommended)
-memory_limit = 64M</code></pre>
-                                </li>
-                                <li>
-                                    phpMyFAQ 2.9 runs on PHP 5.5, 5.6, 7.0 and 7.1 but we don't recommend these versions
-                                    as they're out of support.
+memory_limit = 128M</code></pre>
                                 </li>
                             </ul>
                         </li>
@@ -67,7 +63,7 @@ memory_limit = 64M</code></pre>
                                 </li>
                                 <li>
                                     additionally <a rel="nofollow" target="_blank" href="https://elastic.co">Elasticsearch</a>
-                                    (2.x  with phpMyFAQ 2.9, 5.x with phpMyFAQ 3.0 )
+                                    (5.x and 6.x)
                                 </li>
                             </ul>
                         </li>
@@ -124,7 +120,6 @@ memory_limit = 64M</code></pre>
                                 <li>Apple Safari</li>
                                 <li>Opera</li>
                                 <li>Microsoft Edge</li>
-                                <li>Microsoft Internet Explorer 11.x</li>
                             </ul>
                         </li>
                     </ul>
