@@ -20,7 +20,7 @@ layout: none
                     </p>
                     <ul>
                         <li>
-                            <strong><a rel="nofollow" target="_blank" href="http://www.php.net">PHP 7.2+ or PHP 8.0+</a></strong>
+                            <strong><a rel="nofollow" target="_blank" href="http://www.php.net">PHP 7.3+ or PHP 8+</a></strong>
                             <ul>
                                 <li>
                                     We recommend using a PHP accelerator or Opcode cache like Zend OpCache
@@ -33,9 +33,7 @@ layout: none
                                 </li>
                                 <li>
                                     Recommended configuration:
-<pre><code class="ini">register_globals = off
-safe_mode = off (recommended)
-memory_limit = 128M</code></pre>
+<pre><code class="ini">memory_limit = 128M</code></pre>
                                 </li>
                             </ul>
                         </li>
@@ -63,7 +61,7 @@ memory_limit = 128M</code></pre>
                                 </li>
                                 <li>
                                     additionally <a rel="nofollow" target="_blank" href="https://elastic.co">Elasticsearch</a>
-                                    (5.x and 6.x)
+                                    (5.x and later)
                                 </li>
                             </ul>
                         </li>
@@ -123,11 +121,6 @@ memory_limit = 128M</code></pre>
                             </ul>
                         </li>
                     </ul>
-                    <p>
-                        You can only run phpMyFAQ successfully, when the PHP directive safe_mode is set to off, further
-                        constraints affect the directives open_basedir and disable_functions, which can be set in the
-                        central php.ini respectively.
-                    </p>
                     <p>
                         In case PHP runs as module of the Apache, you will have to be able to do a chown on the files
                         before installation. The files and directories have to be owned by the Apache user.
