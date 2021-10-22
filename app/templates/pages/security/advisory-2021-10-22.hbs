@@ -1,0 +1,41 @@
+---
+title: Security Advisory 2020-12-23
+description: XSS in phpMyFAQ
+canonical: security/advisory-2020-12-23
+layout: security.hbs
+---
+<h2>XSS in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2020-12-23</dd>
+  <dt>Software:</dt>
+  <dd>phpmyfaq.de website</dd>
+  <dt>Risk:</dt>
+  <dd>Medium</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of a security issue that has been discovered in our mail server configuration, a
+  missing DMARC record
+</p>
+
+<h2>Description</h2>
+<p>
+  Email spoofing was possible due to missing DMARC Records for the mail server at phpmyfaq.de. Attackers could send an
+  email from that exact domain put in From field, because SMTP by default does not have any protection against fake
+  “From” addresses.
+</p>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team activated DMARC for our domain phpmyfaq.de.
+</p>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ teams would like to thank <strong>Jason Ryan</strong> for the responsible disclosure of the
+  vulnerability.
+</p>
