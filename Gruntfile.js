@@ -41,7 +41,7 @@ module.exports = function (grunt) {
         pkg:        grunt.file.readJSON('package.json'),
         versions:   grunt.file.readJSON('./data/versions.json'),
         deployment: grunt.file.readJSON('./data/' + grunt.config('env') + '/deployment.json'),
-        banner:     '/*! phpMyFAQ - https://www.phpmyfaq.de/ - Copyright (c) 2001-2020 Thorsten Rinne - compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+        banner:     '/*! phpMyFAQ - https://www.phpmyfaq.de/ - Copyright © 2001-2022 Thorsten Rinne - compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
 
         // Fetch external data for downloads
         curl: {
