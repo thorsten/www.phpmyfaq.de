@@ -1,0 +1,56 @@
+---
+title: Security Advisory 2022-01-17
+description: Multiple CSRF and XSS vulnerabilities in phpMyFAQ
+canonical: security/advisory-2022-01-17
+layout: security.hbs
+---
+<h2>Multiple CSRF and XSS vulnerabilities in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2022-01-17</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 3.0.9</dd>
+  <dt>Risk:</dt>
+  <dd>Medium</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of some security issues that have been discovered in phpMyFAQ 3.0.9 and
+  earlier. phpMyFAQ contains multiple cross-site request forgery (CSRF) and cross-site scripting (XSS) vulnerabilities.
+</p>
+
+<h2>Description</h2>
+<p>
+  phpMyFAQ does not implement sufficient checks to avoid
+</p>
+<ul>
+  <li>XSS in the administration section when deleting meta data by an admin user,</li>
+  <li>CSRF when toggling open questions by an admin user,</li>
+  <li>CSRF when truncating search terms by an admin user,</li>
+  <li>CSRF when logging out an admin user.</li>
+</ul>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ version 3.0.10 which fix the vulnerabilities. All
+  users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 3.0.10.
+</p>
+
+<h2>References</h2>
+<ul>
+  <li>https://huntr.dev/ will be provided soon</li>
+</ul>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ teams would like to thank 0x7zed, M0rphling, justinp09010 and Dennis Yassine for the responsible
+  disclosure of these vulnerabilities.
+</p>
