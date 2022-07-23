@@ -1,0 +1,50 @@
+---
+title: Security Advisory 2022-07-23
+description: Stored XSS vulnerability in phpMyFAQ
+canonical: security/advisory-2022-07-23
+layout: security.hbs
+---
+<h2>Stored XSS vulnerability in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2022-07-23</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 3.1.5</dd>
+  <dt>Risk:</dt>
+  <dd>Medium</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of a security issue that have been discovered in phpMyFAQ 3.1.5 and
+  earlier. phpMyFAQ contains a stored cross-site scripting (XSS) vulnerability.
+</p>
+
+<h2>Description</h2>
+<p>
+  phpMyFAQ does not implement sufficient checks to avoid stored XSS when saving content in the administration
+  configuration
+</p>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ version 3.1.6 which fix the vulnerability. All
+  users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 3.1.6.
+</p>
+
+<h2>References</h2>
+<ul>
+  <li><a target="_blank" href="https://huntr.dev/bounties/09527765-0a39-4da5-9066-ac1a1e5647a6/">XSS (Found by jhond0e)</a></li>
+</ul>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ teams would like to thank jhond0e for the responsible disclosure of the vulnerability.
+</p>
