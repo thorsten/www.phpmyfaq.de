@@ -430,6 +430,13 @@ module.exports = function (grunt) {
                 cwd: '<%= config.app %>/assets/js',
                 dest: '<%= config.dist %>/assets/js',
                 src: '{,*/}*.js'
+            },
+            webfonts: {
+                expand: true,
+                dot: true,
+                cwd: '<%= config.app %>/fonts',
+                dest: '<%= config.dist %>/assets/fonts',
+                src: '{,*/}*.*'
             }
         },
 
@@ -488,6 +495,7 @@ module.exports = function (grunt) {
                 'concat',
                 'copy:styles',
                 'copy:javascripts',
+                'copy:webfonts',
                 'imagemin',
                 'svgmin'
             ]
