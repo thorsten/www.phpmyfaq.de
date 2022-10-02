@@ -1,0 +1,52 @@
+---
+title: Security Advisory 2022-10-02
+description: Multiple CSRF and XSS vulnerabilities in phpMyFAQ
+canonical: security/advisory-2022-10-02
+layout: security.hbs
+---
+<h2>CSRF vulnerability in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2022-10-02</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 3.1.6</dd>
+  <dt>Risk:</dt>
+  <dd>Medium</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of a security issues that have been discovered in phpMyFAQ 3.1.6 and
+  earlier. phpMyFAQ contains a cross-site request forgery (CSRF) vulnerability.
+</p>
+
+<h2>Description</h2>
+<p>
+  phpMyFAQ does not implement sufficient checks to avoid
+</p>
+<ul>
+  <li>CSRF when logging out an user.</li>
+</ul>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ version 3.1.7 which fix the vulnerability. All
+  users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 3.1.7.
+</p>
+
+<h2>References</h2>
+<ul>
+  <li><a target="_blank" href="https://huntr.dev/bounties/76095ac1-da12-449b-9564-4a086be96592/">XSS (Found by KhanhCM)</a></li>
+</ul>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ team would like to thank KhanhCM for the responsible disclosure of this vulnerability.
+</p>
