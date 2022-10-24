@@ -1,0 +1,59 @@
+---
+title: Security Advisory 2022-10-24
+description: Multiple vulnerabilities in phpMyFAQ
+canonical: security/advisory-2022-10-24
+layout: security.hbs
+---
+<h2>CSRF vulnerability in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2022-10-24</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 3.1.7</dd>
+  <dt>Risk:</dt>
+  <dd>Medium</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of a multiple security issues that have been discovered in phpMyFAQ 3.1.7 and
+  earlier. phpMyFAQ contains a pre-auth SQL injection and cross-site scripting vulnerabilities.
+</p>
+
+<h2>Description</h2>
+<p>
+  phpMyFAQ does not implement sufficient checks to avoid
+</p>
+<ul>
+  <li>a pre-auth SQL injection in then saving user comments</li>
+  <li>a reflected cross-site scripting vulnerability in the search</li>
+  <li>a stored cross-site scripting vulnerability in the meta data administration</li>
+  <li>a weak password requirement</li>
+</ul>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ version 3.1.8 which fixes these vulnerabilities. All
+  users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 3.1.8.
+</p>
+
+<h2>References</h2>
+<ul>
+  <li><a target="_blank" href="https://huntr.dev/bounties/613143a1-8e51-449a-b214-12458308835d/">XSS (Found by Hoang Van Hiep)</a></li>
+  <li><a target="_blank" href="https://huntr.dev/bounties/d9666520-4ff5-43bb-aacf-50c8e5570983/">XSS (Found by Hoang Van Hiep)</a></li>
+  <li><a target="_blank" href="https://huntr.dev/bounties/f4711d7f-1368-48ab-9bef-45f32e356c47/">Weak password requirement (Found by Hoang Van Hiep)</a></li>
+  <li>pre-auth SQL injection (Found by Max Garrett)</li>
+
+</ul>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ team would like to thank Hoang Van Hiep and Max Garrett from Assetnote for the responsible disclosure of this vulnerability.
+</p>
