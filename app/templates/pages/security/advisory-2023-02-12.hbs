@@ -1,0 +1,105 @@
+---
+title: Security Advisory 2023-02-12
+description: Multiple vulnerabilities in phpMyFAQ
+canonical: security/advisory-2023-02-12
+layout: security.hbs
+---
+<h2>Multiple vulnerabilities in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2023-02-12</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 3.1.10</dd>
+  <dt>Risk:</dt>
+  <dd>High</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of a multiple security issues that have been discovered in phpMyFAQ 3.1.10 and
+  earlier. phpMyFAQ contains cross-site scripting (XSS), HTML injection vulnerabilities and a weak password check.
+</p>
+
+<h2>Description</h2>
+<p>
+  phpMyFAQ does not implement sufficient checks to avoid
+</p>
+<ul>
+  <li>a bypass to flood admin with FAQ proposals</li>
+  <li>stored XSS in questions</li>
+  <li>stored HTML injections</li>
+  <li>weak passwords </li>
+</ul>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ version 3.1.11 which fixes these vulnerabilities. All
+  users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 3.1.11.
+</p>
+
+<h2>References</h2>
+<ul>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/14fc4841-0f5d-4e12-bf9e-1b60d2ac6a6c/">
+      Bypass
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/8c74ccab-0d1d-4c6b-a0fa-803aa65de04f/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/87397c71-7b84-4617-a66e-fa6c73be9024/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/808d5452-607c-4af1-812f-26c49faf3e61/">
+      HTML injection
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/d9375178-2f23-4f5d-88bd-bba3d6ba7cc5/">
+      HTML injection
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/06af150b-b481-4248-9a48-56ded2814156/">
+      Bypass
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/7152b340-c6f3-4ac8-9f62-f764a267488d/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/9e21156b-ab1d-4c60-88ef-8c9f3e2feb7f/">
+      HTML injection
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/b3881a1f-2f1e-45cb-86f3-735f66e660e9/">
+      Weak password
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/949975f1-271d-46aa-85e5-1a013cdb5efb/">
+      HTML injection
+    </a>
+  </li>
+</ul>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ team would like to thank @ahmedvienna and @josefjku for the responsible disclosure of this
+  vulnerabilities.
+</p>
