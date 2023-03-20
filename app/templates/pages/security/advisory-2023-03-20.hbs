@@ -1,0 +1,155 @@
+---
+title: Security Advisory 2023-03-20
+description: Multiple vulnerabilities in phpMyFAQ
+canonical: security/advisory-2023-03-20
+layout: security.hbs
+---
+<h2>Multiple vulnerabilities in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2023-02-20</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 3.1.11</dd>
+  <dt>Risk:</dt>
+  <dd>Medium</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of a multiple security issues that have been discovered in phpMyFAQ 3.1.11 and
+  earlier. phpMyFAQ contains cross-site scripting (XSS), a weak password check and a privilege escalation.
+</p>
+
+<h2>Description</h2>
+<p>
+  phpMyFAQ does not implement sufficient checks to avoid
+</p>
+<ul>
+  <li>XSS</li>
+  <li>weak passwords</li>
+  <li>privilege escalation</li>
+  <li>Captcha bypass</li>
+</ul>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ version 3.1.12 which fixes these vulnerabilities. All
+  users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 3.1.12.
+</p>
+
+<h2>References</h2>
+<ul>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/e8109aed-d364-4c0c-9545-4de0347b10e1/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/39715aaf-e798-4c60-97c4-45f4f2cd5c61/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/01d6ae23-3a8f-42a8-99f4-10246187d71b/">
+      Password policy
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/dda73cb6-9344-4822-97a1-2e31efb6a73e/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/529f2361-eb2e-476f-b7ef-4e561a712e28/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/1dc7f818-c8ea-4f80-b000-31b48a426334/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/e495b443-b328-42f5-aed5-d68b929b4cb9/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/ece5f051-674e-4919-b998-594714910f9e/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/93f981a3-231d-460d-a239-bb960e8c2fdc/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/e4a58835-96b5-412c-a17e-3ceed30231e1/">
+      Privilege escalation
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/b7d244b7-5ac3-4964-81ee-8dbb5bb5e33a/">
+      Captcha bypass
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/24c0a65f-0751-4ff8-af63-4b325ac8879f/">
+      HTML injection
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/3c2374cc-7082-44b7-a6a6-ccff7a650a3a/">
+      Privilege escalation
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/0854328e-eb00-41a3-9573-8da8f00e369c/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/2f1e417d-cf64-4cfb-954b-3a9cb2f38191/">
+      Privilege escalation
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/584a200a-6ff8-4d53-a3c0-e7893edff60c/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/bce84c02-abb2-474f-a67b-1468c9dcabb8/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/882ffa07-5397-4dbb-886f-4626859d711a/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/8ab09a1c-cfd5-4ce0-aae3-d33c93318957/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/2d0ac48a-490d-4548-8d98-7447042dd1b5/">
+      XSS
+    </a>
+  </li>
+</ul>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ team would like to thank @ahmedvienna, @josefjku, @hatlesswizard, @tsarsecurity and @isdkrisna for the
+  responsible disclosure of this vulnerabilities.
+</p>
