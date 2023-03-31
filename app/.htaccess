@@ -278,12 +278,51 @@ AddDefaultCharset utf-8
 # # SECURITY                                                           #
 # ######################################################################
 
-# ----------------------------------------------------------------------
-# | Clickjacking                                                       |
-# ----------------------------------------------------------------------
 
 <IfModule mod_headers.c>
-    Header set X-Frame-Options "DENY"
+    # ----------------------------------------------------------------------
+    # | Content Security Policy                                            |
+    # ----------------------------------------------------------------------
+    Header set Content-Security-Policy "frame-ancestors 'self'; base-uri 'self'; form-action 'self'; font-src 'self' data:; object-src 'none';"
+
+    # ----------------------------------------------------------------------
+    # | HTTP Content-Types                                                 |
+    # ----------------------------------------------------------------------
+    AddCharset UTF-8 .html
+
+    # ----------------------------------------------------------------------
+    # | Public Key Pins                                                    |
+    # ----------------------------------------------------------------------
+    Header set Public-Key-Pins "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains"
+
+    # ----------------------------------------------------------------------
+    # | Strict-Transport-Security                                          |
+    # ----------------------------------------------------------------------
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+    # ----------------------------------------------------------------------
+    # | X-Content-Type-Options                                             |
+    # ----------------------------------------------------------------------
+    Header always set X-Content-Type-Options "nosniff"
+
+    # ----------------------------------------------------------------------
+    # | X-Frame-Options                                                    |
+    # ----------------------------------------------------------------------
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # ----------------------------------------------------------------------
+    # | X-Xss-Protection                                                   |
+    # ----------------------------------------------------------------------
+    Header always set X-Xss-Protection "1; mode=block"
+
+    # ----------------------------------------------------------------------
+    # | Referrer-Policy                                                    |
+    # ----------------------------------------------------------------------
+    Header set Referrer-Policy "no-referrer"
+
+    # ----------------------------------------------------------------------
+    # | Clickjacking                                                       |
+    # ----------------------------------------------------------------------
     <FilesMatch "\.(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|webapp|web[mp]|woff2?|xloc|xml|xpi)$">
         Header unset X-Frame-Options
     </FilesMatch>
