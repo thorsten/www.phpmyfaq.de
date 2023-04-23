@@ -1,0 +1,73 @@
+---
+title: Security Advisory 2023-04-23
+description: Multiple vulnerabilities in phpMyFAQ
+canonical: security/advisory-2023-04-23
+layout: security.hbs
+---
+<h2>Multiple vulnerabilities in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2023-04-23</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 3.1.12</dd>
+  <dt>Risk:</dt>
+  <dd>Medium</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of a multiple security issues that have been discovered in phpMyFAQ 3.1.12 and
+  earlier. phpMyFAQ contains cross-site scripting (XSS) and an email address manipulation vulnerability.
+</p>
+
+<h2>Description</h2>
+<p>
+  phpMyFAQ does not implement sufficient checks to avoid
+</p>
+<ul>
+  <li>XSS</li>
+  <li>email address manipulation</li>
+</ul>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ version 3.1.13 which fixes these vulnerabilities. All
+  users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 3.1.13.
+</p>
+
+<h2>References</h2>
+<ul>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/20d3a0b3-2693-4bf1-b196-10741201a540/">
+      email address manipulation vulnerability
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/89005a6d-d019-4cb7-ae88-486d2d44190d/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/cee65b6d-b003-4e6a-9d14-89aa94bee43e/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/840c8d91-c97e-4116-a9f8-4ab1a38d239b/">
+      XSS
+    </a>
+  </li>
+</ul>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ team would like to thank Dan Barros, Asura-N, and Aziz Hakim for the responsible disclosure of this
+  vulnerabilities.
+</p>
