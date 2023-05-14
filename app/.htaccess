@@ -602,6 +602,7 @@ FileETag None
     RedirectPermanent /docs/documentation.2.8.en.php    /docs/2.8
     RedirectPermanent /docs/documentation.de.html       /documentation
     RedirectPermanent /documentation.php                /documentation
+    RedirectPermanent /docs/3.2                         https://phpmyfaq.readthedocs.io/
     RedirectPermanent /docs/documentation.de.php        /documentation
     RedirectPermanent /docs/lizenz.html                 https://raw.github.com/thorsten/phpMyFAQ/main/LICENSE
     RedirectPermanent /docs/lizenz.php                  https://raw.github.com/thorsten/phpMyFAQ/main/LICENSE
