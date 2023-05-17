@@ -1,0 +1,59 @@
+---
+title: Security Advisory 2023-05-17
+description: XSS vulnerabilities in phpMyFAQ
+canonical: security/advisory-2023-05-17
+layout: security.hbs
+---
+<h2>XSS vulnerabilities in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2023-04-23</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 3.1.13</dd>
+  <dt>Risk:</dt>
+  <dd>Medium</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of multiple security issues that'd been discovered in phpMyFAQ 3.1.13 and
+  earlier. phpMyFAQ contains cross-site scripting (XSS) vulnerabilities.
+</p>
+
+<h2>Description</h2>
+<p>
+  phpMyFAQ doesn't implement sufficient checks to avoid XSS when intercepting malicious content into FAQs.
+</p>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ version 3.1.14 which fixes these vulnerabilities. All
+  users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 3.1.14.
+</p>
+
+<h2>References</h2>
+<ul>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/4d89c7cc-fb4c-4b64-9b67-f0189f70a620/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/8282d78e-f399-4bf4-8403-f39103a31e78/">
+      XSS
+    </a>
+  </li>
+</ul>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ team would like to thank Mohamed Abdelhady, and H4ck3r Khoỏng for the responsible disclosure of these
+  vulnerabilities.
+</p>
