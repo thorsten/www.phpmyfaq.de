@@ -1,0 +1,60 @@
+---
+title: Security Advisory 2023-07-16
+description: XSS and CSV injection vulnerabilities in phpMyFAQ
+canonical: security/advisory-2023-07-16
+layout: security.hbs
+---
+<h2>XSS and CSV injection vulnerabilities in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2023-07-16</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 3.1.15</dd>
+  <dt>Risk:</dt>
+  <dd>Medium</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of multiple security issues that'd been discovered in phpMyFAQ 3.1.13 and
+  earlier. phpMyFAQ contains cross-site scripting (XSS) and CSV injection vulnerabilities.
+</p>
+
+<h2>Description</h2>
+<p>
+  phpMyFAQ doesn't implement sufficient checks to avoid XSS when intercepting malicious content into FAQs. Additionally
+  phpMyFAQ doesn't implement sufficient checks against CSV injections.
+</p>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ version 3.1.16, which fixes these vulnerabilities. All
+  users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 3.1.16.
+</p>
+
+<h2>References</h2>
+<ul>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/e891dcbc-2092-49d3-9518-23e37187a5ea/">
+      XSS
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/36149a42-cbd5-445e-a371-e351c899b189/">
+      CSV Injection
+    </a>
+  </li>
+</ul>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ team would like to thank @chonkysec, and @lujiefsi for the responsible disclosure of these
+  vulnerabilities.
+</p>
