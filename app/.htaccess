@@ -592,7 +592,7 @@ FileETag None
     RedirectPermanent /faq                              /
     RedirectPermanent /features.php                     /features
     RedirectPermanent /forum                            https://forum.phpmyfaq.de
-    RedirectPermanent /hosting.php                      /hosting
+    RedirectPermanent /hosting                          /
     RedirectPermanent /impressum.php                    /imprint
     RedirectPermanent /imprint.php                      /imprint
     RedirectPermanent /index.php                        /
