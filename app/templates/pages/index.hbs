@@ -9,10 +9,10 @@ layout: none
 
 <section class="promo offset-header">
   <div class="container text-center">
-    <h2 class="title">phpMy<span class="highlight">FAQ</span> 3.1</h2>
+    <h2 class="title">phpMy<span class="highlight">FAQ</span> 3.2</h2>
 
     <p class="intro">
-      phpMyFAQ is a mobile-friendly, feature-rich, scalable open source FAQ web app for PHP 8
+      phpMyFAQ is a mobile-friendly, feature-rich, scalable open source FAQ web app for PHP 8.1+
     </p>
 
     <div class="btns">
@@ -52,6 +52,24 @@ layout: none
     <div class="row">
       <div class="col-lg-4 col-md-6 col-xs-12">
 {{#markdown}}
+### 2023-09-04
+* * *
+The phpMyFAQ Team is pleased to announce [phpMyFAQ 3.2.0](/download), the "Jimmy Buffett" release.
+We changed PHP requirement to PHP 8.1.0 or later, HTTPS is the new default, and we added support for PHP 8.2.
+If you use MariaDB, MySQL, Percona Server or Galera Cluster, phpMyFAQ now only supports InnoDB.
+We added support for 2FA (Two-Factor Authentication) support, an experimental Azure AD login, the option to use Google
+ReCaptcha, our own new REST API v2.2 to fetch groups and add categories, a verification of backup files, an option to
+disable questions and notifications, a new mobile first, touch-friendly default layout and added Symfony HttpFoundation
+to improve stability and maintainability.
+We removed the broken link verification, the translation frontend for users and the experimental large permissions
+support with sections.
+We migrated from SwiftMailer to Symfony Mailer, and we also refactored our codebase to use PHP 8.1 language features.
+Additionally, we updated to Bootstrap v5.3 and bundled TinyMCE v6.7.
+The Japanese and the Dutch translation were up-to-date as well.
+{{/markdown}}
+      </div>
+      <div class="col-lg-4 col-md-6 col-xs-12">
+{{#markdown}}
 ### 2023-08-30
 * * *
 The phpMyFAQ Team would like to announce the availability of [phpMyFAQ 3.2.0-RC.4](/download), the "René Weller" release.
@@ -68,6 +86,8 @@ This release fixes multiple vulnerabilities, and fixed all reported issues.
 [Click here to find a detailed security advisory](/security/advisory-2023-08-27).
 {{/markdown}}
       </div>
+    </div>
+    <div class="row">
       <div class="col-lg-4 col-md-6 col-xs-12">
 {{#markdown}}
 ### 2023-07-21
@@ -78,8 +98,6 @@ With the third release candidate, we fixed all reported and known issues.
 Please don't use this version in production systems, but test this version and please report bugs!.
 {{/markdown ~}}
       </div>
-    </div>
-    <div class="row">
       <div class="col-lg-4 col-md-6 col-xs-12">
 {{#markdown}}
 ### 2023-07-16
@@ -97,14 +115,6 @@ This release fixes multiple vulnerabilities, and fixed all reported issues.
 The phpMyFAQ Team would like to announce the availability of [phpMyFAQ 3.2.0-RC.2](/download), the "The less is more" release.
 With the second release candidate, we fixed all reported, known issues and updated the Dutch translation.
 Please don't use this version in production systems, but test this version and please report bugs!.
-{{/markdown}}
-      </div>
-      <div class="col-lg-4 col-md-6 col-xs-12">
-{{#markdown}}
-### 2023-06-17
-* * *
-The phpMyFAQ Team is pleased to announce [phpMyFAQ 3.1.15](/download), the "Glenda Jackson" release.
-This release fixes all reported issues.
 {{/markdown}}
       </div>
     </div>
