@@ -1,0 +1,85 @@
+---
+title: Security Advisory 2023-09-21
+description: XSS vulnerabilities in phpMyFAQ
+canonical: security/advisory-2023-08-27
+layout: security.hbs
+---
+<h2>XSS and cookie vulnerabilities in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2023-09-21</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 3.1.17</dd>
+  <dt>Risk:</dt>
+  <dd>Medium</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of multiple security issues that'd been discovered in phpMyFAQ 3.2.0 and
+  earlier. phpMyFAQ contains cross-site scripting (XSS) vulnerabilities. The secure flag handling of cookies is buggy.
+</p>
+
+<h2>Description</h2>
+<p>
+  phpMyFAQ doesn't implement sufficient checks to avoid XSS when adding malicious content into FAQs, configuration, user
+  administration, and multi-site configuration.
+</p>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ versions 3.2.1 and 3.1.18, which fixes these vulnerabilities. All
+  users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 3.2.1 or 3.1.18.
+</p>
+
+<h2>References</h2>
+<ul>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/3a2bc18b-5932-4fb5-a01e-24b2b0443b67/">
+      XSS in 3.1.17 and 3.2.0
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/5e146e7c-60c7-498b-9ffe-fd4cb4ca8c54/">
+      XSS in 3.1.17 and 3.2.0
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/a335c013-db75-4120-872c-42059c7100e8/">
+      XSS in 3.1.17 and 3.2.0
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/e2542cbe-41ab-4a90-b6a4-191884c1834d/">
+      XSS in 3.1.17 and 3.2.0
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/f877e65a-e647-457b-b105-7e5c9f58fb43/">
+      XSS in 3.1.17 and 3.2.0
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/ec44bcba-ae7f-497a-851e-8165ecf56945/">
+      Cookie issue in 3.2.0
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://huntr.dev/bounties/e4b0e8f4-5e06-49d1-832f-5756573623ad/">
+      XSS in 3.2.0
+    </a>
+  </li>
+</ul>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ team would like to thank @hainguyen0207 and @nyeooo for the responsible disclosures of these
+  vulnerabilities.
+</p>
