@@ -1,0 +1,68 @@
+---
+title: Security Advisory 2024-02-05
+description: XSS, phishing and spoofing vulnerabilities in phpMyFAQ
+canonical: security/advisory-2024-02-05
+layout: security.hbs
+---
+<h2>XSS, phishing and spoofing vulnerabilities in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2024-02-05</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 3.2.4</dd>
+  <dt>Risk:</dt>
+  <dd>Medium</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of multiple security issues that'd been discovered in phpMyFAQ 3.2.4 and
+  earlier. phpMyFAQ contains cross-site scripting (XSS), phishing and spoofing vulnerabilities.
+</p>
+
+<h2>Description</h2>
+<p>
+  phpMyFAQ doesn't implement sufficient checks to avoid XSS when storing on attachments filenames.
+  The 'sharing FAQ' functionality allows any unauthenticated actor to misuse the phpMyFAQ application to send arbitrary
+  emails to a large range of targets.
+  phpMyFAQ's user removal page allows an attacker to spoof another user's detail, and in turn make a compelling phishing
+  case for removing another user's account.
+</p>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ version 3.2.5, which fixes these vulnerabilities. All
+  users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 3.2.5.
+</p>
+
+<h2>References</h2>
+<ul>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-7m8g-fprr-47fx">
+      phpMyFAQ store XSS on attachments filename
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-9hhf-xmcw-r3xg">
+      Sharing FAQ functionality can easily be abused for phishing purposes
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-6648-6g96-mg35">
+      User Removal Page Allows Spoofing Of User Details
+    </a>
+  </li>
+</ul>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ team would like to thank @PinkDraconian and Nikko Enggaliano for the responsible disclosures of these
+  vulnerabilities.
+</p>
