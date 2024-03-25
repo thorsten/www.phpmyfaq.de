@@ -1,0 +1,100 @@
+---
+title: Security Advisory 2024-03-25
+description: XSS, SQL injections and bypass vulnerabilities in phpMyFAQ
+canonical: security/advisory-2024-03-25
+layout: security.hbs
+---
+<h2>XSS, phishing and spoofing vulnerabilities in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2024-03-25</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 3.2.5</dd>
+  <dt>Risk:</dt>
+  <dd>Medium</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of multiple security issues that'd been discovered in phpMyFAQ 3.2.5 and
+  earlier. phpMyFAQ contains cross-site scripting (XSS), SQL injection and bypass vulnerabilities.
+</p>
+
+<h2>Description</h2>
+<p>
+  phpMyFAQ doesn't implement sufficient checks to avoid a Path Traversal in attachments that allows attackers with admin
+  rights to upload malicious files to other locations of the web root. An attacker with admin privileges can upload an
+  attachment containing JS code without an extension, and the application will render it as HTML, which allows for XSS
+  attacks. It is possible for unauthenticated users to inject HTML code to the page which might affect other users.
+  Also, it requires that adding new FAQs is allowed for guests and that the admin doesn't check the content of a newly
+  added FAQ. A PostgreSQL SQL injection vulnerability has been discovered in the admin section when modifying records
+  due to improper escaping of the email address. By manipulating the news parameter in a POST request, an attacker with
+  admin rights can inject malicious JavaScript code. The category image upload function in phpmyfaq is vulnerable to
+  manipulation of the Content-type and lang parameters, allowing attackers with admin rights to upload malicious files
+  with a .php extension, potentially leading to remote code execution (RCE) on the system. The email field in phpMyFAQ's
+  user control panel page is vulnerable to stored XSS attacks due to the inadequacy of PHP's FILTER_VALIDATE_EMAIL
+  function, which only validates the email format, not its content. A PostgreSQL SQL injection vulnerability has been
+  discovered in the "Add News" functionality due to improper escaping of the email address.
+</p>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ version 3.2.6, which fixes these vulnerabilities. All
+  users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 3.2.6.
+</p>
+
+<h2>References</h2>
+<ul>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-mmh6-5cpf-2c72">
+      Path Traversal in Attachments
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-hm8r-95g3-5hj9">
+      Stored XSS at File Attachments
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-48vw-jpf8-hwqh">
+      Stored HTML Injection at contentLink
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-2grw-mc9r-822r">
+      SQL injections at insertentry & saveentry
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-6p68-36m6-392r">
+      Stored XSS at FAQ News Content
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-pwh2-fpfr-x5gf">
+      File Upload Bypass at Category Image Leads to RCE
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-q7g6-xfh2-vhpx">
+      Stored XSS at user email
+    </a>
+  </li>
+  <li>
+    <a target="_blank" rel="nofollow" href="https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-qgxx-4xv5-6hcw">
+      SQL Injection at "Save News"
+    </a>
+  </li>
+</ul>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ team would like to thank @kevinnivekkevin for the responsible disclosures of these vulnerabilities.
+</p>
