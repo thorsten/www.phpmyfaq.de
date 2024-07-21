@@ -1,0 +1,47 @@
+---
+title: Security Advisory 2024-07-21
+description: Authentication Bypass in phpMyFAQ
+canonical: security/advisory-2024-03-25
+layout: security.hbs
+---
+<h2>Authentication Bypass in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2024-07-21</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 3.2.7</dd>
+  <dt>Risk:</dt>
+  <dd>High</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of a security issues that'd been discovered in phpMyFAQ 3.2.7 and
+  earlier. An authentication bypass has been discovered in the phpMyFAQ application.
+  This vulnerability allows attackers to take over accounts that do not have Two-Factor Authentication (2FA) configured.
+</p>
+
+<h2>Description</h2>
+<p>
+  It was found that the 2FA implementation has a critical flaw.
+  Specifically, the "secret" field for 2FA can be left as a blank string under some conditions, including fresh installations.
+  The vulnerability exists in the handling of the 2FA token in the `index.php` and `TwoFactor.php` files.
+</p>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ version 3.2.8, which fixes the vulnerability. All
+  users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 3.2.8.
+</p>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ team would like to thank Christian Pöschl for the responsible disclosures of these vulnerabilities.
+</p>
