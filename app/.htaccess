@@ -590,6 +590,7 @@ FileETag None
     RedirectPermanent /download.php                     /download
     RedirectPermanent /download.PHP                     /download
     RedirectPermanent /download_old.php                 /old-downloads
+    RedirectPermanent /old-downloads                    /downloads
     RedirectPermanent /faq                              /
     RedirectPermanent /features.php                     /features
     RedirectPermanent /forum                            https://forum.phpmyfaq.de
