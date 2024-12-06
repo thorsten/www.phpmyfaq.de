@@ -536,88 +536,27 @@ FileETag None
     RewriteRule download/phpmyfaq-(.+).tar.gz.md5$      https://download.phpmyfaq.de/phpMyFAQ-$1.tar.gz.md5 [R=301,L]
     RewriteRule download/phpmyfaq-(.+)&version=(.+)     https://download.phpmyfaq.de/phpmyfaq-$1&version=$2 [R=301,L]
 
-    # Documentation
-    RewriteRule documentation.([0-9]+).([0-9]+).en.php$ /docs/$1.$2 [R=301,L]
-
-    # News
-    RewriteRule news/([0-9]+).php$                      /news/$1 [R=301,L]
-    RewriteRule ([0-9]+).php$                           /news/$1 [R=301,L]
-
-    # Security Advisories
-    RewriteRule news/advisory_([0-9]+)-([0-9]+)-([0-9]+).php$       /security/advisory-$1-$2-$3 [R=301,L]
-    RewriteRule security/advisory_([0-9]+)-([0-9]+)-([0-9]+).php$   /security/advisory-$1-$2-$3 [R=301,L]
-    RewriteRule advisory_([0-9]+)-([0-9]+)-([0-9]+).php$            /security/advisory-$1-$2-$3 [R=301,L]
-    RewriteRule advisoriesadvisory-([0-9]+)-([0-9]+)-([0-9]+)      /security/advisory-$1-$2-$3 [R=301,L]
-
 </IfModule>
 
 <IfModule mod_alias.c>
     # Permanent 301 redirects
     RedirectPermanent /app                              /
-    RedirectPermanent /10years.php                      /10years
-    RedirectPermanent /bugtraq.php                      https://github.com/thorsten/phpMyFAQ/issues
-    RedirectPermanent /changelog.php                    /changelog
-    RedirectPermanent /codenames.php                    /docs/codenames
-    RedirectPermanent /docs/codenames.php               /docs/codenames
-    RedirectPermanent /codingguidelines.php             /docs/standards
-    RedirectPermanent /docs/standards.php               /docs/standards
-    RedirectPermanent /contributing.php                 /contribute
-    RedirectPermanent /contribute.php                   /contribute
-    RedirectPermanent /danke.php                        /thankyou
+    RedirectPermanent /contribute                       https://phpmyfaq.readthedocs.io/en/main/development/
     RedirectPermanent /demo                             https://demo.phpmyfaq.de
     RedirectPermanent /download/                        /download
-    RedirectPermanent /development.php                  /development
-    RedirectPermanent /dokumentation.php                /documentation
-    RedirectPermanent /documentation.php                /documentation
-    RedirectPermanent /dokumentation.2.0.en.php         /docs/2.0
-    RedirectPermanent /docs/dokumentation.2.0.en.php    /docs/2.0
-    RedirectPermanent /documentation.2.5.en.php         /docs/2.5
-    RedirectPermanent /docs/documentation.2.5.en.php    /docs/2.5
-    RedirectPermanent /documentation.2.6.en.php         /docs/2.6
-    RedirectPermanent /docs/documentation.2.6.en.php    /docs/2.6
-    RedirectPermanent /documentation.2.7.en.php         /docs/2.7
-    RedirectPermanent /docs/documentation.2.7.en.php    /docs/2.8
-    RedirectPermanent /docs/documentation.2.8.en.php    /docs/2.8
-    RedirectPermanent /docs/documentation.de.html       /documentation
-    RedirectPermanent /documentation.php                /documentation
+    RedirectPermanent /development                      https://phpmyfaq.readthedocs.io/en/main/development/
+    RedirectPermanent /docs                             https://phpmyfaq.readthedocs.io
     RedirectPermanent /docs/3.2                         https://phpmyfaq.readthedocs.io/en/3.2
     RedirectPermanent /docs/4.0                         https://phpmyfaq.readthedocs.io/en/4.0
     RedirectPermanent /docs/4.1                         https://phpmyfaq.readthedocs.io/en/main
-    RedirectPermanent /docs/documentation.de.php        /documentation
     RedirectPermanent /docs/lizenz.html                 https://raw.github.com/thorsten/phpMyFAQ/main/LICENSE
     RedirectPermanent /docs/lizenz.php                  https://raw.github.com/thorsten/phpMyFAQ/main/LICENSE
-    RedirectPermanent /docs/phpmyfaq.txt                /docs
-    RedirectPermanent /donations.php                    /donations
-    RedirectPermanent /download.php                     /download
-    RedirectPermanent /download.PHP                     /download
-    RedirectPermanent /download_old.php                 /old-downloads
     RedirectPermanent /old-downloads                    /downloads
     RedirectPermanent /faq                              /
-    RedirectPermanent /features.php                     /features
     RedirectPermanent /forum                            https://forum.phpmyfaq.de
     RedirectPermanent /hosting                          /
     RedirectPermanent /impressum.php                    /imprint
     RedirectPermanent /imprint.php                      /imprint
-    RedirectPermanent /index.php                        /
-    RedirectPermanent /lifecycle.php                    /
-    RedirectPermanent /license.php                      https://raw.github.com/thorsten/phpMyFAQ/main/LICENSE
-    RedirectPermanent /lizenz.php                       https://raw.github.com/thorsten/phpMyFAQ/main/LICENSE
-    RedirectPermanent /logo.php                         /
-    RedirectPermanent /documentation.php                /documentation
-    RedirectPermanent /referenzen.php                   /references
-    RedirectPermanent /references.php                   /references
-    RedirectPermanent /requirements.php                 /requirements
-    RedirectPermanent /roadmap.php                      /
-    RedirectPermanent /security.php                     /advisories
-    RedirectPermanent /standards.php                    /docs/standards
-    RedirectPermanent /support.php                      /support
-    RedirectPermanent /team.php                         /imprint
-    RedirectPermanent /terms.php                        /terms
-    RedirectPermanent /themes.php                       /
-    RedirectPermanent /imprint.php                      /imprint
-    RedirectPermanent /translation.php                  /translations
-    RedirectPermanent /xml/version.php                  https://api.phpmyfaq.de/versions
-    
 </IfModule>
 
 # ----------------------------------------------------------------------

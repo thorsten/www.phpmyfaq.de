@@ -1,0 +1,45 @@
+---
+title: Security Advisory 2024-12-06
+description: Information disclosure vulnerability in phpMyFAQ
+canonical: security/advisory-2024-12-06
+layout: security.hbs
+---
+<h2>Information disclosure vulnerability in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2024-12-06</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 4.0.0-RC.5</dd>
+  <dt>Risk:</dt>
+  <dd>High</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of a security issues that'd been discovered in phpMyFAQ 4.0.0-RC.5 and
+  earlier. An information disclosure vulnerability has been discovered in the phpMyFAQ application.
+  This vulnerability reveals the database username and password if the database is not available.
+</p>
+
+<h2>Description</h2>
+<p>
+  If the database is not available, the database username and password are shown in the error message.
+</p>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ version 4.0.0, which fixes the vulnerability. All
+  users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 4.0.0.
+</p>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ team would like to thank geo-chen for the responsible disclosures of this vulnerability.
+</p>
