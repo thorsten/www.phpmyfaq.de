@@ -37,7 +37,7 @@ layout: none
 
         <h2>How to contribute?</h2>
         <p>
-          Contributing to phpMyFAQ is quite easy - just fork the project on
+          Contributing to phpMyFAQ is quite easy—just fork the project on
           <a rel="nofollow" target="_blank" href="https://github.com/thorsten/phpMyFAQ/">GitHub</a>, work
           on your copy and send pull requests.
         </p>
@@ -50,15 +50,15 @@ layout: none
           <li>Git</li>
           <li>PHP development
             <ul>
-              <li><a rel="nofollow" href="https://www.php.de">PHP</a> 8.2+</li>
-              <li><a rel="nofollow" href="https://www.phpunit.de">PHPUnit</a> 10.x</li>
+              <li><a rel="nofollow" href="https://www.php.de">PHP</a> 8.3+</li>
+              <li><a rel="nofollow" href="https://www.phpunit.de">PHPUnit</a> 11.x</li>
               <li><a rel="nofollow" href="https://getcomposer.org">Composer</a></li>
             </ul>
           </li>
           <li>JavaScript / HTML5 / CSS development
             <ul>
-              <li><a rel="nofollow" href="https://nodejs.org">Node.js</a> v18+</li>
-              <li><a rel="nofollow" href="https://yarnpkg.com/">Yarn</a> v3</li>
+              <li><a rel="nofollow" href="https://nodejs.org">Node.js</a> v20+</li>
+              <li><a rel="nofollow" href="https://pnpm.io/">PNPM</a></li>
             </ul>
           </li>
           <li>
@@ -96,12 +96,12 @@ $ git remote add upstream git://github.com/thorsten/phpMyFAQ.git</code></pre>
           /var/www/html folder in the container.
         </p>
         <p>
-          For development purposes you can start a full stack to run your current PhpMyFAQ source code from your local
+          For development purposes, you can start a full stack to run your current PhpMyFAQ source code from your local
           repository.
         </p>
         <pre><code class="bash">$ docker-compose up</code></pre>
         <p>
-          The command above starts 5 containers as following.
+          The command above starts five containers as following.
         </p>
         <p>
           Specific images started once to prepare the project:
@@ -119,7 +119,7 @@ $ git remote add upstream git://github.com/thorsten/phpMyFAQ.git</code></pre>
           <li><strong>phpmyadmin</strong>: a PHP tool to have a look on your database.</li>
         </ul>
         <p>
-          Running apache web server with PHP 8.2 support:
+          Running apache web server with PHP 8.3 support:
         </p>
         <ul>
           <li><strong>phpmyfaq</strong>: mounts the phpmyfaq folder in place of /var/www/html.</li>
@@ -139,27 +139,27 @@ $ git remote add upstream git://github.com/thorsten/phpMyFAQ.git</code></pre>
         <pre><code class="bash">$ cd phpMyFAQ
 $ curl -s https://getcomposer.org/installer | php
 $ php composer.phar install
-$ yarn install
-$ yarn build</code></pre>
+$ pnpm install
+$ pnpm build</code></pre>
         <p>
-          Then just start a normal, local <a href="/docs/2.9#2c">phpMyFAQ installation</a>.
+          Then just start a normal, local <a href="/docs/4.0">phpMyFAQ installation</a>.
         </p>
         <p>
           If you changed some JavaScript code, you have to merge the .js files into one with the following
-          yarn task:
+          pnpm task:
         </p>
-        <pre><code class="bash">$ yarn build</code></pre>
+        <pre><code class="bash">$ pnpm build</code></pre>
 
         <h3>Rebase your Patch</h3>
         <p>
           Before submitting your patch, please update your local branch:
         </p>
 
-        <pre><code class="bash">$ git checkout 3.2
+        <pre><code class="bash">$ git checkout 4.0
 $ git fetch upstream
-$ git merge upstream/3.2
+$ git merge upstream/4.0
 $ git checkout YOUR_BRANCH_NAME
-$ git rebase 3.2</code></pre>
+$ git rebase 4.0</code></pre>
 
         <h3>Make a Pull Request</h3>
         <p>You can now make a pull request on the phpMyFAQ Github repository.</p>
@@ -168,15 +168,15 @@ $ git rebase 3.2</code></pre>
         <ul>
           <li>
             <span class="label label-success">Maintenance</span>
-            <em>3.2</em> is the stable branch for bugfixes
+            <em>4.0</em> is the stable branch for bugfixes
           </li>
           <li>
             <span class="label label-success">Development</span>
-            <em>main</em> is the development branch for the next version based on 4.0
+            <em>main</em> is the development branch for the next version based on 4.1
           </li>
           <li><span class="label label-danger">Unsupported</span>
             <em>2.0</em>, <em>2.5</em>, <em>2.6</em>, <em>2.7</em>, <em>2.8</em>, <em>2.9</em>, <em>3.0</em>,
-            and <em>3.1</em> are old, unsupported branches
+            <em>3.1</em>,and <em>3.2</em> are old, unsupported branches
           </li>
         </ul>
 
