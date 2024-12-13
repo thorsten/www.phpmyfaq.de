@@ -1,0 +1,46 @@
+---
+title: Security Advisory 2024-12-13
+description: User Interface (UI) Misrepresentation of Critical Information vulnerability in phpMyFAQ
+canonical: security/advisory-2024-12-13
+layout: security.hbs
+---
+<h2>User Interface (UI) Misrepresentation of Critical Information vulnerability in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2024-12-06</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 4.0.0-RC.5</dd>
+  <dt>Risk:</dt>
+  <dd>High</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of a security issues that'd been discovered in phpMyFAQ 4.0.0 and
+  earlier. A User Interface (UI) Misrepresentation of Critical Information vulnerability has been discovered in the
+  phpMyFAQ application.
+</p>
+
+<h2>Description</h2>
+<p>
+  A vulnerability exists in phpMyFAQ where a privileged attacker can trigger a file download on a victim's machine upon
+  a page visit by embedding it in an iframe element without user interaction or explicit consent.
+</p>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ version 4.0.1, which fixes the vulnerability. All
+  users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 4.0.1.
+</p>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ team would like to thank geo-chen for the responsible disclosures of this vulnerability.
+</p>

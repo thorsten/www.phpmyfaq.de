@@ -41,7 +41,7 @@ module.exports = function (grunt) {
         pkg:        grunt.file.readJSON('package.json'),
         versions:   grunt.file.readJSON('./data/versions.json'),
         deployment: grunt.file.readJSON('./data/' + grunt.config('env') + '/deployment.json'),
-        banner:     '/*! phpMyFAQ - https://www.phpmyfaq.de/ - Copyright © 2001-2022 Thorsten Rinne - compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+        banner:     '/*! phpMyFAQ - https://www.phpmyfaq.de/ - Copyright © 2001-2024 Thorsten Rinne - compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
 
         // Fetch external data for downloads
         curl: {
@@ -511,20 +511,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-
-        // Deployment via FTP
-        'ftp-deploy': {
-            build: {
-                auth: {
-                    host: 'w018670c.kasserver.com',
-                    port: 21,
-                    authKey: 'production'
-                },
-                src: '<%= config.dist %>',
-                dest: '/<%= deployment.remote_path %>'
-            }
-        }
-
     });
 
 

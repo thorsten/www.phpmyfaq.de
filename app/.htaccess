@@ -545,12 +545,12 @@ FileETag None
     RedirectPermanent /demo                             https://demo.phpmyfaq.de
     RedirectPermanent /download/                        /download
     RedirectPermanent /development                      https://phpmyfaq.readthedocs.io/en/main/development/
-    RedirectPermanent /docs                             https://phpmyfaq.readthedocs.io
     RedirectPermanent /docs/3.2                         https://phpmyfaq.readthedocs.io/en/3.2
-    RedirectPermanent /docs/4.0                         https://phpmyfaq.readthedocs.io/en/4.0
+    RedirectPermanent /docs/4.0 https://phpmyfaq.readthedocs.io/en/4.0
     RedirectPermanent /docs/4.1                         https://phpmyfaq.readthedocs.io/en/main
     RedirectPermanent /docs/lizenz.html                 https://raw.github.com/thorsten/phpMyFAQ/main/LICENSE
     RedirectPermanent /docs/lizenz.php                  https://raw.github.com/thorsten/phpMyFAQ/main/LICENSE
+    RedirectPermanent /docs                             https://phpmyfaq.readthedocs.io/
     RedirectPermanent /old-downloads                    /downloads
     RedirectPermanent /faq                              /
     RedirectPermanent /forum                            https://forum.phpmyfaq.de
