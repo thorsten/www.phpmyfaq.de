@@ -1,0 +1,46 @@
+---
+title: Security Advisory 2025-01-02
+description: Stored HTML Injection vulnerability in phpMyFAQ
+canonical: security/advisory-2025-01-02
+layout: security.hbs
+---
+<h2>Stored HTML Injection vulnerability in phpMyFAQ</h2>
+
+<dl class="dl-horizontal">
+  <dt>Issued on:</dt>
+  <dd>2025-01-02</dd>
+  <dt>Software:</dt>
+  <dd>phpMyFAQ &lt;= 4.0.0-RC.5</dd>
+  <dt>Risk:</dt>
+  <dd>Medium</dd>
+  <dt>Platforms:</dt>
+  <dd>all</dd>
+</dl>
+
+<p>
+  The phpMyFAQ Team has learned of a security issues that'd been discovered in phpMyFAQ 4.0.1 and
+  earlier. A stored HTML injection vulnerability has been discovered in the phpMyFAQ application.
+</p>
+
+<h2>Description</h2>
+<p>
+  Due to insufficient validation on the content of new FAQ posts, it is possible for authenticated users to inject
+  malicious HTML or JavaScript code that can impact other users viewing the FAQ. This vulnerability arises when
+  user-provided inputs in FAQ entries are not sanitized or escaped before being rendered on the page.
+</p>
+
+<h2>Solution</h2>
+<p>
+  The phpMyFAQ Team has released the new phpMyFAQ version 4.0.2, which fixes the vulnerability. All
+  users of affected phpMyFAQ versions are encouraged to upgrade as soon as possible to this latest version.
+</p>
+
+<h2>Workaround</h2>
+<p>
+  There's no workaround except installing phpMyFAQ 4.0.2.
+</p>
+
+<h2>Thanks</h2>
+<p>
+  The phpMyFAQ team would like to thank geo-chen for the responsible disclosures of this vulnerability.
+</p>
